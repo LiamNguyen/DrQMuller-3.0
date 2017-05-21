@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		766FBA6E1ED1D7F700E4454D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766FBA6D1ED1D7F700E4454D /* AppDelegate.swift */; };
-		766FBA701ED1D7F700E4454D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766FBA6F1ED1D7F700E4454D /* ViewController.swift */; };
 		766FBA731ED1D7F700E4454D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 766FBA711ED1D7F700E4454D /* Main.storyboard */; };
 		766FBA761ED1D7F700E4454D /* DrQMuller_3_0.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 766FBA741ED1D7F700E4454D /* DrQMuller_3_0.xcdatamodeld */; };
 		766FBA781ED1D7F700E4454D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 766FBA771ED1D7F700E4454D /* Assets.xcassets */; };
@@ -37,7 +36,6 @@
 /* Begin PBXFileReference section */
 		766FBA6A1ED1D7F700E4454D /* DrQMuller-3.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DrQMuller-3.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		766FBA6D1ED1D7F700E4454D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		766FBA6F1ED1D7F700E4454D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		766FBA721ED1D7F700E4454D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		766FBA751ED1D7F700E4454D /* DrQMuller_3_0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DrQMuller_3_0.xcdatamodel; sourceTree = "<group>"; };
 		766FBA771ED1D7F700E4454D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -85,6 +83,7 @@
 				766FBA6B1ED1D7F700E4454D /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 1;
 		};
 		766FBA6B1ED1D7F700E4454D /* Products */ = {
 			isa = PBXGroup;
@@ -100,12 +99,8 @@
 			isa = PBXGroup;
 			children = (
 				766FBA6D1ED1D7F700E4454D /* AppDelegate.swift */,
-				766FBA6F1ED1D7F700E4454D /* ViewController.swift */,
-				766FBA711ED1D7F700E4454D /* Main.storyboard */,
-				766FBA771ED1D7F700E4454D /* Assets.xcassets */,
-				766FBA791ED1D7F700E4454D /* LaunchScreen.storyboard */,
-				766FBA7C1ED1D7F800E4454D /* Info.plist */,
-				766FBA741ED1D7F700E4454D /* DrQMuller_3_0.xcdatamodeld */,
+				766FBA9E1ED1DCB600E4454D /* Storyboards */,
+				766FBA9F1ED1DCD100E4454D /* SupportingFiles */,
 			);
 			path = "DrQMuller-3.0";
 			sourceTree = "<group>";
@@ -126,6 +121,25 @@
 				766FBA921ED1D7F800E4454D /* Info.plist */,
 			);
 			path = "DrQMuller-3.0UITests";
+			sourceTree = "<group>";
+		};
+		766FBA9E1ED1DCB600E4454D /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				766FBA711ED1D7F700E4454D /* Main.storyboard */,
+				766FBA791ED1D7F700E4454D /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		766FBA9F1ED1DCD100E4454D /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				766FBA771ED1D7F700E4454D /* Assets.xcassets */,
+				766FBA7C1ED1D7F800E4454D /* Info.plist */,
+				766FBA741ED1D7F700E4454D /* DrQMuller_3_0.xcdatamodeld */,
+			);
+			name = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,7 +279,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				766FBA701ED1D7F700E4454D /* ViewController.swift in Sources */,
 				766FBA761ED1D7F700E4454D /* DrQMuller_3_0.xcdatamodeld in Sources */,
 				766FBA6E1ED1D7F700E4454D /* AppDelegate.swift in Sources */,
 			);
@@ -427,6 +440,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.letsdev.DrQMuller-3-0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -440,6 +454,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.letsdev.DrQMuller-3-0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
