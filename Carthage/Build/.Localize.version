@@ -1,0 +1,9 @@
+{
+  "commitish" : "1.3.0",
+  "iOS" : [
+    {
+      "hash" : "7f2bd9ad0c5b97d73845d8fcda48133617adda9298c9b1067b285d1371255597",
+      "name" : "Localize"
+    }
+  ]
+}

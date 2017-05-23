@@ -1,0 +1,10 @@
+framework module Swifternalization {
+  umbrella header "Swifternalization.h"
+
+  export *
+  module * { export * }
+}
+
+module Swifternalization.Swift {
+    header "Swifternalization-Swift.h"
+}

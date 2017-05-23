@@ -1,0 +1,13 @@
+{
+	"Login": {
+		"TextfieldPlaceHolder": {
+			"username": "Tên đăng nhập",
+			"password": "Mật khẩu"
+		},
+		"Button": {
+			"resetPassword"	: "Quên tên đăng nhập hoặc mật khẩu?",
+			"login"			: "Đăng nhập",
+			"register"		: "Đăng ký"
+		}
+	}
+}

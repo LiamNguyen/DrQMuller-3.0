@@ -1,0 +1,13 @@
+{
+	"Login" : {
+		"TextfieldPlaceHolder" : {
+			"username" : "Username",
+			"password" : "Password"
+		},
+		"Button": {
+			"resetPassword"	: "Forgot username or password?",
+			"login"			: "Login",
+			"register"		: "Register"
+		}
+	}
+}

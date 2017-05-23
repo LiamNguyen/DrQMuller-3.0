@@ -1,26 +1,180 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="WTY-wt-uZw">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="DrQMuller_3_0" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EWI-K1-tHM">
+                                <rect key="frame" x="48" y="90" width="224.5" height="48.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dr." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpi-lR-LcD">
+                                        <rect key="frame" x="0.0" y="0.0" width="54" height="48.5"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="42"/>
+                                        <color key="textColor" red="0.78531737800000001" green="0.20499869549999999" blue="0.93763845430000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Q-Muller" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BYU-aI-MHz">
+                                        <rect key="frame" x="54" y="0.0" width="170.5" height="48.5"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="42"/>
+                                        <color key="textColor" red="0.56078431370000004" green="0.0" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="224.5" id="7eS-AA-Egg"/>
+                                    <constraint firstAttribute="height" constant="48.5" id="dil-q4-TOW"/>
+                                </constraints>
+                            </stackView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="justified" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="AUM-ga-0Hf" customClass="CustomTextField" customModule="DrQMuller_3_0" customModuleProvider="target">
+                                <rect key="frame" x="27" y="198" width="267" height="46"/>
+                                <color key="tintColor" red="0.56078431370000004" green="0.0" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="dGq-R5-u2R"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userIcon" translatesAutoresizingMaskIntoConstraints="NO" id="QkM-p5-pwR">
+                                <rect key="frame" x="38" y="203" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="7LQ-SH-nbV"/>
+                                    <constraint firstAttribute="height" constant="35" id="rMs-vH-5xb"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="justified" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="kgb-6q-lrQ" customClass="CustomTextField" customModule="DrQMuller_3_0" customModuleProvider="target">
+                                <rect key="frame" x="27" y="276" width="267" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="3Gu-IV-dQe"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pwdIcon" translatesAutoresizingMaskIntoConstraints="NO" id="i6N-Hw-820">
+                                <rect key="frame" x="38" y="281" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="XSW-Wq-Sx9"/>
+                                    <constraint firstAttribute="height" constant="35" id="s2a-TD-qAG"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZOQ-tE-m29" customClass="CustomButton" customModule="DrQMuller_3_0" customModuleProvider="target">
+                                <rect key="frame" x="29" y="370" width="263" height="50"/>
+                                <color key="backgroundColor" red="0.56078431370000004" green="0.0" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="jn9-D4-YaH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <size key="titleShadowOffset" width="44" height="44"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AaH-xS-m1G" customClass="CustomButton" customModule="DrQMuller_3_0" customModuleProvider="target">
+                                <rect key="frame" x="29" y="428" width="263" height="50"/>
+                                <color key="backgroundColor" red="0.56078431370000004" green="0.52452256939999997" blue="0.68213114019999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="pgE-wf-AFU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <state key="normal" title="Register">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ULS-vU-Syc">
+                                <rect key="frame" x="46.5" y="328" width="227" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Dys-BK-7X5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Forgot username or password?">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="mee-el-Uxs">
+                                <rect key="frame" x="244" y="377" width="37" height="37"/>
+                            </activityIndicatorView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="AUM-ga-0Hf" secondAttribute="trailing" constant="10" id="2IY-Kd-odT"/>
+                            <constraint firstItem="kgb-6q-lrQ" firstAttribute="top" secondItem="AUM-ga-0Hf" secondAttribute="bottom" constant="32" id="8Ek-uR-yrv"/>
+                            <constraint firstItem="AaH-xS-m1G" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="13" id="Azc-hY-Tig"/>
+                            <constraint firstItem="EWI-K1-tHM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="0.25" id="KKK-D4-gKB"/>
+                            <constraint firstItem="EWI-K1-tHM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="90" id="LRS-OH-SMh"/>
+                            <constraint firstItem="mee-el-Uxs" firstAttribute="centerY" secondItem="ZOQ-tE-m29" secondAttribute="centerY" id="Ml0-0C-qFY"/>
+                            <constraint firstItem="ULS-vU-Syc" firstAttribute="top" secondItem="kgb-6q-lrQ" secondAttribute="bottom" constant="8" id="NhB-oZ-HtZ"/>
+                            <constraint firstItem="AaH-xS-m1G" firstAttribute="top" secondItem="ZOQ-tE-m29" secondAttribute="bottom" constant="8" id="RZ9-W3-8zi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kgb-6q-lrQ" secondAttribute="trailing" constant="10" id="VMI-Kh-0uJ"/>
+                            <constraint firstItem="ZOQ-tE-m29" firstAttribute="top" secondItem="ULS-vU-Syc" secondAttribute="bottom" constant="12" id="Vdm-xx-aiy"/>
+                            <constraint firstItem="AUM-ga-0Hf" firstAttribute="leading" secondItem="QkM-p5-pwR" secondAttribute="trailing" constant="-46" id="WEp-id-fp1"/>
+                            <constraint firstItem="QkM-p5-pwR" firstAttribute="centerY" secondItem="AUM-ga-0Hf" secondAttribute="centerY" id="Wxm-Re-h5Z"/>
+                            <constraint firstItem="kgb-6q-lrQ" firstAttribute="leading" secondItem="i6N-Hw-820" secondAttribute="trailing" constant="-46" id="X0w-9k-YMk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AaH-xS-m1G" secondAttribute="trailing" constant="12" id="aHM-A1-7ei"/>
+                            <constraint firstItem="mee-el-Uxs" firstAttribute="leading" secondItem="ZOQ-tE-m29" secondAttribute="trailing" constant="-48" id="cK4-4E-tLL"/>
+                            <constraint firstItem="i6N-Hw-820" firstAttribute="centerY" secondItem="kgb-6q-lrQ" secondAttribute="centerY" id="hTI-fu-E6u"/>
+                            <constraint firstItem="kgb-6q-lrQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="11" id="hkC-za-GEW"/>
+                            <constraint firstItem="AUM-ga-0Hf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="11" id="luX-Fs-9XW"/>
+                            <constraint firstItem="AUM-ga-0Hf" firstAttribute="top" secondItem="EWI-K1-tHM" secondAttribute="bottom" constant="59.5" id="q3u-0W-1qw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZOQ-tE-m29" secondAttribute="trailing" constant="12" id="t1W-cn-yPf"/>
+                            <constraint firstItem="ULS-vU-Syc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vm8-mx-zFW"/>
+                            <constraint firstItem="ZOQ-tE-m29" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="13" id="xy1-0p-Bvi"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Gwx-zX-Css"/>
+                    <connections>
+                        <outlet property="btn_Login" destination="ZOQ-tE-m29" id="7HP-rS-eXY"/>
+                        <outlet property="btn_Register" destination="AaH-xS-m1G" id="Jkl-2s-Hww"/>
+                        <outlet property="btn_ResetPassword" destination="ULS-vU-Syc" id="fLV-uK-VHQ"/>
+                        <outlet property="constraint_TopUsername_BottomLogo" destination="q3u-0W-1qw" id="Ksu-fi-K10"/>
+                        <outlet property="txt_Password" destination="kgb-6q-lrQ" id="a7U-i3-m2i"/>
+                        <outlet property="txt_Username" destination="AUM-ga-0Hf" id="V7c-uH-qF9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1091.25" y="600"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4Ri-pV-dBz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WTY-wt-uZw" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wLd-gn-pPf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="cMk-Dc-5yl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n5H-3t-c0m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="340" y="602"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="pwdIcon" width="256" height="256"/>
+        <image name="userIcon" width="512" height="512"/>
+    </resources>
 </document>

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7635F4721ED4A62C0050BDA5 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7635F4711ED4A62C0050BDA5 /* LoginViewModel.swift */; };
+		7647BD111ED34F7D00591395 /* Localize.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7647BD101ED34F7D00591395 /* Localize.framework */; };
+		7647BD121ED34F7D00591395 /* Localize.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7647BD101ED34F7D00591395 /* Localize.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7647BD141ED366F900591395 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7647BD131ED366F900591395 /* CustomButton.swift */; };
 		766FBA6E1ED1D7F700E4454D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766FBA6D1ED1D7F700E4454D /* AppDelegate.swift */; };
 		766FBA731ED1D7F700E4454D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 766FBA711ED1D7F700E4454D /* Main.storyboard */; };
 		766FBA761ED1D7F700E4454D /* DrQMuller_3_0.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 766FBA741ED1D7F700E4454D /* DrQMuller_3_0.xcdatamodeld */; };
@@ -14,6 +18,15 @@
 		766FBA7B1ED1D7F700E4454D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 766FBA791ED1D7F700E4454D /* LaunchScreen.storyboard */; };
 		766FBA861ED1D7F800E4454D /* DrQMuller_3_0Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766FBA851ED1D7F800E4454D /* DrQMuller_3_0Tests.swift */; };
 		766FBA911ED1D7F800E4454D /* DrQMuller_3_0UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766FBA901ED1D7F800E4454D /* DrQMuller_3_0UITests.swift */; };
+		766FBAA21ED1F70300E4454D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766FBAA11ED1F70300E4454D /* LoginViewController.swift */; };
+		766FBAA51ED209F200E4454D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766FBAA41ED209F200E4454D /* Constants.swift */; };
+		7690BCA71ED2127E00B631C2 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7690BCA61ED2127E00B631C2 /* CustomTextField.swift */; };
+		7690BCA91ED2309700B631C2 /* Swifternalization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7690BCA81ED2309700B631C2 /* Swifternalization.framework */; };
+		7690BCAA1ED2309700B631C2 /* Swifternalization.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7690BCA81ED2309700B631C2 /* Swifternalization.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7690BCB11ED232CD00B631C2 /* lang-en.json in Resources */ = {isa = PBXBuildFile; fileRef = 7690BCB01ED232CD00B631C2 /* lang-en.json */; };
+		7690BCB51ED2376200B631C2 /* expressions.json in Resources */ = {isa = PBXBuildFile; fileRef = 7690BCB41ED2376200B631C2 /* expressions.json */; };
+		7690BCB71ED2382700B631C2 /* base.json in Resources */ = {isa = PBXBuildFile; fileRef = 7690BCB61ED2382700B631C2 /* base.json */; };
+		7690BCC61ED23AE600B631C2 /* lang-vi.json in Resources */ = {isa = PBXBuildFile; fileRef = 7690BCC51ED23AE600B631C2 /* lang-vi.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,7 +46,25 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		7690BCAB1ED2309700B631C2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7690BCAA1ED2309700B631C2 /* Swifternalization.framework in Embed Frameworks */,
+				7647BD121ED34F7D00591395 /* Localize.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		7635F4711ED4A62C0050BDA5 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		7647BD101ED34F7D00591395 /* Localize.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Localize.framework; path = Carthage/Build/iOS/Localize.framework; sourceTree = "<group>"; };
+		7647BD131ED366F900591395 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		766FBA6A1ED1D7F700E4454D /* DrQMuller-3.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DrQMuller-3.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		766FBA6D1ED1D7F700E4454D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		766FBA721ED1D7F700E4454D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -47,6 +78,16 @@
 		766FBA8C1ED1D7F800E4454D /* DrQMuller-3.0UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DrQMuller-3.0UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		766FBA901ED1D7F800E4454D /* DrQMuller_3_0UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrQMuller_3_0UITests.swift; sourceTree = "<group>"; };
 		766FBA921ED1D7F800E4454D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		766FBAA11ED1F70300E4454D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		766FBAA41ED209F200E4454D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		7690BCA61ED2127E00B631C2 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		7690BCA81ED2309700B631C2 /* Swifternalization.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swifternalization.framework; path = Carthage/Build/iOS/Swifternalization.framework; sourceTree = "<group>"; };
+		7690BCB01ED232CD00B631C2 /* lang-en.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "lang-en.json"; sourceTree = "<group>"; };
+		7690BCB21ED234B800B631C2 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Main.strings; sourceTree = "<group>"; };
+		7690BCB31ED234B800B631C2 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		7690BCB41ED2376200B631C2 /* expressions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = expressions.json; sourceTree = "<group>"; };
+		7690BCB61ED2382700B631C2 /* base.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = base.json; sourceTree = "<group>"; };
+		7690BCC51ED23AE600B631C2 /* lang-vi.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "lang-vi.json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +95,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7690BCA91ED2309700B631C2 /* Swifternalization.framework in Frameworks */,
+				7647BD111ED34F7D00591395 /* Localize.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,9 +117,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7635F4701ED4A5A50050BDA5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7635F4711ED4A62C0050BDA5 /* LoginViewModel.swift */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
 		766FBA611ED1D7F700E4454D = {
 			isa = PBXGroup;
 			children = (
+				7690BCBD1ED2391300B631C2 /* ExternalLibraries */,
 				766FBA6C1ED1D7F700E4454D /* DrQMuller-3.0 */,
 				766FBA841ED1D7F800E4454D /* DrQMuller-3.0Tests */,
 				766FBA8F1ED1D7F800E4454D /* DrQMuller-3.0UITests */,
@@ -99,6 +151,11 @@
 			isa = PBXGroup;
 			children = (
 				766FBA6D1ED1D7F700E4454D /* AppDelegate.swift */,
+				7690BCAD1ED2329A00B631C2 /* Locale */,
+				766FBAA31ED209CC00E4454D /* Helper */,
+				7635F4701ED4A5A50050BDA5 /* ViewModel */,
+				7690BCA51ED2125A00B631C2 /* View */,
+				766FBAA01ED1F6AF00E4454D /* Controller */,
 				766FBA9E1ED1DCB600E4454D /* Storyboards */,
 				766FBA9F1ED1DCD100E4454D /* SupportingFiles */,
 			);
@@ -142,6 +199,51 @@
 			name = SupportingFiles;
 			sourceTree = "<group>";
 		};
+		766FBAA01ED1F6AF00E4454D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				766FBAA11ED1F70300E4454D /* LoginViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		766FBAA31ED209CC00E4454D /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				766FBAA41ED209F200E4454D /* Constants.swift */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		7690BCA51ED2125A00B631C2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7690BCA61ED2127E00B631C2 /* CustomTextField.swift */,
+				7647BD131ED366F900591395 /* CustomButton.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		7690BCAD1ED2329A00B631C2 /* Locale */ = {
+			isa = PBXGroup;
+			children = (
+				7690BCB41ED2376200B631C2 /* expressions.json */,
+				7690BCB61ED2382700B631C2 /* base.json */,
+				7690BCC51ED23AE600B631C2 /* lang-vi.json */,
+				7690BCB01ED232CD00B631C2 /* lang-en.json */,
+			);
+			name = Locale;
+			sourceTree = "<group>";
+		};
+		7690BCBD1ED2391300B631C2 /* ExternalLibraries */ = {
+			isa = PBXGroup;
+			children = (
+				7647BD101ED34F7D00591395 /* Localize.framework */,
+				7690BCA81ED2309700B631C2 /* Swifternalization.framework */,
+			);
+			name = ExternalLibraries;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -152,6 +254,8 @@
 				766FBA661ED1D7F700E4454D /* Sources */,
 				766FBA671ED1D7F700E4454D /* Frameworks */,
 				766FBA681ED1D7F700E4454D /* Resources */,
+				7690BCAB1ED2309700B631C2 /* Embed Frameworks */,
+				7690BCAC1ED230A000B631C2 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -252,8 +356,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7690BCB11ED232CD00B631C2 /* lang-en.json in Resources */,
+				7690BCB71ED2382700B631C2 /* base.json in Resources */,
+				7690BCB51ED2376200B631C2 /* expressions.json in Resources */,
 				766FBA7B1ED1D7F700E4454D /* LaunchScreen.storyboard in Resources */,
 				766FBA781ED1D7F700E4454D /* Assets.xcassets in Resources */,
+				7690BCC61ED23AE600B631C2 /* lang-vi.json in Resources */,
 				766FBA731ED1D7F700E4454D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,13 +382,36 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7690BCAC1ED230A000B631C2 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Swifternalization.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Localize.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		766FBA661ED1D7F700E4454D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				766FBAA21ED1F70300E4454D /* LoginViewController.swift in Sources */,
 				766FBA761ED1D7F700E4454D /* DrQMuller_3_0.xcdatamodeld in Sources */,
+				7647BD141ED366F900591395 /* CustomButton.swift in Sources */,
 				766FBA6E1ED1D7F700E4454D /* AppDelegate.swift in Sources */,
+				766FBAA51ED209F200E4454D /* Constants.swift in Sources */,
+				7690BCA71ED2127E00B631C2 /* CustomTextField.swift in Sources */,
+				7635F4721ED4A62C0050BDA5 /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +451,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				766FBA721ED1D7F700E4454D /* Base */,
+				7690BCB21ED234B800B631C2 /* vi */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -328,6 +460,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				766FBA7A1ED1D7F700E4454D /* Base */,
+				7690BCB31ED234B800B631C2 /* vi */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -339,6 +472,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -390,6 +524,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -435,9 +570,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 86M37DGEMQ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "DrQMuller-3.0/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.letsdev.DrQMuller-3-0";
+				PRODUCT_BUNDLE_IDENTIFIER = vn.letsdev.DrQMuller;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -449,9 +588,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 86M37DGEMQ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "DrQMuller-3.0/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.letsdev.DrQMuller-3-0";
+				PRODUCT_BUNDLE_IDENTIFIER = vn.letsdev.DrQMuller;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -535,6 +678,7 @@
 				766FBA971ED1D7F800E4454D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		766FBA981ED1D7F800E4454D /* Build configuration list for PBXNativeTarget "DrQMuller-3.0Tests" */ = {
 			isa = XCConfigurationList;
@@ -543,6 +687,7 @@
 				766FBA9A1ED1D7F800E4454D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		766FBA9B1ED1D7F800E4454D /* Build configuration list for PBXNativeTarget "DrQMuller-3.0UITests" */ = {
 			isa = XCConfigurationList;
@@ -551,6 +696,7 @@
 				766FBA9D1ED1D7F800E4454D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
