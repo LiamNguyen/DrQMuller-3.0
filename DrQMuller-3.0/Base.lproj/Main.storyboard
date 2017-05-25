@@ -142,6 +142,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Gwx-zX-Css"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="mee-el-Uxs" id="BAi-Ej-enc"/>
                         <outlet property="btn_Login" destination="ZOQ-tE-m29" id="7HP-rS-eXY"/>
                         <outlet property="btn_Register" destination="AaH-xS-m1G" id="Jkl-2s-Hww"/>
                         <outlet property="btn_ResetPassword" destination="ULS-vU-Syc" id="fLV-uK-VHQ"/>
