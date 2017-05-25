@@ -1,3 +1,4 @@
 github "tomkowz/Swifternalization"
 github "Kekiiwaa/Localize"
 github "ReactiveX/RxSwift" ~> 3.0
+github "Alamofire/Alamofire" ~> 4.4
