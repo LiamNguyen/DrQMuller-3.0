@@ -1,2 +1,3 @@
 github "Kekiiwaa/Localize" "1.3.0"
+github "ReactiveX/RxSwift" "3.4.1"
 github "tomkowz/Swifternalization" "v1.3.2"
