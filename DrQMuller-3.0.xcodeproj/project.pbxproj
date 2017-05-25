@@ -28,6 +28,8 @@
 		767044C81ED7106C0002EDE5 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 767044C61ED7106C0002EDE5 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		767044CA1ED711410002EDE5 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 767044C91ED711410002EDE5 /* ObjectMapper.framework */; };
 		767044CB1ED711410002EDE5 /* ObjectMapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 767044C91ED711410002EDE5 /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		767044CD1ED712D80002EDE5 /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 767044CC1ED712D80002EDE5 /* AlamofireObjectMapper.framework */; };
+		767044CE1ED712D80002EDE5 /* AlamofireObjectMapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 767044CC1ED712D80002EDE5 /* AlamofireObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7690BCA71ED2127E00B631C2 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7690BCA61ED2127E00B631C2 /* CustomTextField.swift */; };
 		7690BCA91ED2309700B631C2 /* Swifternalization.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7690BCA81ED2309700B631C2 /* Swifternalization.framework */; };
 		7690BCAA1ED2309700B631C2 /* Swifternalization.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7690BCA81ED2309700B631C2 /* Swifternalization.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -62,6 +64,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				767044CB1ED711410002EDE5 /* ObjectMapper.framework in Embed Frameworks */,
+				767044CE1ED712D80002EDE5 /* AlamofireObjectMapper.framework in Embed Frameworks */,
 				767044C51ED6FEC70002EDE5 /* RxCocoa.framework in Embed Frameworks */,
 				7690BCAA1ED2309700B631C2 /* Swifternalization.framework in Embed Frameworks */,
 				7647BD121ED34F7D00591395 /* Localize.framework in Embed Frameworks */,
@@ -96,6 +99,7 @@
 		767044C31ED6FEC70002EDE5 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		767044C61ED7106C0002EDE5 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		767044C91ED711410002EDE5 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
+		767044CC1ED712D80002EDE5 /* AlamofireObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireObjectMapper.framework; path = Carthage/Build/iOS/AlamofireObjectMapper.framework; sourceTree = "<group>"; };
 		7690BCA61ED2127E00B631C2 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		7690BCA81ED2309700B631C2 /* Swifternalization.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swifternalization.framework; path = Carthage/Build/iOS/Swifternalization.framework; sourceTree = "<group>"; };
 		7690BCB01ED232CD00B631C2 /* lang-en.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "lang-en.json"; sourceTree = "<group>"; };
@@ -112,6 +116,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				767044CA1ED711410002EDE5 /* ObjectMapper.framework in Frameworks */,
+				767044CD1ED712D80002EDE5 /* AlamofireObjectMapper.framework in Frameworks */,
 				767044C41ED6FEC70002EDE5 /* RxCocoa.framework in Frameworks */,
 				7690BCA91ED2309700B631C2 /* Swifternalization.framework in Frameworks */,
 				7647BD111ED34F7D00591395 /* Localize.framework in Frameworks */,
@@ -148,8 +153,6 @@
 		766FBA611ED1D7F700E4454D = {
 			isa = PBXGroup;
 			children = (
-				767044C91ED711410002EDE5 /* ObjectMapper.framework */,
-				767044C61ED7106C0002EDE5 /* Alamofire.framework */,
 				7690BCBD1ED2391300B631C2 /* ExternalLibraries */,
 				766FBA6C1ED1D7F700E4454D /* DrQMuller-3.0 */,
 				766FBA841ED1D7F800E4454D /* DrQMuller-3.0Tests */,
@@ -260,6 +263,9 @@
 		7690BCBD1ED2391300B631C2 /* ExternalLibraries */ = {
 			isa = PBXGroup;
 			children = (
+				767044CC1ED712D80002EDE5 /* AlamofireObjectMapper.framework */,
+				767044C91ED711410002EDE5 /* ObjectMapper.framework */,
+				767044C61ED7106C0002EDE5 /* Alamofire.framework */,
 				767044C31ED6FEC70002EDE5 /* RxCocoa.framework */,
 				767044C01ED6FE3F0002EDE5 /* RxSwift.framework */,
 				7647BD101ED34F7D00591395 /* Localize.framework */,
@@ -419,6 +425,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/ObjectMapper.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/AlamofireObjectMapper.framework",
 			);
 			outputPaths = (
 			);
