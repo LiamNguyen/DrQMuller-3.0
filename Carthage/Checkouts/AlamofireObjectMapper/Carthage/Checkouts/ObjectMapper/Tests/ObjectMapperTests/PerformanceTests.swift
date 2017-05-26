@@ -31,12 +31,12 @@ import XCTest
 import ObjectMapper
 
 class PerformanceTests: XCTestCase {
-	
+
 	let JSONTestString: String = {
 		let subObjectJSON = "{\"string\":\"This is a string\", \"int\": 12,\"double\":12.27,\"float\":12.3212, \"bool\":false, \"arr\":[ \"bla\", true, 42 ], \"dict\":{ \"key1\" : \"value1\", \"key2\" : false, \"key3\" : 142 } }"
-		
+
 		let objectJSONString = "{\"string\":\"This is a string\", \"int\": 12,\"double\":12.27,\"float\":12.3212, \"bool\":false, \"arr\":[ \"bla\", true, 42 ], \"dict\":{ \"key1\" : \"value1\", \"key2\" : false, \"key3\" : 142 }, \"object\": \(subObjectJSON), \"objects\":{ \"key1\": \(subObjectJSON), \"key2\": \(subObjectJSON)}}"
-		
+
 		var JSONString = "["
 		for _ in 0...1000 {
 			JSONString += "\(objectJSONString),"
@@ -44,12 +44,12 @@ class PerformanceTests: XCTestCase {
 		JSONString += "\(objectJSONString)]"
 		return JSONString
 	}()
-	
+
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
-    
+
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
@@ -61,14 +61,14 @@ class PerformanceTests: XCTestCase {
 			_ = Mapper<PerformanceMappableObject>().mapArray(JSONString: self.JSONTestString)
         }
     }
-	
+
 	func testPerformanceCluster() {
 		self.measure {
 			// Put the code you want to measure the time of here.
 			_ = Mapper<PerformanceStaticMappableObject>().mapArray(JSONString: self.JSONTestString)
 		}
 	}
-	
+
 	func testPerformanceImmutable() {
 		self.measure {
 			_ = try? Mapper<PerformanceImmutableMappableObject>().mapArray(JSONString: self.JSONTestString)
@@ -77,7 +77,7 @@ class PerformanceTests: XCTestCase {
 }
 
 class PerformanceMappableObject: Mappable {
-	
+
 	var string: String?
 	var int: Int?
 	var double: Double?
@@ -87,11 +87,11 @@ class PerformanceMappableObject: Mappable {
 	var dictionary: [String: Any]?
 	var object: PerformanceMappableObject?
 	var objects: [PerformanceMappableObject]?
-	
-	required init?(map: Map){
-		
+
+	required init?(map: Map) {
+
 	}
-	
+
 	func mapping(map: Map) {
 		string		<- map["string"]
 		int			<- map["int"]
@@ -106,7 +106,7 @@ class PerformanceMappableObject: Mappable {
 }
 
 class PerformanceStaticMappableObject: StaticMappable {
-	
+
 	var string: String?
 	var int: Int?
 	var double: Double?
@@ -116,11 +116,11 @@ class PerformanceStaticMappableObject: StaticMappable {
 	var dictionary: [String: Any]?
 	var object: PerformanceStaticMappableObject?
 	var objects: [PerformanceStaticMappableObject]?
-	
+
 	static func objectForMapping(map: Map) -> BaseMappable? {
 		return PerformanceStaticMappableObject()
 	}
-	
+
 	func mapping(map: Map) {
 		string		<- map["string"]
 		int			<- map["int"]
@@ -135,7 +135,7 @@ class PerformanceStaticMappableObject: StaticMappable {
 }
 
 class PerformanceImmutableMappableObject: ImmutableMappable {
-	
+
 	let string: String?
 	let int: Int?
 	let double: Double?
@@ -157,7 +157,7 @@ class PerformanceImmutableMappableObject: ImmutableMappable {
 		object = try map.value("object")
 		objects = try map.value("objects")
 	}
-	
+
 	func mapping(map: Map) {
 		string		>>> map["string"]
 		int			>>> map["int"]
@@ -170,5 +170,3 @@ class PerformanceImmutableMappableObject: ImmutableMappable {
 		objects		>>> map["objects"]
 	}
 }
-
-

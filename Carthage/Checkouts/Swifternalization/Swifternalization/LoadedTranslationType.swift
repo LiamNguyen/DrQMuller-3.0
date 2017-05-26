@@ -20,7 +20,7 @@ enum LoadedTranslationType {
         "welcome": "welcome"
     */
     case simple
-    
+
     /**
     Pair where value is a dictionary with expressions.
     
@@ -31,7 +31,7 @@ enum LoadedTranslationType {
         }
     */
     case withExpressions
-    
+
     /**
     Pair where value is a dictionary with length variations.
     
@@ -42,7 +42,7 @@ enum LoadedTranslationType {
         }
     */
     case withLengthVariations
-    
+
     /**
     Pair where value is dictionary that contains dictionary with expression and
     length variations.

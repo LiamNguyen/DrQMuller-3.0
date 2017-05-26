@@ -4,7 +4,7 @@ import Foundation
 Class that gets dictionary of translations and turn it into `LoadedTranslation`s.
 */
 final class TranslationsLoader {
-    
+
     /**
     Converts dictionary into array of `LoadedTranslation`s.
     
@@ -26,10 +26,10 @@ final class TranslationsLoader {
                 }
             }
         }
-        
+
         return loadedTranslations
     }
-    
+
     /**
     Analyzes passed dictionary and checks its content to match it to some translation type.
     
@@ -40,7 +40,7 @@ final class TranslationsLoader {
         // Method counts dicts and strings occurences and return proper type.
         var dicts = 0
         var strings = 0
-        
+
         // Count every string or dict occurence.
         for (_, value) in element {
             if value is String {
@@ -49,7 +49,7 @@ final class TranslationsLoader {
                 dicts += 1
             }
         }
-        
+
         /*
         If there is only string then check if the keys are length variations or
         contain some expressions. IF there is some dict and some strings (or no
@@ -62,7 +62,7 @@ final class TranslationsLoader {
         } else if strings >= 0 && dicts > 0 {
             return .withExpressionsAndLengthVariations
         }
-        
+
         // Not supported type should be nil.
         return nil
     }

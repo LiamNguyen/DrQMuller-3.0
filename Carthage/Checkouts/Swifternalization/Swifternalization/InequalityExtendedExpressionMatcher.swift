@@ -12,17 +12,17 @@ import Foundation
 Validates inequality extended expressions.
 */
 struct InequalityExtendedExpressionMatcher: ExpressionMatcher {
-    
+
     /** 
     Matcher that validates left side of expressions.
     */
     let leftMatcher: InequalityExpressionMatcher
-    
+
     /** 
     Matcher that validates right side of expressions.
     */
     let rightMatcher: InequalityExpressionMatcher
-    
+
     /**
     Creates matcher.
     
@@ -33,7 +33,7 @@ struct InequalityExtendedExpressionMatcher: ExpressionMatcher {
         self.leftMatcher = left
         self.rightMatcher = right
     }
-    
+
     /**
     Validates value passed as parameter.
     

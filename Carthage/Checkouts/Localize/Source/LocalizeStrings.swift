@@ -7,23 +7,22 @@
 
 import UIKit
 
-class LocalizeStrings:LocalizeCommonProtocol, LocalizeProtocol {
-    
+class LocalizeStrings: LocalizeCommonProtocol, LocalizeProtocol {
+
     /// Create default lang name
     override init() {
         super.init()
         self.fileName = "Strings"
     }
-    
+
     // MARK: Public methods
-    
-    
+
     /// Localize a string using your JSON File
     /// If the key is not found return the same key
     /// That prevent replace untagged values
     ///
     /// - returns: localized key or same text
-    public override func localize(key:String, tableName:String? = nil) -> String {
+    public override func localize(key: String, tableName: String? = nil) -> String {
         let tableName = tableName ?? self.fileName
         if let path = self.bundle().path(forResource: self.currentLanguage.rawValue, ofType: "lproj") {
             let bundle = Bundle(path: path)!
@@ -38,11 +37,9 @@ class LocalizeStrings:LocalizeCommonProtocol, LocalizeProtocol {
         }
         return key
     }
-    
-    
+
     // MARK: Config methods
-    
-    
+
     /// Show all aviable languajes whit criteria name
     ///
     /// - returns: list with storaged languages code
@@ -53,5 +50,5 @@ class LocalizeStrings:LocalizeCommonProtocol, LocalizeProtocol {
         }
         return availableLanguages
     }
-    
+
 }

@@ -16,12 +16,12 @@ enum ExpressionPatternType: String {
     Works with Int/Float, e.g. `x<5`, `x=3`, `x<4.5`.
     */
     case Inequality = "ie"
-    
+
     /** 
     Works on Int/Float only, e.g. `4<x<10`, `1<=x<18`, `1.3<=x<15.4`.
     */
     case InequalityExtended = "iex"
-    
+
     /** 
     Regular expression, e.g. `[02-9]+`.
     */

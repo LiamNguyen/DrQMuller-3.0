@@ -1193,7 +1193,7 @@ class ServerTrustPolicyPinCertificatesTestCase: ServerTrustPolicyTestCase {
             TestCertificates.leafSignedByCA1,      // not in certificate chain
             TestCertificates.leafExpired,          // in certificate chain 👍🏼👍🏼
             TestCertificates.leafWildcard,         // not in certificate chain
-            TestCertificates.leafDNSNameAndURI,    // not in certificate chain
+            TestCertificates.leafDNSNameAndURI    // not in certificate chain
         ]
 
         let serverTrustPolicy = ServerTrustPolicy.pinCertificates(

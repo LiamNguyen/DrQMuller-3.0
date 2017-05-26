@@ -15,7 +15,7 @@ class RegexExpressionParserTests: XCTestCase {
         let matcher = RegexExpressionParser("exp:[2-4]").parse() as! RegexExpressionMatcher
         XCTAssertEqual(matcher.pattern, "[2-4]", "should be [2-4]")
     }
-    
+
     func testMatcher2() {
         let matcher = RegexExpressionParser("exp:[a-z]").parse() as! RegexExpressionMatcher
         XCTAssertEqual(matcher.pattern, "[a-z]", "should be [a-z]")

@@ -48,7 +48,7 @@ class BasicTypes: Mappable {
 	var anyObject: Any = true
 	var anyObjectOptional: Any?
 	var anyObjectImplicitlyUnwrapped: Any!
-	
+
 	var arrayBool: Array<Bool> = []
 	var arrayBoolOptional: Array<Bool>?
 	var arrayBoolImplicityUnwrapped: Array<Bool>!
@@ -67,22 +67,22 @@ class BasicTypes: Mappable {
 	var arrayAnyObject: Array<Any> = []
 	var arrayAnyObjectOptional: Array<Any>?
 	var arrayAnyObjectImplicitlyUnwrapped: Array<Any>!
-	
-	var dictBool: Dictionary<String,Bool> = [:]
+
+	var dictBool: Dictionary<String, Bool> = [:]
 	var dictBoolOptional: Dictionary<String, Bool>?
 	var dictBoolImplicityUnwrapped: Dictionary<String, Bool>!
-	var dictInt: Dictionary<String,Int> = [:]
-	var dictIntOptional: Dictionary<String,Int>?
-	var dictIntImplicityUnwrapped: Dictionary<String,Int>!
-	var dictDouble: Dictionary<String,Double> = [:]
-	var dictDoubleOptional: Dictionary<String,Double>?
-	var dictDoubleImplicityUnwrapped: Dictionary<String,Double>!
-	var dictFloat: Dictionary<String,Float> = [:]
-	var dictFloatOptional: Dictionary<String,Float>?
-	var dictFloatImplicityUnwrapped: Dictionary<String,Float>!
-	var dictString: Dictionary<String,String> = [:]
-	var dictStringOptional: Dictionary<String,String>?
-	var dictStringImplicityUnwrapped: Dictionary<String,String>!
+	var dictInt: Dictionary<String, Int> = [:]
+	var dictIntOptional: Dictionary<String, Int>?
+	var dictIntImplicityUnwrapped: Dictionary<String, Int>!
+	var dictDouble: Dictionary<String, Double> = [:]
+	var dictDoubleOptional: Dictionary<String, Double>?
+	var dictDoubleImplicityUnwrapped: Dictionary<String, Double>!
+	var dictFloat: Dictionary<String, Float> = [:]
+	var dictFloatOptional: Dictionary<String, Float>?
+	var dictFloatImplicityUnwrapped: Dictionary<String, Float>!
+	var dictString: Dictionary<String, String> = [:]
+	var dictStringOptional: Dictionary<String, String>?
+	var dictStringImplicityUnwrapped: Dictionary<String, String>!
 	var dictAnyObject: Dictionary<String, Any> = [:]
 	var dictAnyObjectOptional: Dictionary<String, Any>?
 	var dictAnyObjectImplicitlyUnwrapped: Dictionary<String, Any>!
@@ -127,14 +127,14 @@ class BasicTypes: Mappable {
 	var dictEnumIntOptional: [String: EnumInt]?
 	var dictEnumIntImplicitlyUnwrapped: [String: EnumInt]!
 
-	init(){
-		
-	}
-	
-	required init?(map: Map){
+	init() {
 
 	}
-	
+
+	required init?(map: Map) {
+
+	}
+
 	func mapping(map: Map) {
 		bool								<- map["bool"]
 		boolOptional						<- map["boolOpt"]
@@ -154,7 +154,7 @@ class BasicTypes: Mappable {
 		anyObject							<- map["anyObject"]
 		anyObjectOptional					<- map["anyObjectOpt"]
 		anyObjectImplicitlyUnwrapped		<- map["anyObjectImp"]
-		
+
 		arrayBool							<- map["arrayBool"]
 		arrayBoolOptional					<- map["arrayBoolOpt"]
 		arrayBoolImplicityUnwrapped			<- map["arrayBoolImp"]
@@ -173,7 +173,7 @@ class BasicTypes: Mappable {
 		arrayAnyObject						<- map["arrayAnyObject"]
 		arrayAnyObjectOptional				<- map["arrayAnyObjectOpt"]
 		arrayAnyObjectImplicitlyUnwrapped	<- map["arrayAnyObjectImp"]
-		
+
 		dictBool							<- map["dictBool"]
 		dictBoolOptional					<- map["dictBoolOpt"]
 		dictBoolImplicityUnwrapped			<- map["dictBoolImp"]
@@ -209,7 +209,7 @@ class BasicTypes: Mappable {
 		arrayEnumInt						<- map["arrayEnumInt"]
 		arrayEnumIntOptional				<- map["arrayEnumIntOpt"]
 		arrayEnumIntImplicitlyUnwrapped		<- map["arrayEnumIntImp"]
-		
+
 		dictEnumInt							<- map["dictEnumInt"]
 		dictEnumIntOptional					<- map["dictEnumIntOpt"]
 		dictEnumIntImplicitlyUnwrapped		<- map["dictEnumIntImp"]
@@ -222,26 +222,26 @@ class TestCollectionOfPrimitives: Mappable {
 	var dictStringBool: [String: Bool] = [:]
 	var dictStringDouble: [String: Double] = [:]
 	var dictStringFloat: [String: Float] = [:]
-	
+
 	var arrayString: [String] = []
 	var arrayInt: [Int] = []
 	var arrayBool: [Bool] = []
 	var arrayDouble: [Double] = []
 	var arrayFloat: [Float] = []
-	
-	init(){
-		
+
+	init() {
+
 	}
-	
-	required init?(map: Map){
+
+	required init?(map: Map) {
 		if map["value"].value() == nil {
-			
+
 		}
 		if map.JSON["value"] == nil {
-			
+
 		}
 	}
-	
+
 	func mapping(map: Map) {
 		dictStringString    <- map["dictStringString"]
 		dictStringBool      <- map["dictStringBool"]

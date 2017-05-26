@@ -39,7 +39,7 @@ class RegexExpressionParser: ExpressionParser {
             return nil
         }
     }
-    
+
     /**
     Get regular expression pattern from pattern passed during initialization.
     

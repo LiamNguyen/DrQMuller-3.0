@@ -20,7 +20,7 @@ extension Float {
         let r = Float(arc4random(UInt32.self)) / Float(UInt32.max)
         return (r * (upper - lower)) + lower
     }
-    
+
     static func randomNumbers(_ lower: Float, upper: Float, count: Int) -> [Float] {
         var nums = [Float]()
         for _ in 0..<count {
@@ -28,7 +28,7 @@ extension Float {
         }
         return nums
     }
-    
+
     static func randomNumbersStrings(_ lower: Float, upper: Float, count: Int) -> [String] {
         var numStr = [String]()
         for i in randomNumbers(lower, upper: upper, count: count) {

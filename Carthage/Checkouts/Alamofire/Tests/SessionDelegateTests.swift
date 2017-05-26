@@ -421,7 +421,7 @@ class SessionDelegateTestCase: BaseTestCase {
         let urlString = "https://httpbin.org/redirect-to?url=\(redirectURLString)"
         let headers = [
             "Authorization": "1234",
-            "Custom-Header": "foobar",
+            "Custom-Header": "foobar"
         ]
 
         // NOTE: It appears that most headers are maintained during a redirect with the exception of the `Authorization`

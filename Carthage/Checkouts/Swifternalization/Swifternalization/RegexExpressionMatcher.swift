@@ -22,7 +22,7 @@ struct RegexExpressionMatcher: ExpressionMatcher {
     Expression pattern with regular expression inside.
     */
     let pattern: RegexPattern
-    
+
     /**
     Initializes matcher.
     
@@ -31,7 +31,7 @@ struct RegexExpressionMatcher: ExpressionMatcher {
     init(pattern: RegexPattern) {
         self.pattern = pattern
     }
-    
+
     /**
     Validates value by matching it to the pattern it contains.
     

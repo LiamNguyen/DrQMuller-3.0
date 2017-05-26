@@ -28,7 +28,7 @@ different is defined in Base it will be also loaded and then the built-in
 expression that differs.
 */
 class SharedExpressionsProcessor {
-    
+
     /**
     Method takes expression for both Base and preferred language localizations
     and also internally loads built-in expressions, combine them and returns 
@@ -53,25 +53,25 @@ class SharedExpressionsProcessor {
         2. He forgot to define such expression for prefered language.
         */
         let uniqueBaseExpressions = baseLanguageExpressions <! preferedLanguageExpressions
-        
+
         // Expressions from json files.
         let loadedExpressions = uniqueBaseExpressions + preferedLanguageExpressions
-        
+
         // Load prefered language nad base built-in expressions. Get unique.
         let prefBuiltInExpressions = loadBuiltInExpressions(preferedLanguage)
         let baseBuiltInExpressions = SharedBaseExpression.allExpressions()
         let uniqueBaseBuiltInExpressions = baseBuiltInExpressions <! prefBuiltInExpressions
-        
+
         // Unique built-in expressions made of base + prefered language.
         let builtInExpressions = uniqueBaseBuiltInExpressions + prefBuiltInExpressions
-        
+
         /*
         To get it done we must get only unique built-in expressions that are not 
         in loaded expressions.
         */
         return loadedExpressions + (builtInExpressions <! loadedExpressions)
     }
-    
+
     /**
     Method loads built-in framework's built-in expressions for specific language.
     

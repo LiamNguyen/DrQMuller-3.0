@@ -9,7 +9,7 @@ internal typealias JSONDictionary = [String : Any]
 Simple JSON file loader.
 */
 final class JSONFileLoader {
-    
+
     /**
     Loads translations dict for specified language.
     
@@ -20,7 +20,7 @@ final class JSONFileLoader {
     class func loadTranslations(_ countryCode: CountryCode, bundle: Bundle) -> JSONDictionary {
         return self.load(countryCode, bundle: bundle) ?? [:]
     }
-    
+
     /**
     Loads expressions dict for specified language.
     
@@ -31,7 +31,7 @@ final class JSONFileLoader {
     class func loadExpressions(_ countryCode: CountryCode, bundle: Bundle) -> [String : String] {
         return self.load("expressions", bundle: bundle)?[countryCode] as? [String : String] ?? [:]
     }
-    
+
     /**
     Loads content of a file with specified name, type and bundle.
     
@@ -44,11 +44,11 @@ final class JSONFileLoader {
         if let fileURL = bundle.url(forResource: fileName, withExtension: "json") {
             return load(fileURL)
         }
-    
+
         print("Cannot find file \(fileName).json.")
         return nil
     }
-    
+
     /**
     Loads file for specified URL and try to serialize it.
     

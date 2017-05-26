@@ -36,59 +36,59 @@ class NestedArrayTests: XCTestCase {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
-    
+
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-	
+
 	func testNestedArray() {
 		let JSON: [String: Any] = [ "nested": [ ["value": 123], ["value": 456] ] ]
-		
+
 		let mapper = Mapper<NestedArray>()
-		
+
 		let value: NestedArray! = mapper.map(JSON: JSON)
 		XCTAssertNotNil(value)
-		
+
 		let JSONFromValue = mapper.toJSON(value)
 		let valueFromParsedJSON: NestedArray! = mapper.map(JSON: JSONFromValue)
 		XCTAssertNotNil(valueFromParsedJSON)
-		
+
 		XCTAssertEqual(value.value_0, valueFromParsedJSON.value_0)
 		XCTAssertEqual(value.value_1, valueFromParsedJSON.value_1)
 	}
-	
+
 	func testNestedObjectArray() {
 		let value = 456
 		let JSON: [String: Any] = [ "nested": [ ["value": 123], ["value": value] ] ]
-		
+
 		let mapper = Mapper<NestedArray>()
-		
+
 		let mappedObject: NestedArray! = mapper.map(JSON: JSON)
 		XCTAssertNotNil(mappedObject)
-		
+
 		XCTAssertEqual(mappedObject.nestedObject!.value, value)
 		XCTAssertEqual(mappedObject.nestedObjectValue, value)
 	}
 }
 
 class NestedArray: Mappable {
-	
+
 	var value_0: Int?
 	var value_1: Int?
-	
+
 	var nestedObject: NestedObject?
 
 	var nestedObjectValue: Int?
-	
-	required init?(map: Map){
-		
+
+	required init?(map: Map) {
+
 	}
-	
+
 	func mapping(map: Map) {
 		value_0	<- map["nested.0.value"]
 		value_1	<- map["nested.1.value"]
-		
+
 		nestedObject <- map["nested.1"]
 		nestedObjectValue <- map["nested.1.value"]
 	}
@@ -96,9 +96,9 @@ class NestedArray: Mappable {
 
 class NestedObject: Mappable {
 	var value: Int?
-	
-	required init?(map: Map){}
-	
+
+	required init?(map: Map) {}
+
 	func mapping(map: Map) {
 		value	<- map["value"]
 	}

@@ -427,7 +427,7 @@ class ResponseFlatMapTestCase: BaseTestCase {
 
         // When
         Alamofire.request(urlString, parameters: ["foo": "bar"]).responseData { resp in
-            response = resp.flatMap { json in
+            response = resp.flatMap { _ in
                 throw TransformError()
             }
 

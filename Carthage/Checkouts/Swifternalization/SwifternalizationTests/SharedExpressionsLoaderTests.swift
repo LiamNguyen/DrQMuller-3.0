@@ -10,7 +10,7 @@ import UIKit
 import XCTest
 
 class SharedExpressionsLoaderTests: XCTestCase {
-    
+
     func testShouldLoadExpressions() {
         let expressions = SharedExpressionsLoader.loadExpressions(ExpressionJSONs.base())
         XCTAssertEqual(expressions.count, 3, "")

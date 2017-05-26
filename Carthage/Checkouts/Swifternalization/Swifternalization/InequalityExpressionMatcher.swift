@@ -12,17 +12,17 @@ import Foundation
 Struct that is used to validate inequality expressions.
 */
 struct InequalityExpressionMatcher: ExpressionMatcher {
-    
+
     /** 
     `InequalitySign` of expression to be matched.
     */
     let sign: InequalitySign
-    
+
     /** 
     A value that will be used during validation to compare to passed one.
     */
     let value: Double
-        
+
     /**
     Initialization method takes few parameters that has been fetched from
     expression parser.
@@ -36,7 +36,7 @@ struct InequalityExpressionMatcher: ExpressionMatcher {
         self.sign = sign
         self.value = value
     }
-    
+
     /**
     Method used to validate passed value and check if it match to expression.
     

@@ -13,7 +13,7 @@ Translation processor which takes loaded translations and process them to make
 them regular translation objects that can be used for further work.
 */
 class LoadedTranslationsProcessor {
-    
+
     /**
     Method takes base and prefered language translations and also shared 
     expressions and mix them together. Meaning, It checks which base loaded 
@@ -43,7 +43,7 @@ class LoadedTranslationsProcessor {
                 return preferedLanguageTranslations.filter({$0.key == base.key}).count == 0
             })
         }
-        
+
         let translationsReadyToProcess = preferedLanguageTranslations + uniqueBaseTranslations
         /*
         Create array with translations. Array is just a map created from loaded 
@@ -56,7 +56,7 @@ class LoadedTranslationsProcessor {
                 // Simple translation with key and value.
                 let value = $0.content[$0.key] as! String
                 return Translation(key: $0.key, expressions: [Expression(pattern: $0.key, value: value)])
-                
+
             case .withExpressions:
                 /*
                 Translation that contains expression.
@@ -70,7 +70,7 @@ class LoadedTranslationsProcessor {
                     expressions.append(Expression(pattern: pattern, value: value))
                 }
                 return Translation(key: $0.key, expressions: expressions)
-                
+
             case .withLengthVariations:
                 // Translation contains length expressions like @100, @200, etc.
                 var lengthVariations = [LengthVariation]()
@@ -105,7 +105,7 @@ class LoadedTranslationsProcessor {
             }
         })
     }
-    
+
     /**
     Parses nubmer from length variation key.
     

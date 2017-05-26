@@ -29,17 +29,16 @@ class ViewController: UIViewController {
         for language in Localize.availableLanguages() {
             let displayName = Localize.displayNameForLanguage(language)
             let languageAction = UIAlertAction(title: displayName, style: .default, handler: {
-                (alert: UIAlertAction!) -> Void in
+                (_: UIAlertAction!) -> Void in
                 Localize.update(language: language)
             })
             actionSheet.addAction(languageAction)
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: {
-            (alert: UIAlertAction) -> Void in
+            (_: UIAlertAction) -> Void in
         })
         actionSheet.addAction(cancelAction)
         self.present(actionSheet, animated: true, completion: nil)
     }
 
 }
-

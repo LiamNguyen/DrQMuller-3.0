@@ -9,7 +9,7 @@ import UIKit
 
 /// All posible languages.
 public enum Languages: String {
-    
+
     /// english with ISO code en
     case english = "en"
     /// spanish with ISO code es
@@ -68,5 +68,5 @@ public enum Languages: String {
     case hebrew = "he"
     /// arabic with ISO code ar
     case arabic	= "ar"
-    
+
 }

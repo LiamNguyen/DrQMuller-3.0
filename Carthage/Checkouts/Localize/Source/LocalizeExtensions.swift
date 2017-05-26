@@ -12,7 +12,7 @@ private var localizeKey2: UInt8 = 1
 
 /// Extension for UI element is the easier way to localize your keys.
 extension UIBarButtonItem {
-    
+
     /// Localizable tag storeged property
     var localizeTag: String! {
         get {
@@ -22,7 +22,7 @@ extension UIBarButtonItem {
             objc_setAssociatedObject(self, &localizeKey1, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)
         }
     }
-    
+
     /// Override awakeFromNib when is going visible, try search a key in JSON File
     /// If key match replace text, if can't match return the key (original text)
     /// Set title for UIBarButtonItem
@@ -31,7 +31,7 @@ extension UIBarButtonItem {
         self.localize()
         NotificationCenter.default.addObserver(self, selector: #selector(localize), name: NSNotification.Name(LocalizeChangeNotification), object: nil)
     }
-    
+
     /// Here we change text with key replacement
     public func localize() {
         if Localize.shared.localizeInterface == .classes {
@@ -48,12 +48,12 @@ extension UIBarButtonItem {
             }
         }
     }
-    
+
 }
 
 /// Extension for UI element is the easier way to localize your keys.
 extension UIButton {
-    
+
     /// Localizable tag storeged property
     var localizeTag: String! {
         get {
@@ -63,7 +63,7 @@ extension UIButton {
             objc_setAssociatedObject(self, &localizeKey1, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)
         }
     }
-    
+
     /// Override awakeFromNib when is going visible, try search a key in JSON File
     /// If key match replace text, if can't match return the key (original text)
     /// Set title for UIButton in each state
@@ -72,7 +72,7 @@ extension UIButton {
         self.localize()
         NotificationCenter.default.addObserver(self, selector: #selector(localize), name: NSNotification.Name(LocalizeChangeNotification), object: nil)
     }
-    
+
     /// Here we change text with key replacement
     public func localize() {
         if Localize.shared.localizeInterface == .classes {
@@ -80,7 +80,7 @@ extension UIButton {
         }
         if self.localizeTag != nil {
             for state in [UIControlState.normal, .highlighted, .selected, .disabled] {
-                if let title = title(for: state) , !title.isEmpty {
+                if let title = title(for: state), !title.isEmpty {
                     self.setTitle(self.localizeTag?.localize(), for: state)
                 }
             }
@@ -96,12 +96,12 @@ extension UIButton {
             }
         }
     }
-    
+
 }
 
 /// Extension for UI element is the easier way to localize your keys.
 extension UILabel {
-    
+
     /// Localizable tag storeged property
     var localizeTag: String! {
         get {
@@ -111,7 +111,7 @@ extension UILabel {
             objc_setAssociatedObject(self, &localizeKey1, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)
         }
     }
-    
+
     /// Override awakeFromNib when is going visible, try search a key in JSON File
     /// If key match replace text, if can't match return the key (original text)
     /// Set title for UILabel
@@ -120,7 +120,7 @@ extension UILabel {
         self.localize()
         NotificationCenter.default.addObserver(self, selector: #selector(localize), name: NSNotification.Name(LocalizeChangeNotification), object: nil)
     }
-    
+
     /// Here we change text with key replacement
     public func localize() {
         if Localize.shared.localizeInterface == .classes {
@@ -137,12 +137,12 @@ extension UILabel {
             }
         }
     }
-    
+
 }
 
 /// Extension for UI element is the easier way to localize your keys.
 extension UINavigationItem {
-    
+
     /// Localizable tag storeged property
     var localizeTagTitle: String! {
         get {
@@ -152,7 +152,7 @@ extension UINavigationItem {
             objc_setAssociatedObject(self, &localizeKey1, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)
         }
     }
-    
+
     /// Localizable tag storeged property
     var localizeTagPrompt: String! {
         get {
@@ -162,7 +162,7 @@ extension UINavigationItem {
             objc_setAssociatedObject(self, &localizeKey2, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)
         }
     }
-    
+
     /// Override awakeFromNib when is going visible, try search a key in JSON File
     /// If key match replace text, if can't match return the key (original text)
     /// Set title and prompt for UINavigationItem
@@ -171,7 +171,7 @@ extension UINavigationItem {
         self.localize()
         NotificationCenter.default.addObserver(self, selector: #selector(localize), name: NSNotification.Name(LocalizeChangeNotification), object: nil)
     }
-    
+
     /// Here we change text with key replacement
     public func localize() {
         if Localize.shared.localizeInterface == .classes {
@@ -180,7 +180,7 @@ extension UINavigationItem {
         self.localizeTitle()
         self.localizePrompt()
     }
-    
+
     /// Here we change text with key replacement for title
     func localizeTitle() {
         if self.localizeTagTitle != nil {
@@ -194,7 +194,7 @@ extension UINavigationItem {
             }
         }
     }
-    
+
     /// Here we change text with key replacement for prompt
     func localizePrompt() {
         if self.localizeTagPrompt != nil {
@@ -208,12 +208,12 @@ extension UINavigationItem {
             }
         }
     }
-    
+
 }
 
 /// Extension for UI element is the easier way to localize your keys.
 extension UISearchBar {
-    
+
     /// Localizable tag storeged property
     var localizeTagPlaceholder: String! {
         get {
@@ -223,7 +223,7 @@ extension UISearchBar {
             objc_setAssociatedObject(self, &localizeKey1, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)
         }
     }
-    
+
     /// Localizable tag storeged property
     var localizeTagPrompt: String! {
         get {
@@ -233,7 +233,7 @@ extension UISearchBar {
             objc_setAssociatedObject(self, &localizeKey2, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)
         }
     }
-    
+
     /// Override awakeFromNib when is going visible, try search a key in JSON File
     /// If key match replace text, if can't match return the key (original text)
     /// Set title and prompt for UISearchBar
@@ -242,7 +242,7 @@ extension UISearchBar {
         self.localize()
         NotificationCenter.default.addObserver(self, selector: #selector(localize), name: NSNotification.Name(LocalizeChangeNotification), object: nil)
     }
-    
+
     /// Here we change text with key replacement
     public func localize() {
         if Localize.shared.localizeInterface == .classes {
@@ -251,7 +251,7 @@ extension UISearchBar {
         self.localizePlaceholder()
         self.localizePrompt()
     }
-    
+
     /// Here we change text with key replacement for placeholder
     func localizePlaceholder() {
         if self.localizeTagPlaceholder != nil {
@@ -265,7 +265,7 @@ extension UISearchBar {
             }
         }
     }
-    
+
     /// Here we change text with key replacement for prompt
     func localizePrompt() {
         if self.localizeTagPrompt != nil {
@@ -279,12 +279,12 @@ extension UISearchBar {
             }
         }
     }
-    
+
 }
 
 /// Extension for UI element is the easier way to localize your keys.
 extension UISegmentedControl {
-    
+
     /// Localizable tag storeged property
     var localizeTag: String! {
         get {
@@ -294,7 +294,7 @@ extension UISegmentedControl {
             objc_setAssociatedObject(self, &localizeKey1, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)
         }
     }
-    
+
     /// Override awakeFromNib when is going visible, try search a key in JSON File
     /// If key match replace text, if can't match return the key (original text)
     /// Set title for UISegmentedControl in each state
@@ -303,7 +303,7 @@ extension UISegmentedControl {
         self.localize()
         NotificationCenter.default.addObserver(self, selector: #selector(localize), name: NSNotification.Name(LocalizeChangeNotification), object: nil)
     }
-    
+
     /// Here we change text with key replacement
     public func localize() {
         if Localize.shared.localizeInterface == .classes {
@@ -315,12 +315,12 @@ extension UISegmentedControl {
             }
         }
     }
-    
+
 }
 
 /// Extension for UI element is the easier way to localize your keys.
 extension UITabBarItem {
-    
+
     /// Localizable tag storeged property
     var localizeTag: String! {
         get {
@@ -330,7 +330,7 @@ extension UITabBarItem {
             objc_setAssociatedObject(self, &localizeKey1, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)
         }
     }
-    
+
     /// Override awakeFromNib when is going visible, try search a key in JSON File
     /// If key match replace text, if can't match return the key (original text)
     /// Set title for UITabBarItem
@@ -339,7 +339,7 @@ extension UITabBarItem {
         self.localize()
         NotificationCenter.default.addObserver(self, selector: #selector(localize), name: NSNotification.Name(LocalizeChangeNotification), object: nil)
     }
-    
+
     /// Here we change text with key replacement
     public func localize() {
         if Localize.shared.localizeInterface == .classes {
@@ -356,12 +356,12 @@ extension UITabBarItem {
             }
         }
     }
-    
+
 }
 
 /// Extension for UI element is the easier way to localize your keys.
 extension UITextField {
-    
+
     /// Localizable tag storeged property
     var localizeTagText: String! {
         get {
@@ -371,7 +371,7 @@ extension UITextField {
             objc_setAssociatedObject(self, &localizeKey1, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)
         }
     }
-    
+
     /// Localizable tag storeged property
     var localizeTagPlaceholder: String! {
         get {
@@ -381,7 +381,7 @@ extension UITextField {
             objc_setAssociatedObject(self, &localizeKey2, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)
         }
     }
-    
+
     /// Override awakeFromNib when is going visible, try search a key in JSON File
     /// If key match replace text, if can't match return the key (original text)
     /// Set title and placeholder for UITextField
@@ -390,7 +390,7 @@ extension UITextField {
         self.localize()
         NotificationCenter.default.addObserver(self, selector: #selector(localize), name: NSNotification.Name(LocalizeChangeNotification), object: nil)
     }
-    
+
     /// Here we change text with key replacement
     public func localize() {
         if Localize.shared.localizeInterface == .classes {
@@ -399,7 +399,7 @@ extension UITextField {
         self.localizePlaceholder()
         self.localizeText()
     }
-    
+
     /// Here we change text with key replacement for placeholder
     func localizePlaceholder() {
         if self.localizeTagPlaceholder != nil {
@@ -413,7 +413,7 @@ extension UITextField {
             }
         }
     }
-    
+
     /// Here we change text with key replacement for text
     func localizeText() {
         if self.localizeTagText != nil {
@@ -427,12 +427,12 @@ extension UITextField {
             }
         }
     }
-    
+
 }
 
 /// Extension for UI element is the easier way to localize your keys.
 extension UITextView {
-    
+
     /// Localizable tag storeged property
     var localizeTag: String! {
         get {
@@ -442,7 +442,7 @@ extension UITextView {
             objc_setAssociatedObject(self, &localizeKey1, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)
         }
     }
-    
+
     /// Override awakeFromNib when is going visible, try search a key in JSON File
     /// If key match replace text, if can't match return the key (original text)
     /// Set title for UITextView
@@ -451,7 +451,7 @@ extension UITextView {
         self.localize()
         NotificationCenter.default.addObserver(self, selector: #selector(localize), name: NSNotification.Name(LocalizeChangeNotification), object: nil)
     }
-    
+
     /// Here we change text with key replacement
     public func localize() {
         if Localize.shared.localizeInterface == .classes {
@@ -468,5 +468,5 @@ extension UITextView {
             }
         }
     }
-    
+
 }

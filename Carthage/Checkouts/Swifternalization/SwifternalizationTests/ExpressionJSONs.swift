@@ -9,7 +9,7 @@
 import Foundation
 
 class ExpressionJSONs {
-    
+
     class func base() -> [String : String] {
         return [
             "key1": "val1",
@@ -17,7 +17,7 @@ class ExpressionJSONs {
             "key3": "val3"
         ]
     }
-    
+
     class func en() -> [String : String] {
         return [
             "key3": "val3",
