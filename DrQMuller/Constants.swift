@@ -3,6 +3,13 @@ import Localize
 import UIKit
 
 struct Constants {
+    struct Config {
+        #if DEVELOPMENT
+            static let API_BASE_URL = "http://210.211.109.180/beta_drmuller/api/index.php/"
+        #else
+            static let API_BASE_URL = "http://210.211.109.180/drmuller/api/index.php/"
+        #endif
+    }
 
 	static let deviceUUID: String = UIDevice.current.identifierForVendor?.uuidString ?? ""
 	static let deviceName: String = UIDevice.current.name
@@ -42,9 +49,9 @@ struct Constants {
 			static let loginBackground	= "background.png"
 		}
 
-		struct TextfieldPlaceHolder {
-			static let username			= "Login.TextfieldPlaceHolder.username".localize()
-			static let password			= "Login.TextfieldPlaceHolder.password".localize()
+		struct TextFieldPlaceHolder {
+			static let username			= "Login.TextFieldPlaceHolder.username".localize()
+			static let password			= "Login.TextFieldPlaceHolder.password".localize()
 		}
 
 		struct Button {
@@ -54,30 +61,30 @@ struct Constants {
 		}
 	}
 
-	struct HttpStatusCode {
-		//    2XX Sucess
+	public enum HttpStatusCode: Int {
+		//    2XX Success
 
-		static let success                  = 200
-		static let created                  = 201
-		static let accepted                 = 202
-		static let noContent                = 204
+		case success                  = 200
+		case created                  = 201
+        case accepted                 = 202
+        case noContent                = 204
 
 		//    4XX Client Error
 
-		static let badRequest               = 400
-		static let unauthorized             = 401
-		static let forbidden                = 403
-		static let notFound                 = 404
-		static let methodNotAllowed         = 405
-		static let notAcceptable            = 406
-		static let conflict                 = 409
+        case badRequest               = 400
+        case unauthorized             = 401
+        case forbidden                = 403
+        case notFound                 = 404
+        case methodNotAllowed         = 405
+        case notAcceptable            = 406
+        case conflict                 = 409
 
 		//    5XX Server Error
 
-		static let internalServerError      = 500
-		static let notImplemented           = 501
-		static let badGateway               = 502
-		static let gatewayTimeout           = 504
+        case internalServerError      = 500
+        case notImplemented           = 501
+        case badGateway               = 502
+        case gatewayTimeout           = 504
 	}
 
 	public enum DeviceType {
@@ -87,5 +94,24 @@ struct Constants {
 		case iPhone6Plus
 		case iPadMini
 		case iPadPro
+	}
+
+	public enum RequestMethod: String {
+		case GET
+		case POST
+		case PUT
+		case PATCH
+	}
+
+	public enum Gender: String {
+		case Male
+		case Female
+	}
+
+	public enum UISavedStep: String {
+		case none
+		case basic
+		case necessary
+		case important
 	}
 }

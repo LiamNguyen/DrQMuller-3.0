@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "76111C331ED8C2ED00CFD04C"
+               BlueprintIdentifier = "760AB9A51ED9E77700FF26A6"
                BuildableName = "DrQMuller Dev.app"
                BlueprintName = "DrQMuller Dev"
                ReferencedContainer = "container:DrQMuller.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "76111C331ED8C2ED00CFD04C"
+            BlueprintIdentifier = "760AB9A51ED9E77700FF26A6"
             BuildableName = "DrQMuller Dev.app"
             BlueprintName = "DrQMuller Dev"
             ReferencedContainer = "container:DrQMuller.xcodeproj">
@@ -55,7 +55,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "76111C331ED8C2ED00CFD04C"
+            BlueprintIdentifier = "760AB9A51ED9E77700FF26A6"
             BuildableName = "DrQMuller Dev.app"
             BlueprintName = "DrQMuller Dev"
             ReferencedContainer = "container:DrQMuller.xcodeproj">
@@ -74,7 +74,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "76111C331ED8C2ED00CFD04C"
+            BlueprintIdentifier = "760AB9A51ED9E77700FF26A6"
             BuildableName = "DrQMuller Dev.app"
             BlueprintName = "DrQMuller Dev"
             ReferencedContainer = "container:DrQMuller.xcodeproj">

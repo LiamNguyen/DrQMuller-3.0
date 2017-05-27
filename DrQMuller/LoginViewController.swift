@@ -44,6 +44,14 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         self.navigationController?.navigationBar.isHidden = false
 	}
 
+    @IBAction func txtUserNameOnChange(_ sender: CustomTextField) {
+		loginViewModel.username.value = txtUsername.text ?? ""
+    }
+
+    @IBAction func txtPasswordOnChange(_ sender: CustomTextField) {
+        loginViewModel.password.value = txtPassword.text ?? ""
+    }
+
 //	Mark: Bind observables from ViewModel
 
 	fileprivate func bindRxObserver() {
@@ -71,8 +79,26 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 //	Mark: Bind actions supported by RxSwift & RxCocoa
 
 	fileprivate func bindRxAction() {
+        btnLogin
+            .rx
+            .tap
+            .subscribe(onNext: { [weak self] in
+                self?.userLogin()
+            }).addDisposableTo(disposeBag)
+    }
 
-	}
+//    Mark: User Login
+
+    fileprivate func userLogin() {
+        loginViewModel.userLogin { result in
+            switch result {
+            case .login_success:
+                print("User in")
+            default:
+                print(result.rawValue.localize())
+            }
+        }
+    }
 
 //	Mark: Draw layout and initial view appearance
 
@@ -84,10 +110,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 //	Mark: Localize texts when language changed
 
     fileprivate func setPlaceHoldersAndButtonTitles() {
-//        Mark: Textfield Placeholder
+//        Mark: TextFields Placeholder
 
-        self.txtUsername.placeholder = Constants.Login.TextfieldPlaceHolder.username
-        self.txtPassword.placeholder = Constants.Login.TextfieldPlaceHolder.password
+        self.txtUsername.placeholder = Constants.Login.TextFieldPlaceHolder.username
+        self.txtPassword.placeholder = Constants.Login.TextFieldPlaceHolder.password
 
 //        Mark: Buttons's Title
 
@@ -96,7 +122,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 		self.btnRegister.setTitle(Constants.Login.Button.register, for: .normal)
     }
 
-//	Mark: Textfields delegation
+//	Mark: TextFields delegation
 
 	func textFieldDidBeginEditing(_ textField: UITextField) {
 		if Constants.DeviceModel.deviceType() == .iPhone5 {

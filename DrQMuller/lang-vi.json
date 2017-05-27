@@ -1,6 +1,6 @@
 {
 	"Login": {
-		"TextfieldPlaceHolder": {
+		"TextFieldPlaceHolder": {
 			"username": "Tên đăng nhập",
 			"password": "Mật khẩu"
 		},
