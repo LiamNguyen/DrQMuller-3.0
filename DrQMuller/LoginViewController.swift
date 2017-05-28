@@ -1,6 +1,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import AudioToolbox
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
 
@@ -95,6 +96,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             case .login_success:
                 print("User in")
             default:
+				AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
 				self.showMessage(result.rawValue.localize(), type: .error, options: [.animation(.fade)])
             }
         }
