@@ -95,7 +95,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             case .login_success:
                 print("User in")
             default:
-                print(result.rawValue.localize())
+				self.showMessage(result.rawValue.localize(), type: .error, options: [.animation(.fade)])
             }
         }
     }

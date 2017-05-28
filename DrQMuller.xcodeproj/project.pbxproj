@@ -71,6 +71,8 @@
 		7690BCB51ED2376200B631C2 /* expressions.json in Resources */ = {isa = PBXBuildFile; fileRef = 7690BCB41ED2376200B631C2 /* expressions.json */; };
 		7690BCB71ED2382700B631C2 /* base.json in Resources */ = {isa = PBXBuildFile; fileRef = 7690BCB61ED2382700B631C2 /* base.json */; };
 		7690BCC61ED23AE600B631C2 /* lang-vi.json in Resources */ = {isa = PBXBuildFile; fileRef = 7690BCC51ED23AE600B631C2 /* lang-vi.json */; };
+		76973E271EDAB239009F105C /* GSMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76973E261EDAB239009F105C /* GSMessage.swift */; };
+		76973E281EDAB340009F105C /* GSMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76973E261EDAB239009F105C /* GSMessage.swift */; };
 		E651738C890277201F3CDC6C /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65172CA792FF7ABCD6E8C39 /* RequestBuilder.swift */; };
 		E651739B05142D32B7194C49 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6517C6E89921365674412E1 /* Helper.swift */; };
 		E6517507AA339A2CB25C58CF /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6517DEF750C8779C2F8BE76 /* Customer.swift */; };
@@ -169,6 +171,7 @@
 		7690BCB41ED2376200B631C2 /* expressions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = expressions.json; sourceTree = "<group>"; };
 		7690BCB61ED2382700B631C2 /* base.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = base.json; sourceTree = "<group>"; };
 		7690BCC51ED23AE600B631C2 /* lang-vi.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "lang-vi.json"; sourceTree = "<group>"; };
+		76973E261EDAB239009F105C /* GSMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GSMessage.swift; sourceTree = "<group>"; };
 		E65172CA792FF7ABCD6E8C39 /* RequestBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
 		E65175D57DF7BF9D520E7586 /* ExtendError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtendError.swift; sourceTree = "<group>"; };
 		E6517682BD42F0ED1126B8EB /* Retrier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Retrier.swift; sourceTree = "<group>"; };
@@ -326,6 +329,7 @@
 		766FBAA31ED209CC00E4454D /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				76973E251EDAB22C009F105C /* lib */,
 				766FBAA41ED209F200E4454D /* Constants.swift */,
 				E6517C6E89921365674412E1 /* Helper.swift */,
 				E65175D57DF7BF9D520E7586 /* ExtendError.swift */,
@@ -384,6 +388,14 @@
 				7690BCA81ED2309700B631C2 /* Swifternalization.framework */,
 			);
 			name = ExternalLibraries;
+			sourceTree = "<group>";
+		};
+		76973E251EDAB22C009F105C /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				76973E261EDAB239009F105C /* GSMessage.swift */,
+			);
+			name = lib;
 			sourceTree = "<group>";
 		};
 		E6517D0C6C0DE98A8D97682F /* Model */ = {
@@ -659,6 +671,7 @@
 				760AB9B11ED9E77700FF26A6 /* Customer.swift in Sources */,
 				E651739B05142D32B7194C49 /* Helper.swift in Sources */,
 				E6517ECF96F463E5375A57F8 /* ExtendError.swift in Sources */,
+				76973E281EDAB340009F105C /* GSMessage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -679,6 +692,7 @@
 				E6517507AA339A2CB25C58CF /* Customer.swift in Sources */,
 				E65178324D656FC515B223C1 /* Helper.swift in Sources */,
 				E6517BC1C3C3F4F2920338E6 /* ExtendError.swift in Sources */,
+				76973E271EDAB239009F105C /* GSMessage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
