@@ -70,7 +70,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="go" secureTextEntry="YES"/>
                                 <connections>
                                     <action selector="txtPasswordOnChange:" destination="BYZ-38-t0r" eventType="editingChanged" id="GVB-ri-QDR"/>
                                 </connections>
@@ -152,6 +152,7 @@
                         <outlet property="btnLogin" destination="ZOQ-tE-m29" id="jKR-iI-jKD"/>
                         <outlet property="btnRegister" destination="AaH-xS-m1G" id="hjJ-cJ-4E8"/>
                         <outlet property="btnResetPassword" destination="ULS-vU-Syc" id="Jkw-Zk-ajx"/>
+                        <outlet property="constraintTopLogoTopView" destination="LRS-OH-SMh" id="eV8-bl-sSu"/>
                         <outlet property="constraintTopUsernameBottomLogo" destination="q3u-0W-1qw" id="YV7-zj-i5i"/>
                         <outlet property="txtPassword" destination="kgb-6q-lrQ" id="C2t-NF-A4w"/>
                         <outlet property="txtUsername" destination="AUM-ga-0Hf" id="C28-YN-Wdi"/>

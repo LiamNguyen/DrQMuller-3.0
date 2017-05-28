@@ -13,6 +13,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 	@IBOutlet fileprivate weak var activityIndicator: UIActivityIndicatorView!
 
     @IBOutlet fileprivate weak var constraintTopUsernameBottomLogo: NSLayoutConstraint!
+    @IBOutlet fileprivate weak var constraintTopLogoTopView: NSLayoutConstraint!
 
 	fileprivate var loginViewModel: LoginViewModel!
 
@@ -64,17 +65,23 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 				self?.activityIndicator.stopAnimating()
 			}).addDisposableTo(disposeBag)
 
-		loginViewModel.initialConstraintUsernameLogoObservable = Float(self.constraintTopUsernameBottomLogo.constant)
-		loginViewModel.constraintUsernameLogoObservable
-			.map({ CGFloat($0) })
-			.subscribe(onNext: { [weak self] constant in
-				DispatchQueue.main.async {
-					self?.constraintTopUsernameBottomLogo.constant = constant
-					UIView.animate(withDuration: 0.4, animations: {
-						self?.view.layoutIfNeeded()
-					})
-				}
-			}).addDisposableTo(disposeBag)
+		loginViewModel.initialConstraintUsernameLogo = Float(self.constraintTopUsernameBottomLogo.constant)
+		loginViewModel.initialContraintLogoView = Float(self.constraintTopLogoTopView.constant)
+
+		Observable.combineLatest(
+				loginViewModel.constraintUsernameLogoObservable,
+				loginViewModel.constraintLogoViewObservable
+			)
+			.map({ (CGFloat($0), CGFloat($1)) })
+			.subscribe(onNext: { [weak self] (usernameLogoConstant, logoViewConstant) in
+			DispatchQueue.main.async {
+				self?.constraintTopUsernameBottomLogo.constant = usernameLogoConstant
+				self?.constraintTopLogoTopView.constant = logoViewConstant
+				UIView.animate(withDuration: 0.4, animations: {
+					self?.view.layoutIfNeeded()
+				})
+			}
+		}).addDisposableTo(disposeBag)
 	}
 
 //	Mark: Bind actions supported by RxSwift & RxCocoa
@@ -127,7 +134,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 //	Mark: TextFields delegation
 
 	func textFieldDidBeginEditing(_ textField: UITextField) {
-		if Constants.DeviceModel.deviceType() == .iPhone5 {
+		if ![.iPadMini, .iPadPro].contains(Constants.DeviceModel.deviceType()) {
 			loginViewModel.viewShouldAdjustWhenKeyBoardAppears.value = true
 		}
 	}
@@ -140,6 +147,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 			return false
 		} else {
 			loginViewModel.viewShouldAdjustWhenKeyBoardAppears.value = false
+			userLogin()
 			return true
 		}
 	}

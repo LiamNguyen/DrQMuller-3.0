@@ -13,10 +13,12 @@ class LoginViewModel {
 //	Mark: Observables
 
 	var constraintUsernameLogoObservable: Observable<Float>!
+	var constraintLogoViewObservable: Observable<Float>!
 
 //	Mark: Normal properties
 
-	var initialConstraintUsernameLogoObservable: Float = 0
+	var initialConstraintUsernameLogo: Float = 0
+	var initialContraintLogoView: Float = 0
     var credential: [String: String] = [String: String]()
 
 	let disposeBag = DisposeBag()
@@ -29,9 +31,16 @@ class LoginViewModel {
 		constraintUsernameLogoObservable = viewShouldAdjustWhenKeyBoardAppears.asObservable()
 			.map({ [weak self] viewShouldAdjustWhenKeyBoardAppears in
 				return viewShouldAdjustWhenKeyBoardAppears ?
-					self!.reduceTwoThirdOfInitialContraint(constraint: self!.initialConstraintUsernameLogoObservable) :
-						self!.initialConstraintUsernameLogoObservable
+						self!.reduceTwoThirdOfInitialConstraint(constraint: self!.initialConstraintUsernameLogo) :
+						self!.initialConstraintUsernameLogo
 			})
+
+		constraintLogoViewObservable = viewShouldAdjustWhenKeyBoardAppears.asObservable()
+			.map({ [weak self] viewShouldAdjustWhenKeyBoardAppears in
+				return viewShouldAdjustWhenKeyBoardAppears ?
+						self!.reduceHalfOfInitialConstraint(constraint: self!.initialContraintLogoView) :
+						self!.initialContraintLogoView
+			 })
 
 		Observable.combineLatest(
 			username.asObservable(),
@@ -47,16 +56,20 @@ class LoginViewModel {
     func userLogin(completionHandler: @escaping (_ result: AuthenticationStore.AuthenticationResult) -> Void) {
         if let requestBody = requestBody() {
             self.isLoading.value = true
-            AuthenticationStore.sharedInstance.userLogin(requestBody) { (result, customer) in
+            AuthenticationStore.sharedInstance.userLogin(requestBody) { [weak self] (result, customer) in
                 print(customer?.toJSONString(prettyPrint: true) ?? "")
                 completionHandler(result)
-                self.isLoading.value = false
+                self?.isLoading.value = false
             }
         }
     }
 
-	fileprivate func reduceTwoThirdOfInitialContraint(constraint: Float) -> Float {
+	fileprivate func reduceTwoThirdOfInitialConstraint(constraint: Float) -> Float {
 		return constraint - constraint / 3 * 2
+	}
+
+	fileprivate func reduceHalfOfInitialConstraint(constraint: Float) -> Float {
+		return constraint / 2
 	}
 
     fileprivate func requestBody() -> Data? {
