@@ -112,7 +112,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 print("User in")
             default:
 				AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
-				self.showMessage(result.rawValue.localize(), type: .error, options: [.animation(.fade)])
+				self.showMessage("Error.\(result.rawValue)".localize(), type: .error, options: [.animation(.fade)])
             }
         }
     }
