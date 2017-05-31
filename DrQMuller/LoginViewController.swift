@@ -46,14 +46,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         self.navigationController?.navigationBar.isHidden = false
 	}
 
-    @IBAction func txtUserNameOnChange(_ sender: CustomTextField) {
-		loginViewModel.username.value = txtUsername.text ?? ""
-    }
-
-    @IBAction func txtPasswordOnChange(_ sender: CustomTextField) {
-        loginViewModel.password.value = txtPassword.text ?? ""
-    }
-
 //	Mark: Bind observables from ViewModel
 
 	fileprivate func bindRxObserver() {
@@ -82,6 +74,22 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 				})
 			}
 		}).addDisposableTo(disposeBag)
+
+//        Mark: Text fields onChange observable
+
+        txtUsername
+            .rx
+            .text
+            .subscribe(onNext: { [weak self] username in
+                self?.loginViewModel.username.value = username ?? ""
+            }).addDisposableTo(disposeBag)
+
+        txtPassword
+            .rx
+            .text
+            .subscribe(onNext: { [weak self] password in
+                self?.loginViewModel.password.value = password ?? ""
+            }).addDisposableTo(disposeBag)
 	}
 
 //	Mark: Bind actions supported by RxSwift & RxCocoa

@@ -52,9 +52,6 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
-                                <connections>
-                                    <action selector="txtUserNameOnChange:" destination="BYZ-38-t0r" eventType="editingChanged" id="XGw-b5-PNG"/>
-                                </connections>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userIcon" translatesAutoresizingMaskIntoConstraints="NO" id="QkM-p5-pwR">
                                 <rect key="frame" x="38" y="203" width="35" height="35"/>
@@ -71,9 +68,6 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="go" secureTextEntry="YES"/>
-                                <connections>
-                                    <action selector="txtPasswordOnChange:" destination="BYZ-38-t0r" eventType="editingChanged" id="GVB-ri-QDR"/>
-                                </connections>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pwdIcon" translatesAutoresizingMaskIntoConstraints="NO" id="i6N-Hw-820">
                                 <rect key="frame" x="38" y="281" width="35" height="35"/>
