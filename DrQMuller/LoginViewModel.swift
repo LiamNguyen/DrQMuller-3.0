@@ -14,6 +14,8 @@ class LoginViewModel {
 
 	var constraintUsernameLogoObservable: Observable<Float>!
 	var constraintLogoViewObservable: Observable<Float>!
+    var loginButtonShouldEnable: Observable<Bool>!
+    var loginButtonAlphaObservable: Observable<Float>!
 
 //	Mark: Normal properties
 
@@ -52,6 +54,19 @@ class LoginViewModel {
 			]
 		}).addDisposableTo(disposeBag)
 	}
+
+        loginButtonShouldEnable = Observable.combineLatest(
+                username.asObservable(),
+                password.asObservable()
+        ).map { (username, password) in
+            return !username.isEmpty && !password.isEmpty
+        }
+
+        loginButtonAlphaObservable = loginButtonShouldEnable
+            .map { loginButtonShouldEnable in
+            return loginButtonShouldEnable ? 1 : 0.75
+        }
+    }
 
     func userLogin(completionHandler: @escaping (_ result: AuthenticationStore.AuthenticationResult) -> Void) {
         if let requestBody = requestBody() {

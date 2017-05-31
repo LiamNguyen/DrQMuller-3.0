@@ -75,6 +75,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 			}
 		}).addDisposableTo(disposeBag)
 
+        loginViewModel.loginButtonShouldEnable
+            .bind(to: btnLogin.rx.isEnabled)
+            .addDisposableTo(disposeBag)
+
+        loginViewModel.loginButtonAlphaObservable
+            .map({ CGFloat($0) })
+            .bind(to: btnLogin.rx.alpha)
+            .addDisposableTo(disposeBag)
+
 //        Mark: Text fields onChange observable
 
         txtUsername
