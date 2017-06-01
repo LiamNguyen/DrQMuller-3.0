@@ -73,15 +73,22 @@
 		7690BCC61ED23AE600B631C2 /* lang-vi.json in Resources */ = {isa = PBXBuildFile; fileRef = 7690BCC51ED23AE600B631C2 /* lang-vi.json */; };
 		76973E271EDAB239009F105C /* GSMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76973E261EDAB239009F105C /* GSMessage.swift */; };
 		76973E281EDAB340009F105C /* GSMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76973E261EDAB239009F105C /* GSMessage.swift */; };
-		76B3455D1EE08E9A00CBAA1A /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76B3455C1EE08E9A00CBAA1A /* SwiftyJSON.framework */; };
-		76B3455E1EE08E9A00CBAA1A /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 76B3455C1EE08E9A00CBAA1A /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		76B345651EE0945200CBAA1A /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76B345641EE0945200CBAA1A /* SwiftyJSON.framework */; };
+		76B345661EE0945200CBAA1A /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 76B345641EE0945200CBAA1A /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		76B345671EE0945500CBAA1A /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76B345641EE0945200CBAA1A /* SwiftyJSON.framework */; };
+		76B345681EE0946F00CBAA1A /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76B345641EE0945200CBAA1A /* SwiftyJSON.framework */; };
+		76B345691EE0946F00CBAA1A /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 76B345641EE0945200CBAA1A /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E6517267749C8E3932F3C239 /* AppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65175249FE71B0820C012B8 /* AppStore.swift */; };
 		E6517314CDBDE92F5E9891EA /* ValidationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65176549AD7FE3C4EB66AD7 /* ValidationHelper.swift */; };
 		E651738C890277201F3CDC6C /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65172CA792FF7ABCD6E8C39 /* RequestBuilder.swift */; };
 		E651739B05142D32B7194C49 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6517C6E89921365674412E1 /* Helper.swift */; };
 		E6517507AA339A2CB25C58CF /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6517DEF750C8779C2F8BE76 /* Customer.swift */; };
 		E65178324D656FC515B223C1 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6517C6E89921365674412E1 /* Helper.swift */; };
+		E6517AA6098C3BFB7432496A /* CustomerAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65178A1F73EBE6D2F8505FC /* CustomerAction.swift */; };
 		E6517BC1C3C3F4F2920338E6 /* ExtendError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65175D57DF7BF9D520E7586 /* ExtendError.swift */; };
 		E6517C0CDD04CECE5E414091 /* Retrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6517682BD42F0ED1126B8EB /* Retrier.swift */; };
+		E6517CF5299C158CDD5E712E /* AppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65175249FE71B0820C012B8 /* AppStore.swift */; };
+		E6517DE662CD0A6432ADE7AE /* CustomerAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65178A1F73EBE6D2F8505FC /* CustomerAction.swift */; };
 		E6517ECF96F463E5375A57F8 /* ExtendError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65175D57DF7BF9D520E7586 /* ExtendError.swift */; };
 		E6517F6340C84B93F85F2242 /* ValidationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65176549AD7FE3C4EB66AD7 /* ValidationHelper.swift */; };
 /* End PBXBuildFile section */
@@ -110,6 +117,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				76B345691EE0946F00CBAA1A /* SwiftyJSON.framework in Embed Frameworks */,
 				760AB9C31ED9E77700FF26A6 /* ObjectMapper.framework in Embed Frameworks */,
 				760AB9C41ED9E77700FF26A6 /* AlamofireObjectMapper.framework in Embed Frameworks */,
 				760AB9C51ED9E77700FF26A6 /* RxCocoa.framework in Embed Frameworks */,
@@ -127,7 +135,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				76B3455E1EE08E9A00CBAA1A /* SwiftyJSON.framework in Embed Frameworks */,
+				76B345661EE0945200CBAA1A /* SwiftyJSON.framework in Embed Frameworks */,
 				767044CB1ED711410002EDE5 /* ObjectMapper.framework in Embed Frameworks */,
 				767044CE1ED712D80002EDE5 /* AlamofireObjectMapper.framework in Embed Frameworks */,
 				767044C51ED6FEC70002EDE5 /* RxCocoa.framework in Embed Frameworks */,
@@ -177,11 +185,13 @@
 		7690BCB61ED2382700B631C2 /* base.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = base.json; sourceTree = "<group>"; };
 		7690BCC51ED23AE600B631C2 /* lang-vi.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "lang-vi.json"; sourceTree = "<group>"; };
 		76973E261EDAB239009F105C /* GSMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GSMessage.swift; sourceTree = "<group>"; };
-		76B3455C1EE08E9A00CBAA1A /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		76B345641EE0945200CBAA1A /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		E65172CA792FF7ABCD6E8C39 /* RequestBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
+		E65175249FE71B0820C012B8 /* AppStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStore.swift; sourceTree = "<group>"; };
 		E65175D57DF7BF9D520E7586 /* ExtendError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtendError.swift; sourceTree = "<group>"; };
 		E65176549AD7FE3C4EB66AD7 /* ValidationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationHelper.swift; sourceTree = "<group>"; };
 		E6517682BD42F0ED1126B8EB /* Retrier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Retrier.swift; sourceTree = "<group>"; };
+		E65178A1F73EBE6D2F8505FC /* CustomerAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerAction.swift; sourceTree = "<group>"; };
 		E6517C6E89921365674412E1 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		E6517DEF750C8779C2F8BE76 /* Customer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -191,7 +201,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76B345671EE0945500CBAA1A /* SwiftyJSON.framework in Frameworks */,
 				760AB9B31ED9E77700FF26A6 /* ObjectMapper.framework in Frameworks */,
+				76B345681EE0946F00CBAA1A /* SwiftyJSON.framework in Frameworks */,
 				760AB9B41ED9E77700FF26A6 /* AlamofireObjectMapper.framework in Frameworks */,
 				760AB9B51ED9E77700FF26A6 /* RxCocoa.framework in Frameworks */,
 				760AB9B61ED9E77700FF26A6 /* Swifternalization.framework in Frameworks */,
@@ -205,7 +217,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76B3455D1EE08E9A00CBAA1A /* SwiftyJSON.framework in Frameworks */,
+				76B345651EE0945200CBAA1A /* SwiftyJSON.framework in Frameworks */,
 				767044CA1ED711410002EDE5 /* ObjectMapper.framework in Frameworks */,
 				767044CD1ED712D80002EDE5 /* AlamofireObjectMapper.framework in Frameworks */,
 				767044C41ED6FEC70002EDE5 /* RxCocoa.framework in Frameworks */,
@@ -252,7 +264,6 @@
 		766FBA611ED1D7F700E4454D = {
 			isa = PBXGroup;
 			children = (
-				76B3455C1EE08E9A00CBAA1A /* SwiftyJSON.framework */,
 				7690BCBD1ED2391300B631C2 /* ExternalLibraries */,
 				766FBA6C1ED1D7F700E4454D /* DrQMuller */,
 				766FBA841ED1D7F800E4454D /* DrQMullerTests */,
@@ -286,6 +297,7 @@
 				766FBA9E1ED1DCB600E4454D /* Storyboards */,
 				766FBA9F1ED1DCD100E4454D /* SupportingFiles */,
 				E6517D0C6C0DE98A8D97682F /* Model */,
+				E65175CFDEADA4B6CF7E96D6 /* Action */,
 			);
 			path = DrQMuller;
 			sourceTree = "<group>";
@@ -354,6 +366,7 @@
 				767044D21ED713BF0002EDE5 /* Remote */,
 				E65172CA792FF7ABCD6E8C39 /* RequestBuilder.swift */,
 				E6517682BD42F0ED1126B8EB /* Retrier.swift */,
+				E6517AD99536084861B60978 /* Local */,
 			);
 			name = Store;
 			sourceTree = "<group>";
@@ -389,6 +402,7 @@
 		7690BCBD1ED2391300B631C2 /* ExternalLibraries */ = {
 			isa = PBXGroup;
 			children = (
+				76B345641EE0945200CBAA1A /* SwiftyJSON.framework */,
 				767044CC1ED712D80002EDE5 /* AlamofireObjectMapper.framework */,
 				767044C91ED711410002EDE5 /* ObjectMapper.framework */,
 				767044C61ED7106C0002EDE5 /* Alamofire.framework */,
@@ -406,6 +420,22 @@
 				76973E261EDAB239009F105C /* GSMessage.swift */,
 			);
 			name = lib;
+			sourceTree = "<group>";
+		};
+		E65175CFDEADA4B6CF7E96D6 /* Action */ = {
+			isa = PBXGroup;
+			children = (
+				E65178A1F73EBE6D2F8505FC /* CustomerAction.swift */,
+			);
+			path = Action;
+			sourceTree = "<group>";
+		};
+		E6517AD99536084861B60978 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				E65175249FE71B0820C012B8 /* AppStore.swift */,
+			);
+			name = Local;
 			sourceTree = "<group>";
 		};
 		E6517D0C6C0DE98A8D97682F /* Model */ = {
@@ -621,6 +651,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/ObjectMapper.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/AlamofireObjectMapper.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
 			);
 			outputPaths = (
 			);
@@ -684,6 +715,8 @@
 				E6517ECF96F463E5375A57F8 /* ExtendError.swift in Sources */,
 				76973E281EDAB340009F105C /* GSMessage.swift in Sources */,
 				E6517F6340C84B93F85F2242 /* ValidationHelper.swift in Sources */,
+				E6517DE662CD0A6432ADE7AE /* CustomerAction.swift in Sources */,
+				E6517267749C8E3932F3C239 /* AppStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -706,6 +739,8 @@
 				E6517BC1C3C3F4F2920338E6 /* ExtendError.swift in Sources */,
 				76973E271EDAB239009F105C /* GSMessage.swift in Sources */,
 				E6517314CDBDE92F5E9891EA /* ValidationHelper.swift in Sources */,
+				E6517AA6098C3BFB7432496A /* CustomerAction.swift in Sources */,
+				E6517CF5299C158CDD5E712E /* AppStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

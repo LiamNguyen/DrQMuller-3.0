@@ -1,5 +1,6 @@
 import Foundation
 import RxSwift
+import SwiftyJSON
 
 class LoginViewModel {
 
@@ -71,9 +72,11 @@ class LoginViewModel {
         if let requestBody = requestBody() {
             self.isLoading.value = true
             AuthenticationStore.sharedInstance.userLogin(requestBody) { [weak self] (result, customer) in
-                print(customer?.toJSONString(prettyPrint: true) ?? "")
-                completionHandler(result)
-                self?.isLoading.value = false
+				completionHandler(result)
+				self?.isLoading.value = false
+				if let customer = customer {
+					CustomerAction.saveCustomer(info: customer.toJSON())
+				}
             }
         }
     }
