@@ -1,4 +1,15 @@
 {
+	"Error": {
+		"invalid_username_password": "Tên đăng nhập hoặc mật khẩu không hợp lệ",
+		"username": {
+			"empty": "Tên đăng nhập trống",
+			"patternFail": "Tên đăng nhập bao gồm chữ số, (-) hoặc (_). 8 đến 25 ký tự"
+		},
+		"password": {
+			"empty": "Mật khẩu trống",
+			"patternFail": "Mật khẩu bao gồm chữ số, (-) hoặc (_). 8 đến 30 ký tự"
+		}
+	},
 	"Login": {
 		"TextFieldPlaceHolder": {
 			"username": "Tên đăng nhập",

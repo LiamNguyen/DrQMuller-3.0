@@ -73,6 +73,7 @@
 		7690BCC61ED23AE600B631C2 /* lang-vi.json in Resources */ = {isa = PBXBuildFile; fileRef = 7690BCC51ED23AE600B631C2 /* lang-vi.json */; };
 		76973E271EDAB239009F105C /* GSMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76973E261EDAB239009F105C /* GSMessage.swift */; };
 		76973E281EDAB340009F105C /* GSMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76973E261EDAB239009F105C /* GSMessage.swift */; };
+		E6517314CDBDE92F5E9891EA /* ValidationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65176549AD7FE3C4EB66AD7 /* ValidationHelper.swift */; };
 		E651738C890277201F3CDC6C /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65172CA792FF7ABCD6E8C39 /* RequestBuilder.swift */; };
 		E651739B05142D32B7194C49 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6517C6E89921365674412E1 /* Helper.swift */; };
 		E6517507AA339A2CB25C58CF /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6517DEF750C8779C2F8BE76 /* Customer.swift */; };
@@ -80,6 +81,7 @@
 		E6517BC1C3C3F4F2920338E6 /* ExtendError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65175D57DF7BF9D520E7586 /* ExtendError.swift */; };
 		E6517C0CDD04CECE5E414091 /* Retrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6517682BD42F0ED1126B8EB /* Retrier.swift */; };
 		E6517ECF96F463E5375A57F8 /* ExtendError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65175D57DF7BF9D520E7586 /* ExtendError.swift */; };
+		E6517F6340C84B93F85F2242 /* ValidationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65176549AD7FE3C4EB66AD7 /* ValidationHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -174,6 +176,7 @@
 		76973E261EDAB239009F105C /* GSMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GSMessage.swift; sourceTree = "<group>"; };
 		E65172CA792FF7ABCD6E8C39 /* RequestBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
 		E65175D57DF7BF9D520E7586 /* ExtendError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtendError.swift; sourceTree = "<group>"; };
+		E65176549AD7FE3C4EB66AD7 /* ValidationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationHelper.swift; sourceTree = "<group>"; };
 		E6517682BD42F0ED1126B8EB /* Retrier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Retrier.swift; sourceTree = "<group>"; };
 		E6517C6E89921365674412E1 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		E6517DEF750C8779C2F8BE76 /* Customer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
@@ -333,6 +336,7 @@
 				766FBAA41ED209F200E4454D /* Constants.swift */,
 				E6517C6E89921365674412E1 /* Helper.swift */,
 				E65175D57DF7BF9D520E7586 /* ExtendError.swift */,
+				E65176549AD7FE3C4EB66AD7 /* ValidationHelper.swift */,
 			);
 			name = Helper;
 			sourceTree = "<group>";
@@ -672,6 +676,7 @@
 				E651739B05142D32B7194C49 /* Helper.swift in Sources */,
 				E6517ECF96F463E5375A57F8 /* ExtendError.swift in Sources */,
 				76973E281EDAB340009F105C /* GSMessage.swift in Sources */,
+				E6517F6340C84B93F85F2242 /* ValidationHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -693,6 +698,7 @@
 				E65178324D656FC515B223C1 /* Helper.swift in Sources */,
 				E6517BC1C3C3F4F2920338E6 /* ExtendError.swift in Sources */,
 				76973E271EDAB239009F105C /* GSMessage.swift in Sources */,
+				E6517314CDBDE92F5E9891EA /* ValidationHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

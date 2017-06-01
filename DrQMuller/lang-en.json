@@ -1,4 +1,15 @@
 {
+	"Error": {
+        "invalid_username_password": "Invalid username or password",
+        "username": {
+            "empty": "Username is empty",
+            "patternFail": "Username should only contains letters, numbers, (-) or (_). 8 to 25 characters"
+        },
+        "password": {
+            "empty": "Password is empty",
+            "patternFail": "Password should only contains letters, numbers, (-) or (_). 8 to 30 characters"
+        }
+    },
 	"Login" : {
 		"TextFieldPlaceHolder" : {
 			"username" : "Username",
