@@ -73,6 +73,8 @@
 		7690BCC61ED23AE600B631C2 /* lang-vi.json in Resources */ = {isa = PBXBuildFile; fileRef = 7690BCC51ED23AE600B631C2 /* lang-vi.json */; };
 		76973E271EDAB239009F105C /* GSMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76973E261EDAB239009F105C /* GSMessage.swift */; };
 		76973E281EDAB340009F105C /* GSMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76973E261EDAB239009F105C /* GSMessage.swift */; };
+		76B3455D1EE08E9A00CBAA1A /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76B3455C1EE08E9A00CBAA1A /* SwiftyJSON.framework */; };
+		76B3455E1EE08E9A00CBAA1A /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 76B3455C1EE08E9A00CBAA1A /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E6517314CDBDE92F5E9891EA /* ValidationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65176549AD7FE3C4EB66AD7 /* ValidationHelper.swift */; };
 		E651738C890277201F3CDC6C /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65172CA792FF7ABCD6E8C39 /* RequestBuilder.swift */; };
 		E651739B05142D32B7194C49 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6517C6E89921365674412E1 /* Helper.swift */; };
@@ -125,6 +127,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				76B3455E1EE08E9A00CBAA1A /* SwiftyJSON.framework in Embed Frameworks */,
 				767044CB1ED711410002EDE5 /* ObjectMapper.framework in Embed Frameworks */,
 				767044CE1ED712D80002EDE5 /* AlamofireObjectMapper.framework in Embed Frameworks */,
 				767044C51ED6FEC70002EDE5 /* RxCocoa.framework in Embed Frameworks */,
@@ -174,6 +177,7 @@
 		7690BCB61ED2382700B631C2 /* base.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = base.json; sourceTree = "<group>"; };
 		7690BCC51ED23AE600B631C2 /* lang-vi.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "lang-vi.json"; sourceTree = "<group>"; };
 		76973E261EDAB239009F105C /* GSMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GSMessage.swift; sourceTree = "<group>"; };
+		76B3455C1EE08E9A00CBAA1A /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		E65172CA792FF7ABCD6E8C39 /* RequestBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
 		E65175D57DF7BF9D520E7586 /* ExtendError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtendError.swift; sourceTree = "<group>"; };
 		E65176549AD7FE3C4EB66AD7 /* ValidationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationHelper.swift; sourceTree = "<group>"; };
@@ -201,6 +205,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76B3455D1EE08E9A00CBAA1A /* SwiftyJSON.framework in Frameworks */,
 				767044CA1ED711410002EDE5 /* ObjectMapper.framework in Frameworks */,
 				767044CD1ED712D80002EDE5 /* AlamofireObjectMapper.framework in Frameworks */,
 				767044C41ED6FEC70002EDE5 /* RxCocoa.framework in Frameworks */,
@@ -247,6 +252,7 @@
 		766FBA611ED1D7F700E4454D = {
 			isa = PBXGroup;
 			children = (
+				76B3455C1EE08E9A00CBAA1A /* SwiftyJSON.framework */,
 				7690BCBD1ED2391300B631C2 /* ExternalLibraries */,
 				766FBA6C1ED1D7F700E4454D /* DrQMuller */,
 				766FBA841ED1D7F800E4454D /* DrQMullerTests */,
@@ -648,6 +654,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/ObjectMapper.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/AlamofireObjectMapper.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
 			);
 			outputPaths = (
 			);
