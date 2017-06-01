@@ -53,7 +53,6 @@ class LoginViewModel {
 				"password": password.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
 			]
 		}).addDisposableTo(disposeBag)
-	}
 
         loginButtonShouldEnable = Observable.combineLatest(
                 username.asObservable(),
