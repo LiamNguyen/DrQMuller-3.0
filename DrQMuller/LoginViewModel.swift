@@ -72,10 +72,12 @@ class LoginViewModel {
         if let requestBody = requestBody() {
             self.isLoading.value = true
             AuthenticationStore.sharedInstance.userLogin(requestBody) { [weak self] (result, customer) in
-				completionHandler(result)
 				self?.isLoading.value = false
 				if let customer = customer {
 					CustomerAction.saveCustomer(info: customer.toJSON())
+					completionHandler(result)
+				} else {
+					completionHandler(result == .login_success ? .server_error : result)
 				}
             }
         }
