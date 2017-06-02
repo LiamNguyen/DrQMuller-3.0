@@ -8,11 +8,11 @@ struct CustomerAction {
             infoWithoutToken[key] = value
         }
         AppStore.sharedInstance.dispatch(
-                action: (key: StateKey.user.rawValue, state: infoWithoutToken)
+                action: (key: StateKey.customer.rawValue, state: infoWithoutToken)
         )
     }
 
     enum StateKey: String {
-        case user
+        case customer
     }
 }
