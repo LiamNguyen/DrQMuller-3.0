@@ -64,7 +64,7 @@ class LoginViewModel {
 
         loginButtonAlphaObservable = loginButtonShouldEnable
             .map { loginButtonShouldEnable in
-            return loginButtonShouldEnable ? 1 : 0.75
+            return loginButtonShouldEnable ? 1 : 0.5
         }
     }
 
