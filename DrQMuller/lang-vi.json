@@ -1,5 +1,6 @@
 {
 	"Error": {
+		"server_error": "Lỗi máy chủ. Liên hệ bộ phận chăm sóc khách hàng",
 		"invalid_username_password": "Tên đăng nhập hoặc mật khẩu không hợp lệ",
 		"username": {
 			"empty": "Tên đăng nhập trống",

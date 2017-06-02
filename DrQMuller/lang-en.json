@@ -1,5 +1,6 @@
 {
 	"Error": {
+		"server_error": "Server error. Please contact customer service",
         "invalid_username_password": "Invalid username or password",
         "username": {
             "empty": "Username is empty",
