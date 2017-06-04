@@ -71,5 +71,6 @@ class AuthenticationStore: AuthenticationStoreType {
         case invalid_username_password
         case username_exist
         case server_error
+        case save_client_local_error
     }
 }

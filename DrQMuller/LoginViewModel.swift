@@ -74,12 +74,21 @@ class LoginViewModel {
             AuthenticationStore.sharedInstance.userLogin(requestBody) { [weak self] (result, customer) in
 				self?.isLoading.value = false
 				if let customer = customer {
-					CustomerAction.saveCustomer(info: customer.toJSON())
-					completionHandler(result)
+					completionHandler(self!.saveCustomer(customer: customer) ? result : .save_client_local_error)
 				} else {
 					completionHandler(result == .login_success ? .server_error : result)
 				}
             }
+        }
+    }
+
+    fileprivate func saveCustomer(customer: Customer) -> Bool {
+        do {
+            try CustomerAction.saveCustomer(info: customer.toJSON())
+            return true
+        } catch let error {
+            print("Failed To save customer\(error.localizedDescription)")
+            return false
         }
     }
 

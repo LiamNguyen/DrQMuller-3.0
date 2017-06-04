@@ -1,7 +1,8 @@
 {
 	"Error": {
 		"server_error": "Server error. Please contact customer service",
-        "invalid_username_password": "Invalid username or password",
+		"save_client_local_error": "Store data locally error. Please contact customer service",
+		"invalid_username_password": "Invalid username or password",
         "username": {
             "empty": "Username is empty",
             "patternFail": "Username should only contains letters, numbers, (-) or (_). 8 to 25 characters"

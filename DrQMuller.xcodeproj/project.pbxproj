@@ -89,10 +89,12 @@
 		E651739B05142D32B7194C49 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6517C6E89921365674412E1 /* Helper.swift */; };
 		E6517507AA339A2CB25C58CF /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6517DEF750C8779C2F8BE76 /* Customer.swift */; };
 		E65178324D656FC515B223C1 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6517C6E89921365674412E1 /* Helper.swift */; };
+		E65178EB2A41EDD64AECB5D2 /* KeychainAccessService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6517770A6381701B0BB5F48 /* KeychainAccessService.swift */; };
 		E6517AA6098C3BFB7432496A /* CustomerAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65178A1F73EBE6D2F8505FC /* CustomerAction.swift */; };
 		E6517BC1C3C3F4F2920338E6 /* ExtendError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65175D57DF7BF9D520E7586 /* ExtendError.swift */; };
 		E6517C0CDD04CECE5E414091 /* Retrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6517682BD42F0ED1126B8EB /* Retrier.swift */; };
 		E6517CF5299C158CDD5E712E /* AppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65175249FE71B0820C012B8 /* AppStore.swift */; };
+		E6517CFEEDAD3968C5A3E8DB /* KeychainAccessService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6517770A6381701B0BB5F48 /* KeychainAccessService.swift */; };
 		E6517D997E120E41380EB600 /* UserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6517B7E1786E173D5343560 /* UserDefaultsService.swift */; };
 		E6517DE662CD0A6432ADE7AE /* CustomerAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65178A1F73EBE6D2F8505FC /* CustomerAction.swift */; };
 		E6517ECF96F463E5375A57F8 /* ExtendError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65175D57DF7BF9D520E7586 /* ExtendError.swift */; };
@@ -200,6 +202,7 @@
 		E65175D57DF7BF9D520E7586 /* ExtendError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtendError.swift; sourceTree = "<group>"; };
 		E65176549AD7FE3C4EB66AD7 /* ValidationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationHelper.swift; sourceTree = "<group>"; };
 		E6517682BD42F0ED1126B8EB /* Retrier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Retrier.swift; sourceTree = "<group>"; };
+		E6517770A6381701B0BB5F48 /* KeychainAccessService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainAccessService.swift; sourceTree = "<group>"; };
 		E65178A1F73EBE6D2F8505FC /* CustomerAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerAction.swift; sourceTree = "<group>"; };
 		E6517B7E1786E173D5343560 /* UserDefaultsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsService.swift; sourceTree = "<group>"; };
 		E6517C6E89921365674412E1 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
@@ -432,6 +435,7 @@
 			children = (
 				76973E261EDAB239009F105C /* GSMessage.swift */,
 				E6517B7E1786E173D5343560 /* UserDefaultsService.swift */,
+				E6517770A6381701B0BB5F48 /* KeychainAccessService.swift */,
 			);
 			name = lib;
 			sourceTree = "<group>";
@@ -734,6 +738,7 @@
 				E6517DE662CD0A6432ADE7AE /* CustomerAction.swift in Sources */,
 				E6517267749C8E3932F3C239 /* AppStore.swift in Sources */,
 				E6517D997E120E41380EB600 /* UserDefaultsService.swift in Sources */,
+				E6517CFEEDAD3968C5A3E8DB /* KeychainAccessService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -759,6 +764,7 @@
 				E6517AA6098C3BFB7432496A /* CustomerAction.swift in Sources */,
 				E6517CF5299C158CDD5E712E /* AppStore.swift in Sources */,
 				E65170A360CCC84DDC9F0CD4 /* UserDefaultsService.swift in Sources */,
+				E65178EB2A41EDD64AECB5D2 /* KeychainAccessService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

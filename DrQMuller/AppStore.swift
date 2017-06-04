@@ -39,11 +39,12 @@ class AppStore {
 		return appState.value
     }
 
-    func dispatch(action: (key: String, state: Any)) {
+    func dispatch(action: (key: String, state: Any)) throws {
         do {
             appState.value = try appState.value.merged(with: JSON([action.key: action.state]))
         } catch let error {
-            print("SwiftyJson merge error:\n\(error)")
+            print("SwiftyJson merge error:\n\(error.localizedDescription)")
+            throw ExtendError.DispatchActionToStoreFailed
         }
     }
 }
