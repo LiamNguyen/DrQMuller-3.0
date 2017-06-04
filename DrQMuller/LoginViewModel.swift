@@ -87,7 +87,7 @@ class LoginViewModel {
             try CustomerAction.saveCustomer(info: customer.toJSON())
             return true
         } catch let error {
-            print("Failed To save customer\(error.localizedDescription)")
+            print("Failed To save customer\n\(error.localizedDescription)")
             return false
         }
     }

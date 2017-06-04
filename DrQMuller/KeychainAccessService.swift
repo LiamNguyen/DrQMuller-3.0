@@ -4,9 +4,6 @@ import KeychainAccess
 class KeychainAccessService {
     fileprivate static let keychain: Keychain = Keychain(service: Bundle.main.bundleIdentifier ?? "vn.default.id")
 
-    init() {
-    }
-
     static func store(value: Any, forKey: KeychainAccessKey) throws {
         do {
             if let value = value as? String {
