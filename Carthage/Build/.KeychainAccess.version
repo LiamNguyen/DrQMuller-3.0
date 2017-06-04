@@ -1,0 +1,27 @@
+{
+  "iOS" : [
+    {
+      "hash" : "b439498125e8f832563caf002d9c0653ec89664fa1693d30b4f5fb8b9d8606eb",
+      "name" : "KeychainAccess"
+    }
+  ],
+  "commitish" : "v3.0.2",
+  "watchOS" : [
+    {
+      "hash" : "04a815865fc624edb863252204f8b79f8f81dfeeb2cdb7a680e6ee6a04769f48",
+      "name" : "KeychainAccess"
+    }
+  ],
+  "tvOS" : [
+    {
+      "hash" : "beffd8a9c39724c3fa8177c1ace99b82888c38e6e79567b52d255784687fb48d",
+      "name" : "KeychainAccess"
+    }
+  ],
+  "Mac" : [
+    {
+      "hash" : "bdfd9ba7ec38adc1a53955a88bf85aec4bb2513e27533dde746f05463ad8bf2e",
+      "name" : "KeychainAccess"
+    }
+  ]
+}
