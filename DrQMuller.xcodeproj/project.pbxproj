@@ -82,20 +82,20 @@
 		76B345671EE0945500CBAA1A /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76B345641EE0945200CBAA1A /* SwiftyJSON.framework */; };
 		76B345681EE0946F00CBAA1A /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76B345641EE0945200CBAA1A /* SwiftyJSON.framework */; };
 		76B345691EE0946F00CBAA1A /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 76B345641EE0945200CBAA1A /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E65170A360CCC84DDC9F0CD4 /* UserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6517B7E1786E173D5343560 /* UserDefaultsService.swift */; };
 		E6517267749C8E3932F3C239 /* AppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65175249FE71B0820C012B8 /* AppStore.swift */; };
 		E6517314CDBDE92F5E9891EA /* ValidationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65176549AD7FE3C4EB66AD7 /* ValidationHelper.swift */; };
 		E651738C890277201F3CDC6C /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65172CA792FF7ABCD6E8C39 /* RequestBuilder.swift */; };
 		E651739B05142D32B7194C49 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6517C6E89921365674412E1 /* Helper.swift */; };
 		E6517507AA339A2CB25C58CF /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6517DEF750C8779C2F8BE76 /* Customer.swift */; };
 		E65178324D656FC515B223C1 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6517C6E89921365674412E1 /* Helper.swift */; };
-		E65178E4BD31A47E8754CC1F /* UserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65177B775780374E9AA202F /* UserDefaultsService.swift */; };
 		E6517AA6098C3BFB7432496A /* CustomerAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65178A1F73EBE6D2F8505FC /* CustomerAction.swift */; };
 		E6517BC1C3C3F4F2920338E6 /* ExtendError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65175D57DF7BF9D520E7586 /* ExtendError.swift */; };
 		E6517C0CDD04CECE5E414091 /* Retrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6517682BD42F0ED1126B8EB /* Retrier.swift */; };
 		E6517CF5299C158CDD5E712E /* AppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65175249FE71B0820C012B8 /* AppStore.swift */; };
+		E6517D997E120E41380EB600 /* UserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6517B7E1786E173D5343560 /* UserDefaultsService.swift */; };
 		E6517DE662CD0A6432ADE7AE /* CustomerAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65178A1F73EBE6D2F8505FC /* CustomerAction.swift */; };
 		E6517ECF96F463E5375A57F8 /* ExtendError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65175D57DF7BF9D520E7586 /* ExtendError.swift */; };
-		E6517EE3B2F48398C30F414C /* UserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65177B775780374E9AA202F /* UserDefaultsService.swift */; };
 		E6517F6340C84B93F85F2242 /* ValidationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65176549AD7FE3C4EB66AD7 /* ValidationHelper.swift */; };
 /* End PBXBuildFile section */
 
@@ -200,8 +200,8 @@
 		E65175D57DF7BF9D520E7586 /* ExtendError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtendError.swift; sourceTree = "<group>"; };
 		E65176549AD7FE3C4EB66AD7 /* ValidationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationHelper.swift; sourceTree = "<group>"; };
 		E6517682BD42F0ED1126B8EB /* Retrier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Retrier.swift; sourceTree = "<group>"; };
-		E65177B775780374E9AA202F /* UserDefaultsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsService.swift; sourceTree = "<group>"; };
 		E65178A1F73EBE6D2F8505FC /* CustomerAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerAction.swift; sourceTree = "<group>"; };
+		E6517B7E1786E173D5343560 /* UserDefaultsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsService.swift; sourceTree = "<group>"; };
 		E6517C6E89921365674412E1 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		E6517DEF750C8779C2F8BE76 /* Customer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -431,6 +431,7 @@
 			isa = PBXGroup;
 			children = (
 				76973E261EDAB239009F105C /* GSMessage.swift */,
+				E6517B7E1786E173D5343560 /* UserDefaultsService.swift */,
 			);
 			name = lib;
 			sourceTree = "<group>";
@@ -447,7 +448,6 @@
 			isa = PBXGroup;
 			children = (
 				E65175249FE71B0820C012B8 /* AppStore.swift */,
-				E65177B775780374E9AA202F /* UserDefaultsService.swift */,
 			);
 			name = Local;
 			sourceTree = "<group>";
@@ -733,7 +733,7 @@
 				E6517F6340C84B93F85F2242 /* ValidationHelper.swift in Sources */,
 				E6517DE662CD0A6432ADE7AE /* CustomerAction.swift in Sources */,
 				E6517267749C8E3932F3C239 /* AppStore.swift in Sources */,
-				E6517EE3B2F48398C30F414C /* UserDefaultsService.swift in Sources */,
+				E6517D997E120E41380EB600 /* UserDefaultsService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -758,7 +758,7 @@
 				E6517314CDBDE92F5E9891EA /* ValidationHelper.swift in Sources */,
 				E6517AA6098C3BFB7432496A /* CustomerAction.swift in Sources */,
 				E6517CF5299C158CDD5E712E /* AppStore.swift in Sources */,
-				E65178E4BD31A47E8754CC1F /* UserDefaultsService.swift in Sources */,
+				E65170A360CCC84DDC9F0CD4 /* UserDefaultsService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
