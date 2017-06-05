@@ -2,8 +2,7 @@ import Foundation
 
 class Helper {
     static func jsonObjectToData(_ jsonObject: [String: Any]) throws-> Data {
-        let jsonValidObject = JSONSerialization.isValidJSONObject(jsonObject)
-        if !jsonValidObject {
+        if !JSONSerialization.isValidJSONObject(jsonObject) {
             print("Invalid JSON object")
             throw ExtendError.InvalidJSONObject
         }

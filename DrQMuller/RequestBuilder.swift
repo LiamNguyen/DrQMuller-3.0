@@ -5,7 +5,7 @@ class RequestBuilder {
 
     static func build(_ manager: SessionManager, _ retrier: Retrier, requestMethod: Constants.RequestMethod, url: URL, requestBody: Data = Data(), authorizationToken: String = "") -> DataRequest {
         if requestMethod != .GET && requestBody.isEmpty {
-            print("\nERROR: Missing request body for \(requestMethod.rawValue) \n")
+            print("\nERROR: Missing request body for \(requestMethod.rawValue)\n")
         }
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = requestMethod.rawValue
