@@ -7,6 +7,7 @@ class AppStore {
 
     fileprivate var initialState: JSON
     fileprivate var appState: Variable<JSON>!
+	fileprivate var firstTimeInitializeState: Bool = true
     fileprivate var autoStoreDisabled: Bool = false
 
     fileprivate let disposeBag = DisposeBag()
@@ -32,9 +33,12 @@ class AppStore {
     fileprivate func bindRx() {
         appState.asObservable()
             .subscribe(onNext: { [weak self] appState in
-                if !self!.autoStoreDisabled {
+                if !self!.autoStoreDisabled && !self!.firstTimeInitializeState {
                     UserDefaultsService.save(forKey: .appState, data: appState.rawString() as Any)
                 }
+				if self!.firstTimeInitializeState {
+					self?.firstTimeInitializeState = false
+				}
             }).addDisposableTo(disposeBag)
     }
 
@@ -51,11 +55,17 @@ class AppStore {
         }
     }
 
+//    Mark: Testing purpose
+
     func disableAutoStoreUserDefaults() {
         autoStoreDisabled = true
     }
 
     func enableAutoStoreUserDefaults() {
         autoStoreDisabled = false
+    }
+
+	func resetAppState() {
+        appState.value = initialState
     }
 }
