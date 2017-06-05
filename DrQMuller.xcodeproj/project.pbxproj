@@ -80,7 +80,6 @@
 		76B345651EE0945200CBAA1A /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76B345641EE0945200CBAA1A /* SwiftyJSON.framework */; };
 		76B345661EE0945200CBAA1A /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 76B345641EE0945200CBAA1A /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		76B345671EE0945500CBAA1A /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76B345641EE0945200CBAA1A /* SwiftyJSON.framework */; };
-		76B345681EE0946F00CBAA1A /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76B345641EE0945200CBAA1A /* SwiftyJSON.framework */; };
 		76B345691EE0946F00CBAA1A /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 76B345641EE0945200CBAA1A /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		76EDA6F31EE5708C00BE0FDE /* AuthenticationStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EDA6F21EE5708C00BE0FDE /* AuthenticationStoreTests.swift */; };
 		76EDA7061EE588E800BE0FDE /* AppStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EDA7051EE588E800BE0FDE /* AppStoreTests.swift */; };
@@ -211,7 +210,6 @@
 			files = (
 				76B345671EE0945500CBAA1A /* SwiftyJSON.framework in Frameworks */,
 				760AB9B31ED9E77700FF26A6 /* ObjectMapper.framework in Frameworks */,
-				76B345681EE0946F00CBAA1A /* SwiftyJSON.framework in Frameworks */,
 				760AB9B41ED9E77700FF26A6 /* AlamofireObjectMapper.framework in Frameworks */,
 				764D12C71EE3FD2D00BAAA6E /* KeychainAccess.framework in Frameworks */,
 				760AB9B51ED9E77700FF26A6 /* RxCocoa.framework in Frameworks */,

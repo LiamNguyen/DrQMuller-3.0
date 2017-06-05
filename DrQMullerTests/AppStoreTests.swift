@@ -20,7 +20,9 @@ class AppStoreTests: XCTestCase {
     override func tearDown() {
         super.tearDown()
 
-        UserDefaultsService.save(forKey: .appState, data: currentStoredAppState!)
+		if let currentStoredAppState = currentStoredAppState {
+			UserDefaultsService.save(forKey: .appState, data: currentStoredAppState)
+		}
         currentStoredAppState = nil
         initialState = nil
         firstExpectedState = nil
@@ -29,6 +31,9 @@ class AppStoreTests: XCTestCase {
     }
 
     func testDispatchAction() {
+        AppStore.sharedInstance.disableAutoStoreUserDefaults()
+        AppStore.sharedInstance.resetAppState()
+
         XCTAssertEqual(AppStore.sharedInstance.getState(), initialState)
 
         try? AppStore.sharedInstance.dispatch(action: (key: "hello", state: "I am testing something here for sure"))
@@ -42,6 +47,24 @@ class AppStoreTests: XCTestCase {
         try? AppStore.sharedInstance.dispatch(action: (key: "MyList", state: ["I replaced it already"]))
 
         XCTAssertEqual(AppStore.sharedInstance.getState(), thirdExpectedState)
+
+        AppStore.sharedInstance.enableAutoStoreUserDefaults()
+    }
+
+    func testAutoSaveToUserDefaultsWhenAppStateChange() {
+        AppStore.sharedInstance.disableAutoStoreUserDefaults()
+        AppStore.sharedInstance.resetAppState()
+        AppStore.sharedInstance.enableAutoStoreUserDefaults()
+
+		XCTAssertTrue(UserDefaultsService.get(forKey: .appState) == nil)
+
+        try? AppStore.sharedInstance.dispatch(action: (key: "hello", state: "I am testing something here for sure"))
+
+        if let storedAppState = UserDefaultsService.get(forKey: .appState) as? String {
+            XCTAssertEqual(stringToJSON(string: storedAppState), firstExpectedState)
+        } else {
+            XCTFail()
+        }
     }
 
     fileprivate func initializeAppStateForTesting() {
@@ -77,5 +100,9 @@ class AppStoreTests: XCTestCase {
                 ]
             ]
         )
+    }
+
+    fileprivate func stringToJSON(string: String) -> JSON {
+        return JSON(string.data(using: .utf8) ?? Data())
     }
 }
