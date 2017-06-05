@@ -7,6 +7,7 @@ class AppStore {
 
     fileprivate var initialState: JSON
     fileprivate var appState: Variable<JSON>!
+    fileprivate var autoSaveDisabled: Bool = false
 
     fileprivate let disposeBag = DisposeBag()
 
@@ -30,8 +31,10 @@ class AppStore {
 
     fileprivate func bindRx() {
         appState.asObservable()
-            .subscribe(onNext: { appState in
-                UserDefaultsService.save(forKey: .appState, data: appState.rawString() as Any)
+            .subscribe(onNext: { [weak self] appState in
+                if !self!.autoSaveDisabled {
+                    UserDefaultsService.save(forKey: .appState, data: appState.rawString() as Any)
+                }
             }).addDisposableTo(disposeBag)
     }
 
@@ -46,5 +49,13 @@ class AppStore {
             print("SwiftyJson merge error:\n\(error.localizedDescription)")
             throw ExtendError.DispatchActionToStoreFailed
         }
+    }
+
+    func disableAutoStoreUserDefaults() {
+        autoSaveDisabled = true
+    }
+
+    func enableAutoStoreUserDefaults() {
+        autoSaveDisabled = false
     }
 }
