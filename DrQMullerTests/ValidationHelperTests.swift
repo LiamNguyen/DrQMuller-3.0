@@ -26,6 +26,10 @@ class ValidationHelperTests: XCTestCase {
 			"username": "pnguyen1",
 			"password": ""
 		]
+		let schemeFailBoth = [
+			"username": "@#$@#$@#",
+			"password": "##@$@#$@"
+		]
 
 		XCTAssertTrue(ValidationHelper.validate(scheme: schemeSuccess).isEmpty)
 		XCTAssertEqual(
@@ -43,6 +47,22 @@ class ValidationHelperTests: XCTestCase {
 		XCTAssertEqual(
 			ValidationHelper.validate(scheme: schemeFailPassword)[0].errorCode,
 			"empty"
+		)
+		XCTAssertEqual(
+			ValidationHelper.validate(scheme: schemeFailBoth)[0].key,
+			"username"
+		)
+		XCTAssertEqual(
+			ValidationHelper.validate(scheme: schemeFailBoth)[1].key,
+			"password"
+		)
+		XCTAssertEqual(
+			ValidationHelper.validate(scheme: schemeFailBoth)[0].errorCode,
+			"patternFail"
+		)
+		XCTAssertEqual(
+			ValidationHelper.validate(scheme: schemeFailBoth)[1].errorCode,
+			"patternFail"
 		)
 	}
 
