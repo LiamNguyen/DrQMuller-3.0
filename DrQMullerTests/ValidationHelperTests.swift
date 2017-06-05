@@ -65,9 +65,4 @@ class ValidationHelperTests: XCTestCase {
 			"patternFail"
 		)
 	}
-
-    func testPerformanceExample() {
-        self.measure {
-        }
-    }
 }

@@ -82,6 +82,7 @@
 		76B345671EE0945500CBAA1A /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76B345641EE0945200CBAA1A /* SwiftyJSON.framework */; };
 		76B345681EE0946F00CBAA1A /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76B345641EE0945200CBAA1A /* SwiftyJSON.framework */; };
 		76B345691EE0946F00CBAA1A /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 76B345641EE0945200CBAA1A /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		76EDA6F31EE5708C00BE0FDE /* AuthenticationStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EDA6F21EE5708C00BE0FDE /* AuthenticationStoreTests.swift */; };
 		E65170A360CCC84DDC9F0CD4 /* UserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6517B7E1786E173D5343560 /* UserDefaultsService.swift */; };
 		E6517267749C8E3932F3C239 /* AppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65175249FE71B0820C012B8 /* AppStore.swift */; };
 		E6517314CDBDE92F5E9891EA /* ValidationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65176549AD7FE3C4EB66AD7 /* ValidationHelper.swift */; };
@@ -187,6 +188,7 @@
 		7690BCC51ED23AE600B631C2 /* lang-vi.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "lang-vi.json"; sourceTree = "<group>"; };
 		76973E261EDAB239009F105C /* GSMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GSMessage.swift; sourceTree = "<group>"; };
 		76B345641EE0945200CBAA1A /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		76EDA6F21EE5708C00BE0FDE /* AuthenticationStoreTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationStoreTests.swift; sourceTree = "<group>"; };
 		E65172CA792FF7ABCD6E8C39 /* RequestBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
 		E65175249FE71B0820C012B8 /* AppStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStore.swift; sourceTree = "<group>"; };
 		E65175D57DF7BF9D520E7586 /* ExtendError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtendError.swift; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				762FF6D71EE490D1006DA986 /* ValidationHelperTests.swift */,
+				76EDA6F21EE5708C00BE0FDE /* AuthenticationStoreTests.swift */,
 				762FF6D91EE490D1006DA986 /* Info.plist */,
 			);
 			path = DrQMullerTests;
@@ -688,6 +691,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				762FF6D81EE490D1006DA986 /* ValidationHelperTests.swift in Sources */,
+				76EDA6F31EE5708C00BE0FDE /* AuthenticationStoreTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -975,6 +979,7 @@
 				762FF6DE1EE490D1006DA986 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		766FBA651ED1D7F700E4454D /* Build configuration list for PBXProject "DrQMuller" */ = {
 			isa = XCConfigurationList;
