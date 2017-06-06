@@ -1,7 +1,6 @@
 import UIKit
 import RxSwift
 import RxCocoa
-import AudioToolbox
 import Localize
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
@@ -119,17 +118,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 //    Mark: User Login
 
     fileprivate func userLogin() {
-        loginViewModel.userLogin { [weak self] result in
+        loginViewModel.userLogin {result in
             switch result {
             case .login_success:
                 print("User in")
             default:
-				AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
-				self?.showMessage(
-                    "Error.\(result.rawValue)".localize(),
-                    type: .error,
-                    options: [.animation(.fade), .textNumberOfLines(self!.numberOfLinesForMessage)]
-                )
+				ErrorDisplayService.sharedInstance.failReason.value.append((key: "", errorCode: result.rawValue))
             }
         }
     }

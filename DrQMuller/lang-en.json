@@ -12,15 +12,15 @@
             "patternFail": "Password should only contains letters, numbers, (-) or (_). 8 to 30 characters"
         }
     },
-	"Login" : {
+	"Login": {
 		"TextFieldPlaceHolder" : {
-			"username" : "Username",
-			"password" : "Password"
+			"username": "Username",
+			"password": "Password"
 		},
 		"Button": {
-			"resetPassword"	: "Forgot username or password?",
-			"login"			: "Login",
-			"register"		: "Register"
+			"resetPassword": "Forgot username or password?",
+			"login": "Login",
+			"register": "Register"
 		}
 	}
 }
