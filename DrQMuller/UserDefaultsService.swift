@@ -17,5 +17,8 @@ class UserDefaultsService {
 
     enum Keys: String {
         case appState
+        case testSave
+        case testGet
+        case testRemove
     }
 }

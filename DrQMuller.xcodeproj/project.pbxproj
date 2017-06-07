@@ -81,6 +81,7 @@
 		76B345661EE0945200CBAA1A /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 76B345641EE0945200CBAA1A /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		76B345671EE0945500CBAA1A /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76B345641EE0945200CBAA1A /* SwiftyJSON.framework */; };
 		76B345691EE0946F00CBAA1A /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 76B345641EE0945200CBAA1A /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		76BA40411EE8212A00FD00AE /* UserDefaultsServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BA40401EE8212A00FD00AE /* UserDefaultsServiceTests.swift */; };
 		76EDA6F31EE5708C00BE0FDE /* AuthenticationStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EDA6F21EE5708C00BE0FDE /* AuthenticationStoreTests.swift */; };
 		76EDA7061EE588E800BE0FDE /* AppStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EDA7051EE588E800BE0FDE /* AppStoreTests.swift */; };
 		76EDA7071EE58A5B00BE0FDE /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76B345641EE0945200CBAA1A /* SwiftyJSON.framework */; };
@@ -193,6 +194,7 @@
 		7690BCC51ED23AE600B631C2 /* lang-vi.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "lang-vi.json"; sourceTree = "<group>"; };
 		76973E261EDAB239009F105C /* GSMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GSMessage.swift; sourceTree = "<group>"; };
 		76B345641EE0945200CBAA1A /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		76BA40401EE8212A00FD00AE /* UserDefaultsServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsServiceTests.swift; sourceTree = "<group>"; };
 		76EDA6F21EE5708C00BE0FDE /* AuthenticationStoreTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationStoreTests.swift; sourceTree = "<group>"; };
 		76EDA7051EE588E800BE0FDE /* AppStoreTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStoreTests.swift; sourceTree = "<group>"; };
 		E65172CA792FF7ABCD6E8C39 /* RequestBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
@@ -268,6 +270,7 @@
 				762FF6D71EE490D1006DA986 /* ValidationHelperTests.swift */,
 				76EDA6F21EE5708C00BE0FDE /* AuthenticationStoreTests.swift */,
 				76EDA7051EE588E800BE0FDE /* AppStoreTests.swift */,
+				76BA40401EE8212A00FD00AE /* UserDefaultsServiceTests.swift */,
 				762FF6D91EE490D1006DA986 /* Info.plist */,
 			);
 			path = DrQMullerTests;
@@ -711,6 +714,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76BA40411EE8212A00FD00AE /* UserDefaultsServiceTests.swift in Sources */,
 				76EDA7061EE588E800BE0FDE /* AppStoreTests.swift in Sources */,
 				762FF6D81EE490D1006DA986 /* ValidationHelperTests.swift in Sources */,
 				76EDA6F31EE5708C00BE0FDE /* AuthenticationStoreTests.swift in Sources */,
