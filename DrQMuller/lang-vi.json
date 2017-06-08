@@ -3,6 +3,7 @@
 		"server_error": "Lỗi máy chủ. Liên hệ bộ phận chăm sóc khách hàng",
 		"save_client_local_error": "Lỗi lưu thông tin nội bộ. Liên hệ bộ phận chăm sóc khách hàng",
 		"invalid_username_password": "Tên đăng nhập hoặc mật khẩu không hợp lệ",
+		"application_error": "Lỗi ứng dụng. Liên hệ bộ phận chăm sóc khách hàng",
 		"username": {
 			"empty": "Tên đăng nhập trống",
 			"patternFail": "Tên đăng nhập bao gồm chữ số, (-) hoặc (_). 8 đến 25 ký tự"

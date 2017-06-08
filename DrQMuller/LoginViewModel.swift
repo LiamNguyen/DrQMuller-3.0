@@ -86,10 +86,13 @@ class LoginViewModel {
         do {
             try CustomerAction.saveCustomer(info: customer.toJSON())
             return true
-        } catch let error {
-            print("Failed To save customer\n\(error.localizedDescription)")
+        } catch let error as ExtendError {
+            print(error.descriptionForLog)
             return false
-        }
+        } catch let error {
+			print("Unhandled error: \(error.localizedDescription)")
+			return false
+		}
     }
 
 	fileprivate func reduceTwoThirdOfInitialConstraint(constraint: Float) -> Float {
@@ -103,12 +106,10 @@ class LoginViewModel {
     fileprivate func requestBody() -> Data? {
         do {
             return try Helper.jsonObjectToData(self.credential)
-        } catch ExtendError.InvalidJSONObject {
-            print("Invalid JSON Object")
-        } catch ExtendError.JSONSerializationFailed {
-            print("Failed to serialize JSON")
-        } catch {
-            print("Unknown Error")
+        } catch let error as ExtendError {
+            print(error.descriptionForLog)
+        } catch let error {
+            print("Unhandled error: \(error.localizedDescription)")
         }
         return nil
     }

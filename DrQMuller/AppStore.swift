@@ -36,12 +36,14 @@ class AppStore {
                 if !self!.autoStoreDisabled && !self!.firstTimeInitializeState {
 					do {
                         try UserDefaultsService.save(forKey: .appState, data: appState.rawString() as Any)
-                    } catch let error {
+                    } catch let error as ExtendError {
                         ErrorDisplayService.sharedInstance.failReason.value.append((
                                 key: "",
-                                errorCode: error.localizedDescription
+                                errorCode: error.commonErrorCode
                         ))
-                        print(error)
+                        print(error.descriptionForLog)
+                    } catch let error {
+                        print(error.localizedDescription)
                     }
                 }
 				if self!.firstTimeInitializeState {

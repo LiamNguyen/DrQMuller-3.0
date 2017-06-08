@@ -3,10 +3,8 @@ import Foundation
 class Helper {
     static func jsonObjectToData(_ jsonObject: [String: Any]) throws-> Data {
         if !JSONSerialization.isValidJSONObject(jsonObject) {
-            print("Invalid JSON object")
             throw ExtendError.InvalidJSONObject
         }
-
         do {
             return try JSONSerialization.data(withJSONObject: jsonObject, options: .prettyPrinted)
         } catch {

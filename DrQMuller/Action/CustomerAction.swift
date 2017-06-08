@@ -11,7 +11,8 @@ class CustomerAction {
             try AppStore.sharedInstance.dispatch(
                     action: (key: StateKey.customer.rawValue, state: infoWithoutToken)
             )
-        } catch ExtendError.DispatchActionToStoreFailed {
+        } catch let error as ExtendError {
+            print(error.descriptionForLog)
             throw ExtendError.SaveCustomerFailed
         }
         do {
@@ -19,7 +20,8 @@ class CustomerAction {
                 throw ExtendError.SaveCustomerFailed
             }
             try KeychainAccessService.store(value: token, forKey: .authorizationToken)
-        } catch ExtendError.StoreKeyChainFailed {
+        } catch let error as ExtendError {
+            print(error.descriptionForLog)
             throw ExtendError.SaveCustomerFailed
         }
     }
