@@ -14,14 +14,14 @@ class AppStoreTests: XCTestCase {
 
         initializeAppStateForTesting()
         currentStoredAppState = UserDefaultsService.get(forKey: .appState)
-        UserDefaultsService.remove(forKey: .appState)
+        try? UserDefaultsService.remove(forKey: .appState)
     }
 
     override func tearDown() {
         super.tearDown()
 
 		if let currentStoredAppState = currentStoredAppState {
-			UserDefaultsService.save(forKey: .appState, data: currentStoredAppState)
+			try? UserDefaultsService.save(forKey: .appState, data: currentStoredAppState)
 		}
         currentStoredAppState = nil
         initialState = nil

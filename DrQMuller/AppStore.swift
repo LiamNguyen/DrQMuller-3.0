@@ -34,7 +34,15 @@ class AppStore {
         appState.asObservable()
             .subscribe(onNext: { [weak self] appState in
                 if !self!.autoStoreDisabled && !self!.firstTimeInitializeState {
-                    UserDefaultsService.save(forKey: .appState, data: appState.rawString() as Any)
+					do {
+                        try UserDefaultsService.save(forKey: .appState, data: appState.rawString() as Any)
+                    } catch let error {
+                        ErrorDisplayService.sharedInstance.failReason.value.append((
+                                key: "",
+                                errorCode: error.localizedDescription
+                        ))
+                        print(error)
+                    }
                 }
 				if self!.firstTimeInitializeState {
 					self?.firstTimeInitializeState = false

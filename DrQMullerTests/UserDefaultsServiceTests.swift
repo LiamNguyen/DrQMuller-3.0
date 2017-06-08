@@ -24,13 +24,13 @@ class UserDefaultsServiceTests: XCTestCase {
         testDataGet = nil
         testDataRemove = nil
 
-        _ = UserDefaultsService.remove(forKey: .testSave)
-        _ = UserDefaultsService.remove(forKey: .testGet)
-        _ = UserDefaultsService.remove(forKey: .testRemove)
+        try? UserDefaultsService.remove(forKey: .testSave)
+        try? UserDefaultsService.remove(forKey: .testGet)
+        try? UserDefaultsService.remove(forKey: .testRemove)
     }
 
-    func testSavingToUserDefaults() {
-        XCTAssertTrue(UserDefaultsService.save(forKey: .testSave, data: testDataSave))
+    func testSavingToUserDefaults() throws {
+        XCTAssertNoThrow(try UserDefaultsService.save(forKey: .testSave, data: testDataSave))
 
         if let retrievedTestDataSave = UserDefaultsService.get(forKey: .testSave) as? String {
             XCTAssertEqual(retrievedTestDataSave, testDataSave)
@@ -38,7 +38,7 @@ class UserDefaultsServiceTests: XCTestCase {
             XCTFail()
         }
 
-        XCTAssertTrue(UserDefaultsService.save(forKey: .testSave, data: testDataSaveSecond))
+        XCTAssertNoThrow(try UserDefaultsService.save(forKey: .testSave, data: testDataSaveSecond))
 
         if let retrievedTestDataSaveSecond = UserDefaultsService.get(forKey: .testSave) as? [String] {
             XCTAssertEqual(retrievedTestDataSaveSecond, testDataSaveSecond)
@@ -47,23 +47,20 @@ class UserDefaultsServiceTests: XCTestCase {
         }
     }
 
-    func testGetFromUserDefaults() {
+    func testGetFromUserDefaults() throws {
         XCTAssertTrue(UserDefaultsService.get(forKey: .testGet) == nil)
+        XCTAssertNoThrow(try UserDefaultsService.save(forKey: .testGet, data: testDataGet))
 
-        if UserDefaultsService.save(forKey: .testGet, data: testDataGet) {
-            if let retrievedTestDataGet = UserDefaultsService.get(forKey: .testGet) as? String {
-                XCTAssertEqual(retrievedTestDataGet, testDataGet)
-            } else {
-                XCTFail()
-            }
+        if let retrievedTestDataGet = UserDefaultsService.get(forKey: .testGet) as? String {
+            XCTAssertEqual(retrievedTestDataGet, testDataGet)
         } else {
             XCTFail()
         }
     }
 
-    func testRemoveFromUserDefaults() {
-        XCTAssertTrue(UserDefaultsService.save(forKey: .testRemove, data: testDataRemove))
-        XCTAssertTrue(UserDefaultsService.remove(forKey: .testRemove))
+    func testRemoveFromUserDefaults() throws {
+        XCTAssertNoThrow(try UserDefaultsService.save(forKey: .testRemove, data: testDataRemove))
+        XCTAssertNoThrow(try UserDefaultsService.remove(forKey: .testRemove))
         XCTAssertTrue(UserDefaultsService.get(forKey: .testRemove) == nil)
     }
 }

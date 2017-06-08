@@ -6,4 +6,6 @@ enum ExtendError: Error {
     case DispatchActionToStoreFailed
     case StoreKeyChainFailed
     case SaveCustomerFailed
+    case UserDefaultsStoreFailed
+    case UserDefaultRemoveFailed
 }
