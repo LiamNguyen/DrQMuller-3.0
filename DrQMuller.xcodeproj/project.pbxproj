@@ -51,6 +51,10 @@
 		764D12C61EE3FD1F00BAAA6E /* KeychainAccess.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 764D12C41EE3FD1F00BAAA6E /* KeychainAccess.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		764D12C71EE3FD2D00BAAA6E /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 764D12C41EE3FD1F00BAAA6E /* KeychainAccess.framework */; };
 		764D12C81EE3FD2D00BAAA6E /* KeychainAccess.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 764D12C41EE3FD1F00BAAA6E /* KeychainAccess.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7653BDDE1EEB0FBB0079EE3D /* SwiftyBeaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7653BDDD1EEB0FBB0079EE3D /* SwiftyBeaver.framework */; };
+		7653BDDF1EEB0FBB0079EE3D /* SwiftyBeaver.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7653BDDD1EEB0FBB0079EE3D /* SwiftyBeaver.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7653BDE01EEB0FC10079EE3D /* SwiftyBeaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7653BDDD1EEB0FBB0079EE3D /* SwiftyBeaver.framework */; };
+		7653BDE11EEB0FC10079EE3D /* SwiftyBeaver.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7653BDDD1EEB0FBB0079EE3D /* SwiftyBeaver.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		766FBA6E1ED1D7F700E4454D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766FBA6D1ED1D7F700E4454D /* AppDelegate.swift */; };
 		766FBA731ED1D7F700E4454D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 766FBA711ED1D7F700E4454D /* Main.storyboard */; };
 		766FBA781ED1D7F700E4454D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 766FBA771ED1D7F700E4454D /* Assets.xcassets */; };
@@ -130,6 +134,7 @@
 				760AB9C41ED9E77700FF26A6 /* AlamofireObjectMapper.framework in Embed Frameworks */,
 				760AB9C51ED9E77700FF26A6 /* RxCocoa.framework in Embed Frameworks */,
 				760AB9C61ED9E77700FF26A6 /* Swifternalization.framework in Embed Frameworks */,
+				7653BDE11EEB0FC10079EE3D /* SwiftyBeaver.framework in Embed Frameworks */,
 				760AB9C71ED9E77700FF26A6 /* Localize.framework in Embed Frameworks */,
 				764D12C81EE3FD2D00BAAA6E /* KeychainAccess.framework in Embed Frameworks */,
 				760AB9C81ED9E77700FF26A6 /* Alamofire.framework in Embed Frameworks */,
@@ -149,6 +154,7 @@
 				767044CE1ED712D80002EDE5 /* AlamofireObjectMapper.framework in Embed Frameworks */,
 				767044C51ED6FEC70002EDE5 /* RxCocoa.framework in Embed Frameworks */,
 				7690BCAA1ED2309700B631C2 /* Swifternalization.framework in Embed Frameworks */,
+				7653BDDF1EEB0FBB0079EE3D /* SwiftyBeaver.framework in Embed Frameworks */,
 				7647BD121ED34F7D00591395 /* Localize.framework in Embed Frameworks */,
 				764D12C61EE3FD1F00BAAA6E /* KeychainAccess.framework in Embed Frameworks */,
 				767044C81ED7106C0002EDE5 /* Alamofire.framework in Embed Frameworks */,
@@ -170,6 +176,7 @@
 		7647BD101ED34F7D00591395 /* Localize.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Localize.framework; path = Carthage/Build/iOS/Localize.framework; sourceTree = "<group>"; };
 		7647BD131ED366F900591395 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		764D12C41EE3FD1F00BAAA6E /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainAccess.framework; path = Carthage/Build/iOS/KeychainAccess.framework; sourceTree = "<group>"; };
+		7653BDDD1EEB0FBB0079EE3D /* SwiftyBeaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyBeaver.framework; path = Carthage/Build/iOS/SwiftyBeaver.framework; sourceTree = "<group>"; };
 		766FBA6A1ED1D7F700E4454D /* DrQMuller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrQMuller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		766FBA6D1ED1D7F700E4454D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		766FBA721ED1D7F700E4454D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -221,6 +228,7 @@
 				760AB9B41ED9E77700FF26A6 /* AlamofireObjectMapper.framework in Frameworks */,
 				764D12C71EE3FD2D00BAAA6E /* KeychainAccess.framework in Frameworks */,
 				760AB9B51ED9E77700FF26A6 /* RxCocoa.framework in Frameworks */,
+				7653BDE01EEB0FC10079EE3D /* SwiftyBeaver.framework in Frameworks */,
 				760AB9B61ED9E77700FF26A6 /* Swifternalization.framework in Frameworks */,
 				760AB9B71ED9E77700FF26A6 /* Localize.framework in Frameworks */,
 				760AB9B81ED9E77700FF26A6 /* Alamofire.framework in Frameworks */,
@@ -246,6 +254,7 @@
 				767044CD1ED712D80002EDE5 /* AlamofireObjectMapper.framework in Frameworks */,
 				767044C41ED6FEC70002EDE5 /* RxCocoa.framework in Frameworks */,
 				7690BCA91ED2309700B631C2 /* Swifternalization.framework in Frameworks */,
+				7653BDDE1EEB0FBB0079EE3D /* SwiftyBeaver.framework in Frameworks */,
 				7647BD111ED34F7D00591395 /* Localize.framework in Frameworks */,
 				764D12C51EE3FD1F00BAAA6E /* KeychainAccess.framework in Frameworks */,
 				767044C71ED7106C0002EDE5 /* Alamofire.framework in Frameworks */,
@@ -406,6 +415,7 @@
 		7690BCBD1ED2391300B631C2 /* ExternalLibraries */ = {
 			isa = PBXGroup;
 			children = (
+				7653BDDD1EEB0FBB0079EE3D /* SwiftyBeaver.framework */,
 				764D12C41EE3FD1F00BAAA6E /* KeychainAccess.framework */,
 				76B345641EE0945200CBAA1A /* SwiftyJSON.framework */,
 				767044CC1ED712D80002EDE5 /* AlamofireObjectMapper.framework */,
@@ -637,6 +647,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/AlamofireObjectMapper.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/KeychainAccess.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyBeaver.framework",
 			);
 			outputPaths = (
 			);
@@ -672,6 +683,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/AlamofireObjectMapper.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/KeychainAccess.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyBeaver.framework",
 			);
 			outputPaths = (
 			);
