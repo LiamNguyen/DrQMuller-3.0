@@ -91,6 +91,7 @@
 		76EDA6F31EE5708C00BE0FDE /* AuthenticationStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EDA6F21EE5708C00BE0FDE /* AuthenticationStoreTests.swift */; };
 		76EDA7061EE588E800BE0FDE /* AppStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EDA7051EE588E800BE0FDE /* AppStoreTests.swift */; };
 		76EDA7071EE58A5B00BE0FDE /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76B345641EE0945200CBAA1A /* SwiftyJSON.framework */; };
+		E6517012F47B87657F0FBFB2 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6517B395E5662C1BDADB996 /* Cache.swift */; };
 		E6517034276C230E1C0B9814 /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65179037516FD7D6B93FEED /* UIApplicationExtension.swift */; };
 		E65170A360CCC84DDC9F0CD4 /* UserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6517B7E1786E173D5343560 /* UserDefaultsService.swift */; };
 		E6517267749C8E3932F3C239 /* AppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65175249FE71B0820C012B8 /* AppStore.swift */; };
@@ -113,6 +114,7 @@
 		E6517D997E120E41380EB600 /* UserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6517B7E1786E173D5343560 /* UserDefaultsService.swift */; };
 		E6517DE662CD0A6432ADE7AE /* CustomerAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65178A1F73EBE6D2F8505FC /* CustomerAction.swift */; };
 		E6517ECF96F463E5375A57F8 /* ExtendError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65175D57DF7BF9D520E7586 /* ExtendError.swift */; };
+		E6517F0A19E3C6B1A7FD96BF /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6517B395E5662C1BDADB996 /* Cache.swift */; };
 		E6517F6340C84B93F85F2242 /* ValidationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65176549AD7FE3C4EB66AD7 /* ValidationHelper.swift */; };
 /* End PBXBuildFile section */
 
@@ -220,6 +222,7 @@
 		E6517770A6381701B0BB5F48 /* KeychainAccessService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainAccessService.swift; sourceTree = "<group>"; };
 		E65178A1F73EBE6D2F8505FC /* CustomerAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerAction.swift; sourceTree = "<group>"; };
 		E65179037516FD7D6B93FEED /* UIApplicationExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
+		E6517B395E5662C1BDADB996 /* Cache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
 		E6517B7E1786E173D5343560 /* UserDefaultsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsService.swift; sourceTree = "<group>"; };
 		E6517C6E89921365674412E1 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		E6517DEF750C8779C2F8BE76 /* Customer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
@@ -288,8 +291,8 @@
 				76EDA7051EE588E800BE0FDE /* AppStoreTests.swift */,
 				76BA40401EE8212A00FD00AE /* UserDefaultsServiceTests.swift */,
 				7653BDE41EEBF0AE0079EE3D /* KeyChainAccessServiceTests.swift */,
-				762FF6D91EE490D1006DA986 /* Info.plist */,
 				7653BDE61EEC21420079EE3D /* CustomerActionTests.swift */,
+				762FF6D91EE490D1006DA986 /* Info.plist */,
 			);
 			path = DrQMullerTests;
 			sourceTree = "<group>";
@@ -462,6 +465,7 @@
 			isa = PBXGroup;
 			children = (
 				E65175249FE71B0820C012B8 /* AppStore.swift */,
+				E6517B395E5662C1BDADB996 /* Cache.swift */,
 			);
 			name = Local;
 			sourceTree = "<group>";
@@ -730,6 +734,7 @@
 				E65179719D28668F69485BFE /* ErrorDisplayService.swift in Sources */,
 				E65173ABC889BCA65816A0A4 /* UIApplicationExtension.swift in Sources */,
 				E6517A08D5FC54D3899BF78D /* Logger.swift in Sources */,
+				E6517012F47B87657F0FBFB2 /* Cache.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -772,6 +777,7 @@
 				E651788A67ADCDBDE24CFB5B /* ErrorDisplayService.swift in Sources */,
 				E6517034276C230E1C0B9814 /* UIApplicationExtension.swift in Sources */,
 				E651793111D2C5764FF3DA2A /* Logger.swift in Sources */,
+				E6517F0A19E3C6B1A7FD96BF /* Cache.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

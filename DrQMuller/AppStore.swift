@@ -15,32 +15,21 @@ class AppStore {
     fileprivate init() {
 //        Mark: Define initial app state
 
-        initialState = JSON(
-            [
-                StateKey.customer.rawValue: ""
-            ]
-        )
+        initialState = JSON([
+            StateKey.customer.rawValue: ""
+        ])
 
-		if let storedAppState = UserDefaultsService.get(forKey: .appState) as? String {
-			appState = Variable(Helper.stringToJSON(string: storedAppState))
-		} else {
-            appState = Variable(initialState)
-        }
-
+        initializeAppState()
         bindRx()
     }
 
     fileprivate func bindRx() {
         appState.asObservable()
-            .subscribe(onNext: { [weak self] appState in
+            .subscribe(onNext: { [weak self] _ in
                 if !self!.autoStoreDisabled && !self!.firstTimeInitializeState {
-					do {
-                        try UserDefaultsService.save(forKey: .appState, data: appState.rawString() as Any)
+                    do {
+                        try Cache.sharedInstance.save(fields: [.customer])
                     } catch let error as ExtendError {
-                        ErrorDisplayService.sharedInstance.failReason.value.append((
-                                key: "",
-                                errorCode: error.commonErrorCode
-                        ))
                         Logger.sharedInstance.log(event: error.descriptionForLog, type: .error)
                     } catch let error {
                         Logger.sharedInstance.log(event: error.localizedDescription, type: .error)
@@ -65,6 +54,24 @@ class AppStore {
         }
     }
 
+    fileprivate func initializeAppState() {
+        do {
+            appState = Variable(try initialState.merged(with: Cache.sharedInstance.getAppCache()))
+        } catch let error {
+            Logger.sharedInstance.log(event: "SwiftyJson merge error:\n\(error.localizedDescription)", type: .error)
+            ErrorDisplayService.sharedInstance.failReason.value.append((
+                key: "",
+                errorCode: "application_error"
+            ))
+        }
+    }
+
+    enum StateKey: String {
+        case customer
+        case testing
+        case myList
+    }
+
 //    Mark: Testing purpose
 
     func disableAutoStoreUserDefaults() {
@@ -77,11 +84,5 @@ class AppStore {
 
 	func resetAppState() {
         appState.value = initialState
-    }
-
-    enum StateKey: String {
-        case customer
-        case testing
-        case myList
     }
 }

@@ -20,7 +20,7 @@ class UserDefaultsService {
     }
 
     enum Keys: String {
-        case appState
+        case appCache
         case testSave
         case testGet
         case testRemove

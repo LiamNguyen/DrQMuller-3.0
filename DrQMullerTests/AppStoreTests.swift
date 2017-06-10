@@ -3,31 +3,33 @@ import SwiftyJSON
 @testable import DrQMuller
 
 class AppStoreTests: XCTestCase {
-    fileprivate var currentStoredAppState: Any?
+    fileprivate var currentStoredAppCache: Any?
     fileprivate var initialState: JSON!
     fileprivate var firstExpectedState: JSON!
     fileprivate var secondExpectedState: JSON!
     fileprivate var thirdExpectedState: JSON!
+    fileprivate var customer: JSON!
 
     override func setUp() {
         super.setUp()
 
         initializeAppStateForTesting()
-        currentStoredAppState = UserDefaultsService.get(forKey: .appState)
-        try? UserDefaultsService.remove(forKey: .appState)
+        currentStoredAppCache = UserDefaultsService.get(forKey: .appCache)
+        try? UserDefaultsService.remove(forKey: .appCache)
     }
 
     override func tearDown() {
         super.tearDown()
 
-		if let currentStoredAppState = currentStoredAppState {
-			try? UserDefaultsService.save(forKey: .appState, data: currentStoredAppState)
+		if let currentStoredAppCache = currentStoredAppCache {
+			try? UserDefaultsService.save(forKey: .appCache, data: currentStoredAppCache)
 		}
-        currentStoredAppState = nil
+        currentStoredAppCache = nil
         initialState = nil
         firstExpectedState = nil
         secondExpectedState = nil
         thirdExpectedState = nil
+        customer = nil
     }
 
     func testDispatchAction() {
@@ -56,12 +58,20 @@ class AppStoreTests: XCTestCase {
         AppStore.sharedInstance.resetAppState()
         AppStore.sharedInstance.enableAutoStoreUserDefaults()
 
-		XCTAssertTrue(UserDefaultsService.get(forKey: .appState) == nil)
+		XCTAssertTrue(UserDefaultsService.get(forKey: .appCache) == nil)
 
         try? AppStore.sharedInstance.dispatch(action: (key: .testing, state: "I am testing something here for sure"))
 
-        if let storedAppState = UserDefaultsService.get(forKey: .appState) as? String {
-            XCTAssertEqual(Helper.stringToJSON(string: storedAppState), firstExpectedState)
+        XCTAssertTrue(UserDefaultsService.get(forKey: .appCache) == nil)
+
+        try? AppStore.sharedInstance.dispatch(action: (key: .customer, state: customer))
+
+        if let storedAppCache = UserDefaultsService.get(forKey: .appCache) as? String {
+            let customerStateKey: String = AppStore.StateKey.customer.rawValue
+            let storedCustomer = Helper.stringToJSON(string: storedAppCache)[customerStateKey]
+            let currentCustomer = AppStore.sharedInstance.getState()[customerStateKey]
+
+            XCTAssertEqual(storedCustomer, currentCustomer)
         } else {
             XCTFail()
         }
@@ -100,5 +110,17 @@ class AppStoreTests: XCTestCase {
                 ]
             ]
         )
+
+        customer = JSON([
+            "customerId": "4B2AA2B5-9A1F-4A92-BFC1-7DE483F09A4A",
+            "customerName": "Testing bots",
+            "dob": "1980-01-22",
+            "gender": "Male",
+            "phone": "00000000000",
+            "address": "Testing address",
+            "email": "test@test.com",
+            "uiSavedStep": "none",
+            "active": 0
+        ])
     }
 }

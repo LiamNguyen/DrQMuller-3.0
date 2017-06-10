@@ -10,6 +10,7 @@ enum ExtendError: Error {
     case SaveCustomerFailed
     case UserDefaultsStoreFailed
     case UserDefaultRemoveFailed
+    case FindKeyInStateTreeFailed
 }
 
 extension ExtendError {
