@@ -18,24 +18,32 @@ class KeychainAccessService {
         }
     }
 
-    static func getString(forKey: KeychainAccessKey) -> String {
+    static func getString(forKey: KeychainAccessKey) throws -> String {
         do {
-            return try keychain.getString(forKey.rawValue) ?? ""
+            if let keychain = try keychain.getString(forKey.rawValue) {
+                return keychain
+            } else {
+                Logger.sharedInstance.log(event: "Failed to get keychain", type: .error)
+                throw ExtendError.GetKeyChainFailed
+            }
         } catch let error {
             Logger.sharedInstance.log(event: "Failed to get keychain\n\(error.localizedDescription)", type: .error)
-            return ""
+            throw ExtendError.GetKeyChainFailed
         }
     }
 
-    static func remove(forKey: KeychainAccessKey) {
+    static func remove(forKey: KeychainAccessKey) throws {
         do {
             try keychain.remove(forKey.rawValue)
         } catch let error {
             Logger.sharedInstance.log(event: "Failed to remove keychain\n\(error.localizedDescription)", type: .error)
+            throw ExtendError.RemoveKeyChainFailed
         }
     }
 
     enum KeychainAccessKey: String {
         case authorizationToken
+        case testStore
+        case testRemove
     }
 }

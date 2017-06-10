@@ -5,6 +5,8 @@ enum ExtendError: Error {
     case JSONSerializationFailed
     case DispatchActionToStoreFailed
     case StoreKeyChainFailed
+    case RemoveKeyChainFailed
+    case GetKeyChainFailed
     case SaveCustomerFailed
     case UserDefaultsStoreFailed
     case UserDefaultRemoveFailed
