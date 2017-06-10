@@ -9,7 +9,7 @@ class CustomerAction {
         }
         do {
             try AppStore.sharedInstance.dispatch(
-                action: (key: StateKey.customer.rawValue, state: infoWithoutToken)
+                action: (key: .customer, state: infoWithoutToken)
             )
         } catch let error as ExtendError {
             Logger.sharedInstance.log(event: error.descriptionForLog, type: .error)
@@ -24,9 +24,5 @@ class CustomerAction {
             Logger.sharedInstance.log(event: error.descriptionForLog, type: .error)
             throw ExtendError.SaveCustomerFailed
         }
-    }
-
-    enum StateKey: String {
-        case customer
     }
 }

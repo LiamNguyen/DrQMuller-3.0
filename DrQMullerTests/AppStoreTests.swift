@@ -36,15 +36,15 @@ class AppStoreTests: XCTestCase {
 
         XCTAssertEqual(AppStore.sharedInstance.getState(), initialState)
 
-        try? AppStore.sharedInstance.dispatch(action: (key: "hello", state: "I am testing something here for sure"))
+        try? AppStore.sharedInstance.dispatch(action: (key: .testing, state: "I am testing something here for sure"))
 
         XCTAssertEqual(AppStore.sharedInstance.getState(), firstExpectedState)
 
-        try? AppStore.sharedInstance.dispatch(action: (key: "MyList", state: ["Find more money", "Find even more and more money"]))
+        try? AppStore.sharedInstance.dispatch(action: (key: .myList, state: ["Find more money", "Find even more and more money"]))
 
         XCTAssertEqual(AppStore.sharedInstance.getState(), secondExpectedState)
 
-        try? AppStore.sharedInstance.dispatch(action: (key: "MyList", state: ["I replaced it already"]))
+        try? AppStore.sharedInstance.dispatch(action: (key: .myList, state: ["I replaced it already"]))
 
         XCTAssertEqual(AppStore.sharedInstance.getState(), thirdExpectedState)
 
@@ -58,7 +58,7 @@ class AppStoreTests: XCTestCase {
 
 		XCTAssertTrue(UserDefaultsService.get(forKey: .appState) == nil)
 
-        try? AppStore.sharedInstance.dispatch(action: (key: "hello", state: "I am testing something here for sure"))
+        try? AppStore.sharedInstance.dispatch(action: (key: .testing, state: "I am testing something here for sure"))
 
         if let storedAppState = UserDefaultsService.get(forKey: .appState) as? String {
             XCTAssertEqual(Helper.stringToJSON(string: storedAppState), firstExpectedState)
@@ -70,20 +70,20 @@ class AppStoreTests: XCTestCase {
     fileprivate func initializeAppStateForTesting() {
         initialState = JSON(
             [
-                "customer": ""
+                AppStore.StateKey.customer.rawValue: ""
             ]
         )
         firstExpectedState = JSON(
             [
-                "customer": "",
-                "hello": "I am testing something here for sure"
+                AppStore.StateKey.customer.rawValue: "",
+                AppStore.StateKey.testing.rawValue: "I am testing something here for sure"
             ]
         )
         secondExpectedState = JSON(
             [
-                "customer": "",
-                "hello": "I am testing something here for sure",
-                "MyList": [
+                AppStore.StateKey.customer.rawValue: "",
+                AppStore.StateKey.testing.rawValue: "I am testing something here for sure",
+                AppStore.StateKey.myList.rawValue: [
                     "Find more money",
                     "Find even more and more money"
                 ]
@@ -91,9 +91,9 @@ class AppStoreTests: XCTestCase {
         )
         thirdExpectedState = JSON(
             [
-                "customer": "",
-                "hello": "I am testing something here for sure",
-                "MyList": [
+                AppStore.StateKey.customer.rawValue: "",
+                AppStore.StateKey.testing.rawValue: "I am testing something here for sure",
+                AppStore.StateKey.myList.rawValue: [
                     "Find more money",
                     "Find even more and more money",
                     "I replaced it already"

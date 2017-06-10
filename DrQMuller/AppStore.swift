@@ -17,7 +17,7 @@ class AppStore {
 
         initialState = JSON(
             [
-                "customer": ""
+                StateKey.customer.rawValue: ""
             ]
         )
 
@@ -56,9 +56,9 @@ class AppStore {
 		return appState.value
     }
 
-    func dispatch(action: (key: String, state: Any)) throws {
+    func dispatch(action: (key: StateKey, state: Any)) throws {
         do {
-            appState.value = try appState.value.merged(with: JSON([action.key: action.state]))
+            appState.value = try appState.value.merged(with: JSON([action.key.rawValue: action.state]))
         } catch let error {
             Logger.sharedInstance.log(event: "SwiftyJson merge error:\n\(error.localizedDescription)", type: .error)
             throw ExtendError.DispatchActionToStoreFailed
@@ -77,5 +77,11 @@ class AppStore {
 
 	func resetAppState() {
         appState.value = initialState
+    }
+
+    enum StateKey: String {
+        case customer
+        case testing
+        case myList
     }
 }
