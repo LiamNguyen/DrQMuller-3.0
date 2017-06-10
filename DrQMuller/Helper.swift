@@ -1,4 +1,5 @@
 import Foundation
+import SwiftyJSON
 
 class Helper {
     static func jsonObjectToData(_ jsonObject: [String: Any]) throws-> Data {
@@ -18,4 +19,8 @@ class Helper {
         }
         return "Failed to convert NSString to String"
     }
+
+	static func stringToJSON(string: String) -> JSON {
+		return JSON(string.data(using: .utf8) ?? Data())
+	}
 }

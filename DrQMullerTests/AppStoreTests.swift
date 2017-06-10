@@ -61,7 +61,7 @@ class AppStoreTests: XCTestCase {
         try? AppStore.sharedInstance.dispatch(action: (key: "hello", state: "I am testing something here for sure"))
 
         if let storedAppState = UserDefaultsService.get(forKey: .appState) as? String {
-            XCTAssertEqual(stringToJSON(string: storedAppState), firstExpectedState)
+            XCTAssertEqual(Helper.stringToJSON(string: storedAppState), firstExpectedState)
         } else {
             XCTFail()
         }
@@ -100,9 +100,5 @@ class AppStoreTests: XCTestCase {
                 ]
             ]
         )
-    }
-
-    fileprivate func stringToJSON(string: String) -> JSON {
-        return JSON(string.data(using: .utf8) ?? Data())
     }
 }

@@ -22,7 +22,7 @@ class AppStore {
         )
 
 		if let storedAppState = UserDefaultsService.get(forKey: .appState) as? String {
-			appState = Variable(JSON(storedAppState.data(using: .utf8) ?? Data()))
+			appState = Variable(Helper.stringToJSON(string: storedAppState))
 		} else {
             appState = Variable(initialState)
         }
