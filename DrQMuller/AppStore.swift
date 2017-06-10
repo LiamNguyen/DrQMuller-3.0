@@ -41,9 +41,9 @@ class AppStore {
                                 key: "",
                                 errorCode: error.commonErrorCode
                         ))
-                        print(error.descriptionForLog)
+                        Logger.sharedInstance.log(event: error.descriptionForLog, type: .error)
                     } catch let error {
-                        print(error.localizedDescription)
+                        Logger.sharedInstance.log(event: error.localizedDescription, type: .error)
                     }
                 }
 				if self!.firstTimeInitializeState {
@@ -60,7 +60,7 @@ class AppStore {
         do {
             appState.value = try appState.value.merged(with: JSON([action.key: action.state]))
         } catch let error {
-            print("SwiftyJson merge error:\n\(error.localizedDescription)")
+            Logger.sharedInstance.log(event: "SwiftyJson merge error:\n\(error.localizedDescription)", type: .error)
             throw ExtendError.DispatchActionToStoreFailed
         }
     }

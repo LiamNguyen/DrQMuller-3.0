@@ -13,6 +13,9 @@ struct Constants {
 
 	static let deviceUUID: String = UIDevice.current.identifierForVendor?.uuidString ?? ""
 	static let deviceName: String = UIDevice.current.name
+	static let appId: String = "6JvYGw"
+	static let appCode: String = "tCl7oakmzObiyOsfFqnmsjxsrByinRkg"
+	static let logKey: String = "svf0wex1ufj3uLhb6fh7QfrhliNcunjO"
 	static var longTextLineNumbers: Int = {
 		return Constants.DeviceModel.deviceType() == .iPhone5 || Constants.DeviceModel.deviceType() == .iPhone4 ? 3 : 2
 	}()

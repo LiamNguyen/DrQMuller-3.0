@@ -12,7 +12,7 @@ class CustomerAction {
                     action: (key: StateKey.customer.rawValue, state: infoWithoutToken)
             )
         } catch let error as ExtendError {
-            print(error.descriptionForLog)
+            Logger.sharedInstance.log(event: error.descriptionForLog, type: .error)
             throw ExtendError.SaveCustomerFailed
         }
         do {
@@ -21,7 +21,7 @@ class CustomerAction {
             }
             try KeychainAccessService.store(value: token, forKey: .authorizationToken)
         } catch let error as ExtendError {
-            print(error.descriptionForLog)
+            Logger.sharedInstance.log(event: error.descriptionForLog, type: .error)
             throw ExtendError.SaveCustomerFailed
         }
     }

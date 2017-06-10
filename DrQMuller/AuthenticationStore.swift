@@ -35,9 +35,9 @@ class AuthenticationStore: AuthenticationStoreType {
                 }
             case .failure(let error):
                 completionHandler(result, nil)
-                print(error.localizedDescription)
+                Logger.sharedInstance.log(event: error.localizedDescription, type: .info)
                 if let response = response.response {
-                    print(response)
+                    Logger.sharedInstance.log(event: response, type: .verbose)
                 }
             }
         }

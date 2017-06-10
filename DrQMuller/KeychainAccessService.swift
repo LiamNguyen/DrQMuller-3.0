@@ -13,7 +13,7 @@ class KeychainAccessService {
                 try keychain.set(value, key: forKey.rawValue)
             }
         } catch let error {
-            print("Failed to store keychain\n\(error.localizedDescription)")
+            Logger.sharedInstance.log(event: "Failed to store keychain\n\(error.localizedDescription)", type: .error)
             throw ExtendError.StoreKeyChainFailed
         }
     }
@@ -22,7 +22,7 @@ class KeychainAccessService {
         do {
             return try keychain.getString(forKey.rawValue) ?? ""
         } catch let error {
-            print("Failed to get keychain\n\(error.localizedDescription)")
+            Logger.sharedInstance.log(event: "Failed to get keychain\n\(error.localizedDescription)", type: .error)
             return ""
         }
     }
@@ -31,7 +31,7 @@ class KeychainAccessService {
         do {
             try keychain.remove(forKey.rawValue)
         } catch let error {
-            print("Failed to remove keychain\n\(error.localizedDescription)")
+            Logger.sharedInstance.log(event: "Failed to remove keychain\n\(error.localizedDescription)", type: .error)
         }
     }
 

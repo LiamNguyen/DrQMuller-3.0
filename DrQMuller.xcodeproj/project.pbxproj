@@ -100,7 +100,9 @@
 		E65178324D656FC515B223C1 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6517C6E89921365674412E1 /* Helper.swift */; };
 		E651788A67ADCDBDE24CFB5B /* ErrorDisplayService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E651738F1E391E2584FBE3BE /* ErrorDisplayService.swift */; };
 		E65178EB2A41EDD64AECB5D2 /* KeychainAccessService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6517770A6381701B0BB5F48 /* KeychainAccessService.swift */; };
+		E651793111D2C5764FF3DA2A /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65173859AE7DF95D15DAAA8 /* Logger.swift */; };
 		E65179719D28668F69485BFE /* ErrorDisplayService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E651738F1E391E2584FBE3BE /* ErrorDisplayService.swift */; };
+		E6517A08D5FC54D3899BF78D /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65173859AE7DF95D15DAAA8 /* Logger.swift */; };
 		E6517AA6098C3BFB7432496A /* CustomerAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65178A1F73EBE6D2F8505FC /* CustomerAction.swift */; };
 		E6517BC1C3C3F4F2920338E6 /* ExtendError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65175D57DF7BF9D520E7586 /* ExtendError.swift */; };
 		E6517C0CDD04CECE5E414091 /* Retrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6517682BD42F0ED1126B8EB /* Retrier.swift */; };
@@ -205,6 +207,7 @@
 		76EDA6F21EE5708C00BE0FDE /* AuthenticationStoreTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationStoreTests.swift; sourceTree = "<group>"; };
 		76EDA7051EE588E800BE0FDE /* AppStoreTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStoreTests.swift; sourceTree = "<group>"; };
 		E65172CA792FF7ABCD6E8C39 /* RequestBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
+		E65173859AE7DF95D15DAAA8 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		E651738F1E391E2584FBE3BE /* ErrorDisplayService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorDisplayService.swift; sourceTree = "<group>"; };
 		E65175249FE71B0820C012B8 /* AppStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStore.swift; sourceTree = "<group>"; };
 		E65175D57DF7BF9D520E7586 /* ExtendError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtendError.swift; sourceTree = "<group>"; };
@@ -436,6 +439,7 @@
 				E6517B7E1786E173D5343560 /* UserDefaultsService.swift */,
 				E6517770A6381701B0BB5F48 /* KeychainAccessService.swift */,
 				E651738F1E391E2584FBE3BE /* ErrorDisplayService.swift */,
+				E65173859AE7DF95D15DAAA8 /* Logger.swift */,
 			);
 			name = lib;
 			sourceTree = "<group>";
@@ -719,6 +723,7 @@
 				E6517CFEEDAD3968C5A3E8DB /* KeychainAccessService.swift in Sources */,
 				E65179719D28668F69485BFE /* ErrorDisplayService.swift in Sources */,
 				E65173ABC889BCA65816A0A4 /* UIApplicationExtension.swift in Sources */,
+				E6517A08D5FC54D3899BF78D /* Logger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -758,6 +763,7 @@
 				E65178EB2A41EDD64AECB5D2 /* KeychainAccessService.swift in Sources */,
 				E651788A67ADCDBDE24CFB5B /* ErrorDisplayService.swift in Sources */,
 				E6517034276C230E1C0B9814 /* UIApplicationExtension.swift in Sources */,
+				E651793111D2C5764FF3DA2A /* Logger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

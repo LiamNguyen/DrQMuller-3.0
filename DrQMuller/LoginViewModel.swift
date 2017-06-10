@@ -87,10 +87,10 @@ class LoginViewModel {
             try CustomerAction.saveCustomer(info: customer.toJSON())
             return true
         } catch let error as ExtendError {
-            print(error.descriptionForLog)
+			Logger.sharedInstance.log(event: error.descriptionForLog, type: .error)
             return false
         } catch let error {
-			print("Unhandled error: \(error.localizedDescription)")
+			Logger.sharedInstance.log(event: "Unhandled error: \(error.localizedDescription)", type: .error)
 			return false
 		}
     }
@@ -107,9 +107,9 @@ class LoginViewModel {
         do {
             return try Helper.jsonObjectToData(self.credential)
         } catch let error as ExtendError {
-            print(error.descriptionForLog)
-        } catch let error {
-            print("Unhandled error: \(error.localizedDescription)")
+			Logger.sharedInstance.log(event: error.descriptionForLog, type: .error)
+		} catch let error {
+			Logger.sharedInstance.log(event: "Unhandled error: \(error.localizedDescription)", type: .error)
         }
         return nil
     }
