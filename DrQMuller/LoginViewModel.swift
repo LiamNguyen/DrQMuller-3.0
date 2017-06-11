@@ -21,7 +21,7 @@ class LoginViewModel {
 //	Mark: Normal properties
 
 	var initialConstraintUsernameLogo: Float = 0
-	var initialContraintLogoView: Float = 0
+	var initialConstraintLogoView: Float = 0
     var credential: [String: String] = [String: String]()
 
 	fileprivate let disposeBag: DisposeBag = DisposeBag()
@@ -34,15 +34,15 @@ class LoginViewModel {
 		constraintUsernameLogoObservable = viewShouldAdjustWhenKeyBoardAppears.asObservable()
 			.map({ [weak self] viewShouldAdjustWhenKeyBoardAppears in
 				return viewShouldAdjustWhenKeyBoardAppears ?
-						self!.reduceTwoThirdOfInitialConstraint(constraint: self!.initialConstraintUsernameLogo) :
+						Helper.reduceTwoThirdOfInitialConstraint(constraint: self!.initialConstraintUsernameLogo) :
 						self!.initialConstraintUsernameLogo
 			})
 
 		constraintLogoViewObservable = viewShouldAdjustWhenKeyBoardAppears.asObservable()
 			.map({ [weak self] viewShouldAdjustWhenKeyBoardAppears in
 				return viewShouldAdjustWhenKeyBoardAppears ?
-						self!.reduceHalfOfInitialConstraint(constraint: self!.initialContraintLogoView) :
-						self!.initialContraintLogoView
+						Helper.reduceHalfOfInitialConstraint(constraint: self!.initialConstraintLogoView) :
+						self!.initialConstraintLogoView
 			 })
 
 		Observable.combineLatest(
@@ -94,14 +94,6 @@ class LoginViewModel {
 			return false
 		}
     }
-
-	fileprivate func reduceTwoThirdOfInitialConstraint(constraint: Float) -> Float {
-		return constraint - constraint / 3 * 2
-	}
-
-	fileprivate func reduceHalfOfInitialConstraint(constraint: Float) -> Float {
-		return constraint / 2
-	}
 
     fileprivate func requestBody() -> Data? {
         do {

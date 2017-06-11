@@ -23,4 +23,12 @@ class Helper {
 	static func stringToJSON(string: String) -> JSON {
 		return JSON(string.data(using: .utf8) ?? Data())
 	}
+
+    static func reduceTwoThirdOfInitialConstraint(constraint: Float) -> Float {
+        return constraint - constraint / 3 * 2
+    }
+
+    static func reduceHalfOfInitialConstraint(constraint: Float) -> Float {
+        return constraint / 2
+    }
 }

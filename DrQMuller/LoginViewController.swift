@@ -17,9 +17,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 
 	fileprivate var loginViewModel: LoginViewModel!
 
-    fileprivate var numberOfLinesForMessage: Int! {
-		return Constants.DeviceModel.deviceType() == .iPhone5 ? 2 : 1
-    }
 	fileprivate var disposeBag: DisposeBag! = DisposeBag()
 
     override func viewDidLoad() {
@@ -61,7 +58,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 			}).addDisposableTo(disposeBag)
 
 		loginViewModel.initialConstraintUsernameLogo = Float(self.constraintTopUsernameBottomLogo.constant)
-		loginViewModel.initialContraintLogoView = Float(self.constraintTopLogoTopView.constant)
+		loginViewModel.initialConstraintLogoView = Float(self.constraintTopLogoTopView.constant)
 
 		Observable.combineLatest(
 				loginViewModel.constraintUsernameLogoObservable,
