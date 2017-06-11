@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		76009F581EED4E5B0042BFBB /* CacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76009F571EED4E5B0042BFBB /* CacheTests.swift */; };
 		760AB9A71ED9E77700FF26A6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766FBAA11ED1F70300E4454D /* LoginViewController.swift */; };
 		760AB9A81ED9E77700FF26A6 /* AuthenticationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767044D01ED713BB0002EDE5 /* AuthenticationStore.swift */; };
 		760AB9A91ED9E77700FF26A6 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7647BD131ED366F900591395 /* CustomButton.swift */; };
@@ -172,6 +173,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		76009F571EED4E5B0042BFBB /* CacheTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheTests.swift; sourceTree = "<group>"; };
 		760AB9CF1ED9E77700FF26A6 /* DrQMuller Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DrQMuller Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		760AB9D11ED9E7E200FF26A6 /* DrQMuller Dev-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "DrQMuller Dev-Info.plist"; sourceTree = "<group>"; };
 		76111C2F1ED8BE2B00CFD04C /* AuthenticationStoreType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationStoreType.swift; sourceTree = "<group>"; };
@@ -293,6 +295,7 @@
 				7653BDE41EEBF0AE0079EE3D /* KeyChainAccessServiceTests.swift */,
 				7653BDE61EEC21420079EE3D /* CustomerActionTests.swift */,
 				762FF6D91EE490D1006DA986 /* Info.plist */,
+				76009F571EED4E5B0042BFBB /* CacheTests.swift */,
 			);
 			path = DrQMullerTests;
 			sourceTree = "<group>";
@@ -745,6 +748,7 @@
 				76BA40411EE8212A00FD00AE /* UserDefaultsServiceTests.swift in Sources */,
 				76EDA7061EE588E800BE0FDE /* AppStoreTests.swift in Sources */,
 				762FF6D81EE490D1006DA986 /* ValidationHelperTests.swift in Sources */,
+				76009F581EED4E5B0042BFBB /* CacheTests.swift in Sources */,
 				7653BDE71EEC21420079EE3D /* CustomerActionTests.swift in Sources */,
 				76EDA6F31EE5708C00BE0FDE /* AuthenticationStoreTests.swift in Sources */,
 				7653BDE51EEBF0AE0079EE3D /* KeyChainAccessServiceTests.swift in Sources */,
