@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		76009F581EED4E5B0042BFBB /* CacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76009F571EED4E5B0042BFBB /* CacheTests.swift */; };
+		76009F601EEDC5850042BFBB /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76009F5F1EEDC5850042BFBB /* SnapKit.framework */; };
+		76009F611EEDC5850042BFBB /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 76009F5F1EEDC5850042BFBB /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		76009F621EEDC58B0042BFBB /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76009F5F1EEDC5850042BFBB /* SnapKit.framework */; };
+		76009F631EEDC58B0042BFBB /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 76009F5F1EEDC5850042BFBB /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		760AB9A71ED9E77700FF26A6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766FBAA11ED1F70300E4454D /* LoginViewController.swift */; };
 		760AB9A81ED9E77700FF26A6 /* AuthenticationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767044D01ED713BB0002EDE5 /* AuthenticationStore.swift */; };
 		760AB9A91ED9E77700FF26A6 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7647BD131ED366F900591395 /* CustomButton.swift */; };
@@ -146,6 +150,7 @@
 				764D12C81EE3FD2D00BAAA6E /* KeychainAccess.framework in Embed Frameworks */,
 				760AB9C81ED9E77700FF26A6 /* Alamofire.framework in Embed Frameworks */,
 				760AB9C91ED9E77700FF26A6 /* RxSwift.framework in Embed Frameworks */,
+				76009F631EEDC58B0042BFBB /* SnapKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -166,6 +171,7 @@
 				764D12C61EE3FD1F00BAAA6E /* KeychainAccess.framework in Embed Frameworks */,
 				767044C81ED7106C0002EDE5 /* Alamofire.framework in Embed Frameworks */,
 				767044C21ED6FE3F0002EDE5 /* RxSwift.framework in Embed Frameworks */,
+				76009F611EEDC5850042BFBB /* SnapKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -174,6 +180,7 @@
 
 /* Begin PBXFileReference section */
 		76009F571EED4E5B0042BFBB /* CacheTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheTests.swift; sourceTree = "<group>"; };
+		76009F5F1EEDC5850042BFBB /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		760AB9CF1ED9E77700FF26A6 /* DrQMuller Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DrQMuller Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		760AB9D11ED9E7E200FF26A6 /* DrQMuller Dev-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "DrQMuller Dev-Info.plist"; sourceTree = "<group>"; };
 		76111C2F1ED8BE2B00CFD04C /* AuthenticationStoreType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationStoreType.swift; sourceTree = "<group>"; };
@@ -245,6 +252,7 @@
 				760AB9B71ED9E77700FF26A6 /* Localize.framework in Frameworks */,
 				760AB9B81ED9E77700FF26A6 /* Alamofire.framework in Frameworks */,
 				760AB9B91ED9E77700FF26A6 /* RxSwift.framework in Frameworks */,
+				76009F621EEDC58B0042BFBB /* SnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +279,7 @@
 				764D12C51EE3FD1F00BAAA6E /* KeychainAccess.framework in Frameworks */,
 				767044C71ED7106C0002EDE5 /* Alamofire.framework in Frameworks */,
 				767044C11ED6FE3F0002EDE5 /* RxSwift.framework in Frameworks */,
+				76009F601EEDC5850042BFBB /* SnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +439,7 @@
 		7690BCBD1ED2391300B631C2 /* ExternalLibraries */ = {
 			isa = PBXGroup;
 			children = (
+				76009F5F1EEDC5850042BFBB /* SnapKit.framework */,
 				7653BDDD1EEB0FBB0079EE3D /* SwiftyBeaver.framework */,
 				764D12C41EE3FD1F00BAAA6E /* KeychainAccess.framework */,
 				76B345641EE0945200CBAA1A /* SwiftyJSON.framework */,
@@ -665,6 +675,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/KeychainAccess.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyBeaver.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
 			);
 			outputPaths = (
 			);
@@ -701,6 +712,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/KeychainAccess.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyBeaver.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
 			);
 			outputPaths = (
 			);
