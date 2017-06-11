@@ -24,7 +24,7 @@ class LoginViewModel {
 	var initialContraintLogoView: Float = 0
     var credential: [String: String] = [String: String]()
 
-	let disposeBag = DisposeBag()
+	fileprivate let disposeBag: DisposeBag = DisposeBag()
 
 	init() {
 		bindRx()
