@@ -29,20 +29,20 @@ final public class Swifternalization {
     Shared instance of Swifternalization used internally.
     */
     private static let sharedInstance = Swifternalization()
-
+    
     /**
     Array of translations that contain expressions and localized values.
     */
     private var translations = [Translation]()
-
+    
     /**
      Determine whether Swifternalization is configured.
      It should be considered configured after `load(bundle:)` method is called.
      */
     private var configured = false
-
+    
     // MARK: Public Methods
-
+    
     /**
     Call the method to configure Swifternalization.
     
@@ -51,7 +51,7 @@ final public class Swifternalization {
     public class func configure(_ bundle: Bundle = Bundle.main) {
         sharedInstance.load(bundle)
     }
-
+    
     /**
      Configures Swifternalization if you didn't do that before calling
      `localizedString...` methods.
@@ -61,7 +61,7 @@ final public class Swifternalization {
             configure(bundle)
         }
     }
-
+    
     /**
     Get localized value for a key.
     
@@ -80,7 +80,8 @@ final public class Swifternalization {
     public class func localizedString(_ key: String, fittingWidth: Int? = nil, defaultValue: String? = nil, comment: String? = nil) -> String {
         return localizedString(key, stringValue: key, fittingWidth: fittingWidth, defaultValue: defaultValue, comment: comment)
     }
-
+    
+    
     /**
     Get localized value for a key and string value.
     
@@ -119,14 +120,14 @@ final public class Swifternalization {
                 return localizedValue
             }
         }
-
+        
         /**
         If there is not translation that validated `stringValue` successfully 
         then return `defaultValue` if not nil or the `key`.
         */
         return (defaultValue != nil) ? defaultValue! : key
     }
-
+    
     /**
     Get localized value for a key and string value.
     
@@ -146,9 +147,10 @@ final public class Swifternalization {
     public class func localizedString(_ key: String, intValue: Int, fittingWidth: Int? = nil, defaultValue: String? = nil, comment: String? = nil) -> String {
         return localizedString(key, stringValue: "\(intValue)", fittingWidth: fittingWidth, defaultValue: defaultValue, comment: comment)
     }
-
+    
+    
     // MARK: Private Methods
-
+    
     /**
     Loads expressions and translations from expression.json and translation 
     json files.
@@ -159,7 +161,7 @@ final public class Swifternalization {
         // Set base and prefered languages.
         let base = "base"
         let language = getPreferredLanguage(bundle)
-
+        
         /*
         Load base and prefered language expressions from expressions.json,
         convert them into SharedExpression objects and process them and return 
@@ -170,7 +172,7 @@ final public class Swifternalization {
         let baseExpressions = SharedExpressionsLoader.loadExpressions(JSONFileLoader.loadExpressions(base, bundle: bundle))
         let languageExpressions = SharedExpressionsLoader.loadExpressions(JSONFileLoader.loadExpressions(language, bundle: bundle))
         let expressions = SharedExpressionsProcessor.processSharedExpression(language, preferedLanguageExpressions: languageExpressions, baseLanguageExpressions: baseExpressions)
-
+        
         /*
         Load base and prefered language translations from proper language files 
         specified by `language` constant. Convert them into arrays of 
@@ -179,12 +181,12 @@ final public class Swifternalization {
         */
         let baseTranslations = TranslationsLoader.loadTranslations(JSONFileLoader.loadTranslations(base, bundle: bundle))
         let languageTranslations = TranslationsLoader.loadTranslations(JSONFileLoader.loadTranslations(language, bundle: bundle))
-
+        
         // Store processed translations in `translations` variable for future use.
         translations = LoadedTranslationsProcessor.processTranslations(baseTranslations, preferedLanguageTranslations: languageTranslations, sharedExpressions: expressions)
         configured = true
     }
-
+    
     /** 
     Get preferred language of user's device.
     */

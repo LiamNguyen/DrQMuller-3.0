@@ -12,7 +12,7 @@ import Foundation
 Parses inequality extended expressions. `iex:5<x<10`.
 */
 class InequalityExtendedExpressionParser: InequalityExpressionParser {
-
+    
     /**
     Method parses `pattern` passed in initialization.
     
@@ -23,21 +23,21 @@ class InequalityExtendedExpressionParser: InequalityExpressionParser {
             let firstValue = firstValue(),
             let secondSign = secondSign(),
             let secondValue = secondValue() {
-
+                
                 if firstValue < secondValue {
                     firstSign = firstSign.invert()
                 }
-
+                                
                 let leftMatcher = InequalityExpressionMatcher(sign: firstSign, value: firstValue)
                 let rightMatcher = InequalityExpressionMatcher(sign: secondSign, value: secondValue)
                 return InequalityExtendedExpressionMatcher(left: leftMatcher, right: rightMatcher)
         }
-
+        
         return nil
     }
-
+    
     // MARK: Private
-
+    
     /**
     Method parses first value.
     
@@ -46,7 +46,8 @@ class InequalityExtendedExpressionParser: InequalityExpressionParser {
     private func firstValue() -> Double? {
         return getValue(ExpressionPatternType.InequalityExtended.rawValue+":(?<=^iex:)(-?\\d+[.]{0,1}[\\d]{0,})", failureMessage: "Cannot find first value", capturingGroupIdx: 1)
     }
-
+    
+    
     /**
     Method parses first sign.
     
@@ -55,7 +56,7 @@ class InequalityExtendedExpressionParser: InequalityExpressionParser {
     private func firstSign() -> InequalitySign? {
         return getSign(ExpressionPatternType.InequalityExtended.rawValue+":-?\\d{0,}[.]?\\d{0,}(<=|<|)", failureMessage: "Cannot find first sign", capturingGroupIdx: 1)
     }
-
+    
     /**
     Method parses second sign of expression.
     
@@ -64,7 +65,7 @@ class InequalityExtendedExpressionParser: InequalityExpressionParser {
     private func secondSign() -> InequalitySign? {
         return getSign(ExpressionPatternType.InequalityExtended.rawValue+":[-]?\\d*[.]?\\d*[<=>]{1,2}x(<=|<|)", failureMessage: "Cannot find second sign", capturingGroupIdx: 1)
     }
-
+    
     /**
     Method parses second value of expression.
     

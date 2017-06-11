@@ -166,7 +166,8 @@ open class SessionManager {
     public init(
         configuration: URLSessionConfiguration = URLSessionConfiguration.default,
         delegate: SessionDelegate = SessionDelegate(),
-        serverTrustPolicyManager: ServerTrustPolicyManager? = nil) {
+        serverTrustPolicyManager: ServerTrustPolicyManager? = nil)
+    {
         self.delegate = delegate
         self.session = URLSession(configuration: configuration, delegate: delegate, delegateQueue: nil)
 
@@ -184,7 +185,8 @@ open class SessionManager {
     public init?(
         session: URLSession,
         delegate: SessionDelegate,
-        serverTrustPolicyManager: ServerTrustPolicyManager? = nil) {
+        serverTrustPolicyManager: ServerTrustPolicyManager? = nil)
+    {
         guard delegate === session.delegate else { return nil }
 
         self.delegate = delegate
@@ -227,7 +229,8 @@ open class SessionManager {
         parameters: Parameters? = nil,
         encoding: ParameterEncoding = URLEncoding.default,
         headers: HTTPHeaders? = nil)
-        -> DataRequest {
+        -> DataRequest
+    {
         var originalRequest: URLRequest?
 
         do {
@@ -316,7 +319,8 @@ open class SessionManager {
         encoding: ParameterEncoding = URLEncoding.default,
         headers: HTTPHeaders? = nil,
         to destination: DownloadRequest.DownloadFileDestination? = nil)
-        -> DownloadRequest {
+        -> DownloadRequest
+    {
         do {
             let urlRequest = try URLRequest(url: url, method: method, headers: headers)
             let encodedURLRequest = try encoding.encode(urlRequest, with: parameters)
@@ -342,7 +346,8 @@ open class SessionManager {
     open func download(
         _ urlRequest: URLRequestConvertible,
         to destination: DownloadRequest.DownloadFileDestination? = nil)
-        -> DownloadRequest {
+        -> DownloadRequest
+    {
         do {
             let urlRequest = try urlRequest.asURLRequest()
             return download(.request(urlRequest), to: destination)
@@ -378,7 +383,8 @@ open class SessionManager {
     open func download(
         resumingWith resumeData: Data,
         to destination: DownloadRequest.DownloadFileDestination? = nil)
-        -> DownloadRequest {
+        -> DownloadRequest
+    {
         return download(.resumeData(resumeData), to: destination)
     }
 
@@ -387,7 +393,8 @@ open class SessionManager {
     private func download(
         _ downloadable: DownloadRequest.Downloadable,
         to destination: DownloadRequest.DownloadFileDestination?)
-        -> DownloadRequest {
+        -> DownloadRequest
+    {
         do {
             let task = try downloadable.task(session: session, adapter: adapter, queue: queue)
             let download = DownloadRequest(session: session, requestTask: .download(downloadable, task))
@@ -408,7 +415,8 @@ open class SessionManager {
         _ downloadable: DownloadRequest.Downloadable?,
         to destination: DownloadRequest.DownloadFileDestination?,
         failedWith error: Error)
-        -> DownloadRequest {
+        -> DownloadRequest
+    {
         var downloadTask: Request.RequestTask = .download(nil, nil)
 
         if let downloadable = downloadable {
@@ -449,7 +457,8 @@ open class SessionManager {
         to url: URLConvertible,
         method: HTTPMethod = .post,
         headers: HTTPHeaders? = nil)
-        -> UploadRequest {
+        -> UploadRequest
+    {
         do {
             let urlRequest = try URLRequest(url: url, method: method, headers: headers)
             return upload(fileURL, with: urlRequest)
@@ -494,7 +503,8 @@ open class SessionManager {
         to url: URLConvertible,
         method: HTTPMethod = .post,
         headers: HTTPHeaders? = nil)
-        -> UploadRequest {
+        -> UploadRequest
+    {
         do {
             let urlRequest = try URLRequest(url: url, method: method, headers: headers)
             return upload(data, with: urlRequest)
@@ -539,7 +549,8 @@ open class SessionManager {
         to url: URLConvertible,
         method: HTTPMethod = .post,
         headers: HTTPHeaders? = nil)
-        -> UploadRequest {
+        -> UploadRequest
+    {
         do {
             let urlRequest = try URLRequest(url: url, method: method, headers: headers)
             return upload(stream, with: urlRequest)
@@ -599,7 +610,8 @@ open class SessionManager {
         to url: URLConvertible,
         method: HTTPMethod = .post,
         headers: HTTPHeaders? = nil,
-        encodingCompletion: ((MultipartFormDataEncodingResult) -> Void)?) {
+        encodingCompletion: ((MultipartFormDataEncodingResult) -> Void)?)
+    {
         do {
             let urlRequest = try URLRequest(url: url, method: method, headers: headers)
 
@@ -641,7 +653,8 @@ open class SessionManager {
         multipartFormData: @escaping (MultipartFormData) -> Void,
         usingThreshold encodingMemoryThreshold: UInt64 = SessionManager.multipartFormDataEncodingMemoryThreshold,
         with urlRequest: URLRequestConvertible,
-        encodingCompletion: ((MultipartFormDataEncodingResult) -> Void)?) {
+        encodingCompletion: ((MultipartFormDataEncodingResult) -> Void)?)
+    {
         DispatchQueue.global(qos: .utility).async {
             let formData = MultipartFormData()
             multipartFormData(formData)

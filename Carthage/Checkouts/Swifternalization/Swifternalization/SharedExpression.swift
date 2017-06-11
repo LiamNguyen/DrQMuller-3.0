@@ -30,12 +30,12 @@ struct SharedExpression {
     Identifier of expression.
     */
     let identifier: String
-
+    
     /** 
     Pattern of expression.
     */
     let pattern: String
-
+    
     /** 
     Creates expression.
     */

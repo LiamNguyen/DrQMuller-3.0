@@ -14,10 +14,10 @@ Represents translation with expressions.
 struct Translation {
     /// Key that identifies a translation.
     let key: String
-
+    
     /// Expressions that are related to a translation.
     let expressions: [Expression]
-
+    
     /**
     Validates passed `text` and uses `fittingWidth` for getting proper 
     localized string.

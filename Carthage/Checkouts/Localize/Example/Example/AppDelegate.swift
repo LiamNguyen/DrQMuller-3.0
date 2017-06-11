@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-
+        
         let localize = Localize.shared
         // Set your localize provider.
         localize.update(provider: .json)
@@ -30,13 +30,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print(localize.language())
         // List of aviable languajes
         print(localize.availableLanguages())
-
+        
         // Or you can use static methods for all.
-
+        
         Localize.update(fileName: "lang")
         Localize.update(defaultLanguage: .french)
         Localize.update(language: .english)
-
+        
         return true
     }
 
@@ -62,4 +62,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+
 }
+

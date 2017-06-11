@@ -382,7 +382,7 @@ class RequestResponseTestCase: BaseTestCase {
 // MARK: -
 
 extension Request {
-    fileprivate func preValidate(operation: @escaping () -> Void) -> Self {
+    fileprivate func preValidate(operation: @escaping (Void) -> Void) -> Self {
         delegate.queue.addOperation {
             operation()
         }
@@ -390,7 +390,7 @@ extension Request {
         return self
     }
 
-    fileprivate func postValidate(operation: @escaping () -> Void) -> Self {
+    fileprivate func postValidate(operation: @escaping (Void) -> Void) -> Self {
         delegate.queue.addOperation {
             operation()
         }
@@ -598,7 +598,7 @@ class RequestDebugDescriptionTestCase: BaseTestCase {
             HTTPCookiePropertyKey.domain: "httpbin.org",
             HTTPCookiePropertyKey.path: "/post",
             HTTPCookiePropertyKey.name: "foo",
-            HTTPCookiePropertyKey.value: "bar"
+            HTTPCookiePropertyKey.value: "bar",
         ]
 
         let cookie = HTTPCookie(properties: properties)!
@@ -623,7 +623,7 @@ class RequestDebugDescriptionTestCase: BaseTestCase {
             HTTPCookiePropertyKey.domain: "httpbin.org",
             HTTPCookiePropertyKey.path: "/post",
             HTTPCookiePropertyKey.name: "foo",
-            HTTPCookiePropertyKey.value: "bar"
+            HTTPCookiePropertyKey.value: "bar",
         ]
 
         let cookie = HTTPCookie(properties: properties)!

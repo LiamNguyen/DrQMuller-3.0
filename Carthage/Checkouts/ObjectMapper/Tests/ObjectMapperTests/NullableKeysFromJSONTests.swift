@@ -42,7 +42,7 @@ class NullableKeysFromJSONTests: XCTestCase {
         super.setUp()
 		// Put setup code here. This method is called before the invocation of each test method in the class.
     }
-
+    
     func testMapperNullifiesValues() {
 		guard let player = mapper.map(JSONString: fullJSONString) else {
 			XCTFail("Mapping failed")
@@ -81,14 +81,14 @@ class NullableKeysFromJSONTests: XCTestCase {
 	}
 }
 
-class Player: Mappable {
+class Player: Mappable  {
 	var firstName: String?
 	var lastName: String?
 	var team: String?
 	var age: Int?
 	var address: Address?
 
-	required init?(map: Map) {
+	required init?(map: Map){
 		mapping(map: map)
 	}
 
@@ -106,7 +106,7 @@ class Address: Mappable {
 	var number: Int?
 	var city: String?
 
-	required init?(map: Map) {
+	required init?(map: Map){
 		mapping(map: map)
 	}
 

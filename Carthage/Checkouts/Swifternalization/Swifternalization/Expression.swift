@@ -32,17 +32,17 @@ struct Expression {
     get full localized value use this property.
     */
     let value: String
-
+    
     /** 
     Array of length variations.
     */
     let lengthVariations: [LengthVariation]
-
+    
     /** 
     Expression matcher that is used in validation.
     */
-    private var expressionMatcher: ExpressionMatcher?
-
+    private var expressionMatcher: ExpressionMatcher? = nil
+    
     /** 
     Returns expression object.
     */
@@ -50,7 +50,7 @@ struct Expression {
         self.pattern = pattern
         self.value = value
         self.lengthVariations = lengthVariations
-
+        
         /* 
         Create expression matcher if pattern matches some expression type.
         If not matching any expression type then the pattern equality test
@@ -66,7 +66,7 @@ struct Expression {
             }()
         }
     }
-
+    
     /**
     Method that validates passed string.
     
@@ -80,7 +80,7 @@ struct Expression {
             return pattern == value
         }
     }
-
+    
     /**
     Method used to get `ExpressionPatternType` of passed expression pattern.
     

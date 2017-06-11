@@ -57,11 +57,11 @@ class NSDecimalNumberType: Mappable {
     var intString: NSDecimalNumber?
     var doubleString: NSDecimalNumber?
 
-    init() {
+    init(){
 
     }
 
-    required init?(map: Map) {
+    required init?(map: Map){
 
     }
 

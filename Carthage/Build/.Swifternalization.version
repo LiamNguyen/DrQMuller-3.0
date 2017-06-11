@@ -2,7 +2,7 @@
   "commitish" : "v1.3.2",
   "iOS" : [
     {
-      "hash" : "82b66d11aec313f1bcdf038354614f5753adb8f88c086bb113ac48f50fc67fc3",
+      "hash" : "d9ad0e49f46628f926022d50e81a8e539469c03d2729cd1b31383dcc47c5e096",
       "name" : "Swifternalization"
     }
   ]

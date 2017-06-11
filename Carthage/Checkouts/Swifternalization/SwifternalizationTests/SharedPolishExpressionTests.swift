@@ -14,7 +14,7 @@ class SharedPolishExpressionTests: XCTestCase {
     func testFew() {
         let sharedExp = SharedPolishExpression.allExpressions().filter({$0.identifier == "few"}).first!
         let expression = Expression(pattern: sharedExp.pattern, value: "")
-
+        
         XCTAssertTrue(expression.validate("2"), "Should match 2")
         XCTAssertTrue(expression.validate("24"), "Should match 24")
         XCTAssertTrue(expression.validate("153"), "Should match 153")
@@ -25,15 +25,15 @@ class SharedPolishExpressionTests: XCTestCase {
         XCTAssertFalse(expression.validate("12"), "Should not match 12")
         XCTAssertFalse(expression.validate("25"), "Should not match 25")
     }
-
+    
     func testMany() {
         let sharedExp = SharedPolishExpression.allExpressions().filter({$0.identifier == "many"}).first!
         let expression = Expression(pattern: sharedExp.pattern, value: "")
-
+        
         XCTAssertTrue(expression.validate("10"), "Should match 10")
         XCTAssertTrue(expression.validate("18"), "Should match 18")
         XCTAssertTrue(expression.validate("1009"), "Should match 1009")
-
+        
         XCTAssertFalse(expression.validate("22"), "Should not match 22")
         XCTAssertFalse(expression.validate("24"), "Should not match 24")
         XCTAssertFalse(expression.validate("153"), "Should not match 153")

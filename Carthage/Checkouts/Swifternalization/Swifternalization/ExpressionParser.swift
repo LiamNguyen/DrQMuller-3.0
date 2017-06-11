@@ -25,7 +25,7 @@ protocol ExpressionParser {
     :returns: `ExpressionMatcher` or nil if pattern cannot be parsed.
     */
     func parse() -> ExpressionMatcher?
-
+    
     /**
     Initializer that taeks `ExpressionPattern` as parameter.
     

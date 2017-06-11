@@ -16,12 +16,12 @@ enum InternalPattern: String {
     Pattern that matches expressions.
     */
     case Expression = "(?<=\\{)(.+)(?=\\})"
-
+    
     /** 
     Pattern that matches expression types.
     */
     case ExpressionPatternType = "(^.{2,3})(?=:)"
-
+    
     /** 
     Pattern that matches key without expression.
     */

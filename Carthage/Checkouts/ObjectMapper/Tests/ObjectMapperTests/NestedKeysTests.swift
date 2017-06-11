@@ -87,13 +87,13 @@ class NestedKeysTests: XCTestCase {
 
 		let value: NestedKeys! = mapper.map(JSONObject: JSON)
 		XCTAssertNotNil(value)
-
+		
 		let JSONFromValue = mapper.toJSON(value)
 		let valueFromParsedJSON: NestedKeys! = mapper.map(JSON: JSONFromValue)
 		XCTAssertNotNil(valueFromParsedJSON)
 
 		XCTAssertEqual(value.nonNestedString, valueFromParsedJSON.nonNestedString)
-
+		
 		XCTAssertEqual(value.int64, valueFromParsedJSON.int64)
 		XCTAssertEqual(value.bool, valueFromParsedJSON.bool)
 		XCTAssertEqual(value.int, valueFromParsedJSON.int)
@@ -173,7 +173,7 @@ class NestedKeysTests: XCTestCase {
 		XCTAssertNotNil(value)
 
 		XCTAssertEqual(value.nonNestedString, "string")
-
+		
 		XCTAssertEqual(value.int64, NSNumber(value: INT64_MAX))
 		XCTAssertEqual(value.bool, true)
 		XCTAssertEqual(value.int, 255)
@@ -206,13 +206,13 @@ class NestedKeysTests: XCTestCase {
 		XCTAssertEqual(value.object?.value, 987)
 		XCTAssertEqual(value.objectArray.map { $0.value }, [123, 456])
 		XCTAssertEqual(value.objectDict["key"]?.value, 999)
-
+		
 		let JSONFromValue = mapper.toJSON(value)
 		let valueFromParsedJSON: DelimiterNestedKeys! = mapper.map(JSON: JSONFromValue)
 		XCTAssertNotNil(valueFromParsedJSON)
 
 		XCTAssertEqual(value.nonNestedString, valueFromParsedJSON.nonNestedString)
-
+		
 		XCTAssertEqual(value.int64, valueFromParsedJSON.int64)
 		XCTAssertEqual(value.bool, valueFromParsedJSON.bool)
 		XCTAssertEqual(value.int, valueFromParsedJSON.int)
@@ -248,9 +248,9 @@ class NestedKeysTests: XCTestCase {
 }
 
 class NestedKeys: Mappable {
-
+	
 	var nonNestedString: String?
-
+	
 	var int64: NSNumber?
 	var bool: Bool?
 	var int: Int?
@@ -282,13 +282,13 @@ class NestedKeys: Mappable {
 	var objectArray: [Object] = []
 	var objectDict: [String: Object] = [:]
 
-	required init?(map: Map) {
-
+	required init?(map: Map){
+		
 	}
 
 	func mapping(map: Map) {
 		nonNestedString <- map["non.nested.key", nested: false]
-
+		
 		int64	<- map["nested.int64"]
 		bool	<- map["nested.bool"]
 		int		<- map["nested.int"]
@@ -361,11 +361,11 @@ class DelimiterNestedKeys: NestedKeys {
 
 class Object: Mappable, Equatable {
 	var value: Int = Int.min
-
-	required init?(map: Map) {
-
+	
+	required init?(map: Map){
+		
 	}
-
+	
 	func mapping(map: Map) {
 		value <- map["value"]
 	}

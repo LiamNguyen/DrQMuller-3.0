@@ -17,12 +17,12 @@ struct LoadedTranslation {
     correclty.
     */
     let type: LoadedTranslationType
-
+    
     /** 
     Key that identifies this translation.
     */
     var key: String
-
+    
     /** 
     A content of translation just loaded from a file user in future processing.
     */

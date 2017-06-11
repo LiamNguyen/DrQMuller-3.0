@@ -12,7 +12,7 @@ import Foundation
 Class uses NSRegularExpression internally and simplifies its usability.
 */
 final class Regex {
-
+    
     /**
     Return match in a string. Optionally with index of capturing group
     
@@ -22,9 +22,9 @@ final class Regex {
     */
     class func matchInString(_ str: String, pattern: String, capturingGroupIdx: Int?) -> String? {
         var resultString: String?
-
+        
         let range = NSMakeRange(0, str.characters.distance(from: str.startIndex, to: str.endIndex))
-        regexp(pattern)?.enumerateMatches(in: str, options: NSRegularExpression.MatchingOptions.reportCompletion, range: range, using: { result, _, _ in
+        regexp(pattern)?.enumerateMatches(in: str, options: NSRegularExpression.MatchingOptions.reportCompletion, range: range, using: { result, flags, stop in
             if let result = result {
                 if let capturingGroupIdx = capturingGroupIdx, result.numberOfRanges > capturingGroupIdx {
                     resultString = self.substring(str, range: result.rangeAt(capturingGroupIdx))
@@ -33,10 +33,11 @@ final class Regex {
                 }
             }
         })
-
+        
         return resultString
     }
-
+    
+    
     /**
     Return first match in a string.
     
@@ -50,7 +51,7 @@ final class Regex {
         }
         return nil
     }
-
+    
     /**
     Return all matches in a string.
     
@@ -65,10 +66,10 @@ final class Regex {
                 matches.append(substring(str, range: result.range))
             }
         }
-
+        
         return matches
     }
-
+    
     /**
     Returns new `NSRegularExpression` object.
     
@@ -83,7 +84,7 @@ final class Regex {
         }
         return nil
     }
-
+    
     /**
     Method that substring string with passed range.
     
@@ -94,7 +95,7 @@ final class Regex {
     private class func substring(_ str: String, range: NSRange) -> String {
         let startRange = str.characters.index(str.startIndex, offsetBy: range.location)
         let endRange = str.characters.index(startRange, offsetBy: range.length)
-
+        
         return str.substring(with: startRange..<endRange)
     }
 }

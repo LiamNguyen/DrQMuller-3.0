@@ -31,44 +31,44 @@ import XCTest
 import ObjectMapper
 
 class ClassClusterTests: XCTestCase {
-
+    
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
-
+    
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-
+	
     func testClassClusters() {
 		let carName = "Honda"
 		let JSON = ["name": carName, "type": "car"]
-
-		if let vehicle = Mapper<Vehicle>().map(JSON: JSON) {
+		
+		if let vehicle = Mapper<Vehicle>().map(JSON: JSON){
 			XCTAssertNotNil(vehicle)
 			XCTAssertNotNil(vehicle as? Car)
 			XCTAssertEqual((vehicle as? Car)?.name, carName)
 		}
     }
-
+	
 	func testClassClustersFromJSONString() {
 		let carName = "Honda"
 		let JSON = "{\"name\": \"\(carName)\", \"type\": \"car\"}"
-
-		if let vehicle = Mapper<Vehicle>().map(JSONString: JSON) {
+		
+		if let vehicle = Mapper<Vehicle>().map(JSONString: JSON){
 			XCTAssertNotNil(vehicle)
 			XCTAssertNotNil(vehicle as? Car)
 			XCTAssertEqual((vehicle as? Car)?.name, carName)
 		}
 	}
-
+	
 	func testClassClusterArray() {
 		let carName = "Honda"
 		let JSON = [["name": carName, "type": "car"], ["type": "bus"], ["type": "vehicle"]]
-
-		if let vehicles = Mapper<Vehicle>().mapArray(JSONArray: JSON) {
+		
+		if let vehicles = Mapper<Vehicle>().mapArray(JSONArray: JSON){
 			XCTAssertNotNil(vehicles)
 			XCTAssertTrue(vehicles.count == 3)
 			XCTAssertNotNil(vehicles[0] as? Car)
@@ -80,9 +80,9 @@ class ClassClusterTests: XCTestCase {
 }
 
 class Vehicle: StaticMappable {
-
+	
 	var type: String?
-
+	
 	class func objectForMapping(map: Map) -> BaseMappable? {
 		if let type: String = map["type"].value() {
 			switch type {
@@ -97,26 +97,26 @@ class Vehicle: StaticMappable {
 		return nil
 	}
 
-	init() {
-
+	init(){
+		
 	}
-
+	
 	func mapping(map: Map) {
 		type <- map["type"]
 	}
 }
 
 class Car: Vehicle {
-
+	
 	var name: String?
-
+	
 	override class func objectForMapping(map: Map) -> BaseMappable? {
 		return nil
 	}
-
+	
 	override func mapping(map: Map) {
 		super.mapping(map: map)
-
+		
 		name <- map["name"]
 	}
 }

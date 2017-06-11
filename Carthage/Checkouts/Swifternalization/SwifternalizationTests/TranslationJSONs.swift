@@ -9,7 +9,7 @@
 import Foundation
 
 class TranslationJSONs {
-
+    
     class func base() -> [String : Any] {
         return [
             "key-1": "value-1",
@@ -23,7 +23,7 @@ class TranslationJSONs {
                     "@100": "value-3-1-1",
                     "@200": "value-3-1-2"
                 ],
-
+                
                 "key-3-2": [
                     "@100": "value-3-2-1",
                     "@200": "value-3-2-2"
@@ -31,7 +31,7 @@ class TranslationJSONs {
             ]
         ]
     }
-
+    
     class func en() -> [String : Any] {
         return [
             "key-1": "en-value-1",
@@ -45,7 +45,7 @@ class TranslationJSONs {
                     "@100": "value-4-1-1",
                     "@200": "value-$-1-2"
                 ],
-
+                
                 "key-4-2": [
                     "@100": "value-4-2-1",
                     "@200": "value-4-2-2"

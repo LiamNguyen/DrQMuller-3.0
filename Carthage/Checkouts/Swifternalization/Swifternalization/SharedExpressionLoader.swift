@@ -4,7 +4,7 @@ import Foundation
 Used to load content from `expressions.json` file for specified language.
 */
 final class SharedExpressionsLoader {
-
+    
     /**
     Loads expressions for specified language.
     

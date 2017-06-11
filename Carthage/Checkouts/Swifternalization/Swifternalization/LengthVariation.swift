@@ -9,7 +9,7 @@ struct LengthVariation {
     Max width of a screen on which the `value` should be presented.
     */
     let width: Int
-
+    
     /** 
     String with localized content in some language.
     */
