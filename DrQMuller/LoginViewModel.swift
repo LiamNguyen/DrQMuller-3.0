@@ -56,8 +56,8 @@ class LoginViewModel {
 		}).addDisposableTo(disposeBag)
 
         loginButtonShouldEnable = Observable.combineLatest(
-                username.asObservable(),
-                password.asObservable()
+			username.asObservable(),
+			password.asObservable()
         ).map { (username, password) in
             return !username.isEmpty && !password.isEmpty
         }

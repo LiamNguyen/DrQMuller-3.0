@@ -12,6 +12,10 @@
 		76009F611EEDC5850042BFBB /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 76009F5F1EEDC5850042BFBB /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		76009F621EEDC58B0042BFBB /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76009F5F1EEDC5850042BFBB /* SnapKit.framework */; };
 		76009F631EEDC58B0042BFBB /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 76009F5F1EEDC5850042BFBB /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		76009F5A1EEDA54F0042BFBB /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76009F591EEDA54F0042BFBB /* RegisterViewController.swift */; };
+		76009F5B1EEDA54F0042BFBB /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76009F591EEDA54F0042BFBB /* RegisterViewController.swift */; };
+		76009F5D1EEDB0840042BFBB /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76009F5C1EEDB0840042BFBB /* RegisterViewModel.swift */; };
+		76009F5E1EEDB0840042BFBB /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76009F5C1EEDB0840042BFBB /* RegisterViewModel.swift */; };
 		760AB9A71ED9E77700FF26A6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766FBAA11ED1F70300E4454D /* LoginViewController.swift */; };
 		760AB9A81ED9E77700FF26A6 /* AuthenticationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767044D01ED713BB0002EDE5 /* AuthenticationStore.swift */; };
 		760AB9A91ED9E77700FF26A6 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7647BD131ED366F900591395 /* CustomButton.swift */; };
@@ -180,7 +184,8 @@
 
 /* Begin PBXFileReference section */
 		76009F571EED4E5B0042BFBB /* CacheTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheTests.swift; sourceTree = "<group>"; };
-		76009F5F1EEDC5850042BFBB /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
+		76009F591EEDA54F0042BFBB /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		76009F5C1EEDB0840042BFBB /* RegisterViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		760AB9CF1ED9E77700FF26A6 /* DrQMuller Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DrQMuller Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		760AB9D11ED9E7E200FF26A6 /* DrQMuller Dev-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "DrQMuller Dev-Info.plist"; sourceTree = "<group>"; };
 		76111C2F1ED8BE2B00CFD04C /* AuthenticationStoreType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationStoreType.swift; sourceTree = "<group>"; };
@@ -303,8 +308,8 @@
 				76BA40401EE8212A00FD00AE /* UserDefaultsServiceTests.swift */,
 				7653BDE41EEBF0AE0079EE3D /* KeyChainAccessServiceTests.swift */,
 				7653BDE61EEC21420079EE3D /* CustomerActionTests.swift */,
-				762FF6D91EE490D1006DA986 /* Info.plist */,
 				76009F571EED4E5B0042BFBB /* CacheTests.swift */,
+				762FF6D91EE490D1006DA986 /* Info.plist */,
 			);
 			path = DrQMullerTests;
 			sourceTree = "<group>";
@@ -313,6 +318,7 @@
 			isa = PBXGroup;
 			children = (
 				7635F4711ED4A62C0050BDA5 /* LoginViewModel.swift */,
+				76009F5C1EEDB0840042BFBB /* RegisterViewModel.swift */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -379,6 +385,7 @@
 			isa = PBXGroup;
 			children = (
 				766FBAA11ED1F70300E4454D /* LoginViewController.swift */,
+				76009F591EEDA54F0042BFBB /* RegisterViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -728,8 +735,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				760AB9A71ED9E77700FF26A6 /* LoginViewController.swift in Sources */,
+				76009F5E1EEDB0840042BFBB /* RegisterViewModel.swift in Sources */,
 				760AB9A81ED9E77700FF26A6 /* AuthenticationStore.swift in Sources */,
 				760AB9A91ED9E77700FF26A6 /* CustomButton.swift in Sources */,
+				76009F5B1EEDA54F0042BFBB /* RegisterViewController.swift in Sources */,
 				760AB9AA1ED9E77700FF26A6 /* AppDelegate.swift in Sources */,
 				760AB9AB1ED9E77700FF26A6 /* Constants.swift in Sources */,
 				760AB9AC1ED9E77700FF26A6 /* CustomTextField.swift in Sources */,
@@ -772,8 +781,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				766FBAA21ED1F70300E4454D /* LoginViewController.swift in Sources */,
+				76009F5D1EEDB0840042BFBB /* RegisterViewModel.swift in Sources */,
 				767044D11ED713BB0002EDE5 /* AuthenticationStore.swift in Sources */,
 				7647BD141ED366F900591395 /* CustomButton.swift in Sources */,
+				76009F5A1EEDA54F0042BFBB /* RegisterViewController.swift in Sources */,
 				766FBA6E1ED1D7F700E4454D /* AppDelegate.swift in Sources */,
 				766FBAA51ED209F200E4454D /* Constants.swift in Sources */,
 				7690BCA71ED2127E00B631C2 /* CustomTextField.swift in Sources */,

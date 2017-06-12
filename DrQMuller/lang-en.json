@@ -23,5 +23,18 @@
 			"login": "Login",
 			"register": "Register"
 		}
+	},
+	"Register": {
+		"TextFieldPlaceHolder" : {
+			"username": "Username",
+			"password": "Password",
+			"confirmPassword": "Confirm password"
+		},
+		"Button": {
+			"register": "Register"
+		},
+		"Label": {
+			"confirmPasswordMismatch": "Confirm password mismatch"
+		}
 	}
 }

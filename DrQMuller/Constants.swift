@@ -64,6 +64,26 @@ struct Constants {
 		}
 	}
 
+	struct Register {
+		struct View {
+			static let registerBackground = "background.png"
+		}
+
+		struct TextFieldPlaceHolder {
+			static let username	        = "Register.TextFieldPlaceHolder.username".localize()
+			static let password	        = "Register.TextFieldPlaceHolder.password".localize()
+			static let confirmPassword  = "Register.TextFieldPlaceHolder.confirmPassword".localize()
+		}
+
+		struct Button {
+			static let register			= "Register.Button.register".localize()
+		}
+
+		struct Label {
+			static let confirmPasswordMismatch = "Register.Label.confirmPasswordMismatch".localize()
+		}
+	}
+
 	public enum HttpStatusCode: Int {
 		//    2XX Success
 

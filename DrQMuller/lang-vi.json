@@ -23,5 +23,18 @@
 			"login": "Đăng nhập",
 			"register": "Đăng ký"
 		}
+	},
+	"Register": {
+		"TextFieldPlaceHolder": {
+			"username": "Tên đăng nhập",
+			"password": "Mật khẩu",
+			"confirmPassword": "Xác nhận mật khẩu"
+		},
+		"Button": {
+			"register": "Đăng ký"
+		},
+		"Label": {
+			"confirmPasswordMismatch": "Xác nhận không trùng khớp"
+		}
 	}
 }

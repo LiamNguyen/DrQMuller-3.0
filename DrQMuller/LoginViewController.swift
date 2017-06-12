@@ -172,4 +172,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 		self.view.endEditing(true)
 		loginViewModel.viewShouldAdjustWhenKeyBoardAppears.value = false
 	}
+
+	@IBAction func unwindToLoginViewController(segue: UIStoryboardSegue) {}
 }
