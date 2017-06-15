@@ -43,8 +43,29 @@ class AuthenticationStore: AuthenticationStoreType {
         }
     }
 
-	func userRegister(_ credential: Data, _ completionHandler: @escaping (Customer?) -> Void) {
+	func userRegister(_ credential: Data, _ completionHandler: @escaping (AuthenticationResult, Customer?) -> Void) {
+		let retrier = Retrier()
+		let request = RequestBuilder.build(manager, retrier, requestMethod: .POST, url: self.registerURL, requestBody: credential)
 
+		request.response { _ in
+			retrier.deleteRetryInfo(request)
+		}
+		.validate(statusCode: 201..<202)
+		.responseObject { (response: DataResponse<Customer>) in
+			let result = self.responseHandler(response.response?.statusCode ?? Constants.HttpStatusCode.internalServerError.rawValue)
+			switch  response.result {
+			case .success:
+				if let customer = response.result.value {
+					completionHandler(result, customer)
+				}
+			case .failure(let error):
+				completionHandler(result, nil)
+				Logger.sharedInstance.log(event: error.localizedDescription, type: .info)
+				if let response = response.response {
+					Logger.sharedInstance.log(event: response, type: .verbose)
+				}
+			}
+		}
 	}
 
     fileprivate func responseHandler(_ statusCode: Int) -> AuthenticationResult {

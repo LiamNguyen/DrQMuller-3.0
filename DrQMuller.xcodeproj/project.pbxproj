@@ -8,10 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		76009F581EED4E5B0042BFBB /* CacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76009F571EED4E5B0042BFBB /* CacheTests.swift */; };
-		76009F601EEDC5850042BFBB /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76009F5F1EEDC5850042BFBB /* SnapKit.framework */; };
-		76009F611EEDC5850042BFBB /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 76009F5F1EEDC5850042BFBB /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		76009F621EEDC58B0042BFBB /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76009F5F1EEDC5850042BFBB /* SnapKit.framework */; };
-		76009F631EEDC58B0042BFBB /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 76009F5F1EEDC5850042BFBB /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		76009F5A1EEDA54F0042BFBB /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76009F591EEDA54F0042BFBB /* RegisterViewController.swift */; };
 		76009F5B1EEDA54F0042BFBB /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76009F591EEDA54F0042BFBB /* RegisterViewController.swift */; };
 		76009F5D1EEDB0840042BFBB /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76009F5C1EEDB0840042BFBB /* RegisterViewModel.swift */; };
@@ -154,7 +150,6 @@
 				764D12C81EE3FD2D00BAAA6E /* KeychainAccess.framework in Embed Frameworks */,
 				760AB9C81ED9E77700FF26A6 /* Alamofire.framework in Embed Frameworks */,
 				760AB9C91ED9E77700FF26A6 /* RxSwift.framework in Embed Frameworks */,
-				76009F631EEDC58B0042BFBB /* SnapKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -175,7 +170,6 @@
 				764D12C61EE3FD1F00BAAA6E /* KeychainAccess.framework in Embed Frameworks */,
 				767044C81ED7106C0002EDE5 /* Alamofire.framework in Embed Frameworks */,
 				767044C21ED6FE3F0002EDE5 /* RxSwift.framework in Embed Frameworks */,
-				76009F611EEDC5850042BFBB /* SnapKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,7 +251,6 @@
 				760AB9B71ED9E77700FF26A6 /* Localize.framework in Frameworks */,
 				760AB9B81ED9E77700FF26A6 /* Alamofire.framework in Frameworks */,
 				760AB9B91ED9E77700FF26A6 /* RxSwift.framework in Frameworks */,
-				76009F621EEDC58B0042BFBB /* SnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,7 +277,6 @@
 				764D12C51EE3FD1F00BAAA6E /* KeychainAccess.framework in Frameworks */,
 				767044C71ED7106C0002EDE5 /* Alamofire.framework in Frameworks */,
 				767044C11ED6FE3F0002EDE5 /* RxSwift.framework in Frameworks */,
-				76009F601EEDC5850042BFBB /* SnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,7 +438,7 @@
 		7690BCBD1ED2391300B631C2 /* ExternalLibraries */ = {
 			isa = PBXGroup;
 			children = (
-				76009F5F1EEDC5850042BFBB /* SnapKit.framework */,
+				76009F5F1EEDC5850042BFBB,
 				7653BDDD1EEB0FBB0079EE3D /* SwiftyBeaver.framework */,
 				764D12C41EE3FD1F00BAAA6E /* KeychainAccess.framework */,
 				76B345641EE0945200CBAA1A /* SwiftyJSON.framework */,

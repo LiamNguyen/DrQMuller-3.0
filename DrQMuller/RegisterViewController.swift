@@ -122,7 +122,24 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
 	}
 
 	fileprivate func bindRxAction() {
+		btnRegister
+			.rx
+			.tap
+			.subscribe(onNext: { [weak self] _ in
+				self?.userRegister()
+			}).addDisposableTo(disposeBag)
+	}
 
+	fileprivate func userRegister() {
+	    registerViewModel.userRegister { result in
+		    switch result {
+		    case .register_success:
+		        print("User registered")
+		        print(AppStore.sharedInstance.getState()[AppStore.StateKey.customer.rawValue])
+			default:
+				ErrorDisplayService.sharedInstance.failReason.value.append((key: "", errorCode: result.rawValue))
+		    }
+	    }
 	}
 
 //	Mark: Draw layout and initial view appearance

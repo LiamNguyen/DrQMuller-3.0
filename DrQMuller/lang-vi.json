@@ -3,14 +3,15 @@
 		"server_error": "Lỗi máy chủ. Liên hệ bộ phận chăm sóc khách hàng",
 		"save_client_local_error": "Lỗi lưu thông tin nội bộ. Liên hệ bộ phận chăm sóc khách hàng",
 		"invalid_username_password": "Tên đăng nhập hoặc mật khẩu không hợp lệ",
+		"username_exist": "Tên đăng nhập đã được sử dụng",
 		"application_error": "Lỗi ứng dụng. Liên hệ bộ phận chăm sóc khách hàng",
 		"username": {
 			"empty": "Tên đăng nhập trống",
-			"patternFail": "Tên đăng nhập bao gồm chữ số, (-) hoặc (_). 8 đến 25 ký tự"
+			"patternFail": "Tên đăng nhập bao gồm cả chữ và số, (-) hoặc (_). 8 đến 25 ký tự"
 		},
 		"password": {
 			"empty": "Mật khẩu trống",
-			"patternFail": "Mật khẩu bao gồm chữ số, (-) hoặc (_). 8 đến 30 ký tự"
+			"patternFail": "Mật khẩu bao gồm cả chữ và số, (-) hoặc (_). 8 đến 30 ký tự"
 		}
 	},
 	"Login": {

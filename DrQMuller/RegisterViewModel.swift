@@ -93,4 +93,50 @@ class RegisterViewModel {
 				return loginButtonShouldEnable ? 1 : 0.5
 		}
 	}
+
+	func userRegister(completionHandler: @escaping (_ result: AuthenticationStore.AuthenticationResult) -> Void) {
+		let successValidation = ValidationHelper.validate(scheme: self.credential)
+		guard requestBody() != nil, successValidation else {
+			if requestBody() == nil {
+				ErrorDisplayService.sharedInstance.failReason.value.append((
+					key: "",
+					errorCode: "application_error"
+				))
+			}
+			return
+		}
+		self.isLoading.value = true
+		AuthenticationStore.sharedInstance.userRegister(requestBody()!) { [weak self] (result, customer) in
+			self?.isLoading.value = false
+			if let customer = customer {
+				completionHandler(self!.saveCustomer(customer: customer) ? result : .save_client_local_error)
+			} else {
+				completionHandler(result == .register_success ? .server_error : result)
+			}
+		}
+	}
+
+	fileprivate func saveCustomer(customer: Customer) -> Bool {
+		do {
+			try CustomerAction.saveCustomer(info: customer.toJSON())
+			return true
+		} catch let error as ExtendError {
+			Logger.sharedInstance.log(event: error.descriptionForLog, type: .error)
+			return false
+		} catch let error {
+			Logger.sharedInstance.log(event: "Unhandled error: \(error.localizedDescription)", type: .error)
+			return false
+		}
+	}
+
+	fileprivate func requestBody() -> Data? {
+		do {
+			return try Helper.jsonObjectToData(self.credential)
+		} catch let error as ExtendError {
+			Logger.sharedInstance.log(event: error.descriptionForLog, type: .error)
+		} catch let error {
+			Logger.sharedInstance.log(event: "Unhandled error: \(error.localizedDescription)", type: .error)
+		}
+		return nil
+	}
 }
