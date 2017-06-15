@@ -17,9 +17,13 @@ class ErrorDisplayService {
     fileprivate func bindRx() {
         failReason.asObservable()
             .subscribe(onNext: { [weak self] failReason in
-                if !failReason.isEmpty {
-                    self?.showMessage(key: failReason[0].key, errorCode: failReason[0].errorCode)
-                    self?.failReason.value.removeAll()
+	            if failReason.isEmpty {
+		            return
+	            }
+	            for fail in failReason where !fail.errorCode.isEmpty {
+	                self?.showMessage(key: fail.key, errorCode: fail.errorCode)
+	                self?.failReason.value.removeAll()
+	                return
                 }
             }).addDisposableTo(disposeBag)
     }
