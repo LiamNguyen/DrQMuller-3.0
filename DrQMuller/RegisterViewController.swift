@@ -185,7 +185,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
 			return false
 		} else {
 			registerViewModel.viewShouldAdjustWhenKeyBoardAppears.value = false
-
+			userRegister()
 			return true
 		}
 	}

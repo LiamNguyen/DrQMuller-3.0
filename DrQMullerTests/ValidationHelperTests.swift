@@ -26,43 +26,15 @@ class ValidationHelperTests: XCTestCase {
 			"username": "pnguyen1",
 			"password": ""
 		]
+
 		let schemeFailBoth = [
 			"username": "@#$@#$@#",
 			"password": "##@$@#$@"
 		]
 
-		XCTAssertTrue(ValidationHelper.validate(scheme: schemeSuccess).isEmpty)
-		XCTAssertEqual(
-			ValidationHelper.validate(scheme: schemeFailUsername)[0].key,
-			"username"
-		)
-		XCTAssertEqual(
-			ValidationHelper.validate(scheme: schemeFailUsername)[0].errorCode,
-			"patternFail"
-		)
-		XCTAssertEqual(
-			ValidationHelper.validate(scheme: schemeFailPassword)[0].key,
-			"password"
-		)
-		XCTAssertEqual(
-			ValidationHelper.validate(scheme: schemeFailPassword)[0].errorCode,
-			"empty"
-		)
-		XCTAssertEqual(
-			ValidationHelper.validate(scheme: schemeFailBoth)[0].key,
-			"username"
-		)
-		XCTAssertEqual(
-			ValidationHelper.validate(scheme: schemeFailBoth)[1].key,
-			"password"
-		)
-		XCTAssertEqual(
-			ValidationHelper.validate(scheme: schemeFailBoth)[0].errorCode,
-			"patternFail"
-		)
-		XCTAssertEqual(
-			ValidationHelper.validate(scheme: schemeFailBoth)[1].errorCode,
-			"patternFail"
-		)
+		XCTAssertTrue(ValidationHelper.validate(scheme: schemeSuccess))
+		XCTAssertFalse(ValidationHelper.validate(scheme: schemeFailUsername))
+		XCTAssertFalse(ValidationHelper.validate(scheme: schemeFailPassword))
+		XCTAssertFalse(ValidationHelper.validate(scheme: schemeFailBoth))
 	}
 }
