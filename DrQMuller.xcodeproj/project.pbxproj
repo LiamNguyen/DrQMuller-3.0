@@ -94,6 +94,10 @@
 		76B345691EE0946F00CBAA1A /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 76B345641EE0945200CBAA1A /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		76BA40411EE8212A00FD00AE /* UserDefaultsServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BA40401EE8212A00FD00AE /* UserDefaultsServiceTests.swift */; };
 		76D5C2871EF5741F003604AA /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 767044C01ED6FE3F0002EDE5 /* RxSwift.framework */; };
+		76D5C28B1EF5C608003604AA /* NVActivityIndicatorView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76D5C28A1EF5C608003604AA /* NVActivityIndicatorView.framework */; };
+		76D5C28C1EF5C608003604AA /* NVActivityIndicatorView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 76D5C28A1EF5C608003604AA /* NVActivityIndicatorView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		76D5C28D1EF5C625003604AA /* NVActivityIndicatorView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76D5C28A1EF5C608003604AA /* NVActivityIndicatorView.framework */; };
+		76D5C28E1EF5C625003604AA /* NVActivityIndicatorView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 76D5C28A1EF5C608003604AA /* NVActivityIndicatorView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		76EDA6F31EE5708C00BE0FDE /* AuthenticationStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EDA6F21EE5708C00BE0FDE /* AuthenticationStoreTests.swift */; };
 		76EDA7061EE588E800BE0FDE /* AppStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76EDA7051EE588E800BE0FDE /* AppStoreTests.swift */; };
 		76EDA7071EE58A5B00BE0FDE /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76B345641EE0945200CBAA1A /* SwiftyJSON.framework */; };
@@ -147,6 +151,7 @@
 				760AB9C51ED9E77700FF26A6 /* RxCocoa.framework in Embed Frameworks */,
 				760AB9C61ED9E77700FF26A6 /* Swifternalization.framework in Embed Frameworks */,
 				7653BDE11EEB0FC10079EE3D /* SwiftyBeaver.framework in Embed Frameworks */,
+				76D5C28E1EF5C625003604AA /* NVActivityIndicatorView.framework in Embed Frameworks */,
 				760AB9C71ED9E77700FF26A6 /* Localize.framework in Embed Frameworks */,
 				764D12C81EE3FD2D00BAAA6E /* KeychainAccess.framework in Embed Frameworks */,
 				760AB9C81ED9E77700FF26A6 /* Alamofire.framework in Embed Frameworks */,
@@ -167,6 +172,7 @@
 				767044C51ED6FEC70002EDE5 /* RxCocoa.framework in Embed Frameworks */,
 				7690BCAA1ED2309700B631C2 /* Swifternalization.framework in Embed Frameworks */,
 				7653BDDF1EEB0FBB0079EE3D /* SwiftyBeaver.framework in Embed Frameworks */,
+				76D5C28C1EF5C608003604AA /* NVActivityIndicatorView.framework in Embed Frameworks */,
 				7647BD121ED34F7D00591395 /* Localize.framework in Embed Frameworks */,
 				764D12C61EE3FD1F00BAAA6E /* KeychainAccess.framework in Embed Frameworks */,
 				767044C81ED7106C0002EDE5 /* Alamofire.framework in Embed Frameworks */,
@@ -219,6 +225,7 @@
 		76973E261EDAB239009F105C /* GSMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GSMessage.swift; sourceTree = "<group>"; };
 		76B345641EE0945200CBAA1A /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		76BA40401EE8212A00FD00AE /* UserDefaultsServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsServiceTests.swift; sourceTree = "<group>"; };
+		76D5C28A1EF5C608003604AA /* NVActivityIndicatorView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NVActivityIndicatorView.framework; path = Carthage/Build/iOS/NVActivityIndicatorView.framework; sourceTree = "<group>"; };
 		76EDA6F21EE5708C00BE0FDE /* AuthenticationStoreTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationStoreTests.swift; sourceTree = "<group>"; };
 		76EDA7051EE588E800BE0FDE /* AppStoreTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStoreTests.swift; sourceTree = "<group>"; };
 		E65172CA792FF7ABCD6E8C39 /* RequestBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
@@ -248,6 +255,7 @@
 				764D12C71EE3FD2D00BAAA6E /* KeychainAccess.framework in Frameworks */,
 				760AB9B51ED9E77700FF26A6 /* RxCocoa.framework in Frameworks */,
 				7653BDE01EEB0FC10079EE3D /* SwiftyBeaver.framework in Frameworks */,
+				76D5C28D1EF5C625003604AA /* NVActivityIndicatorView.framework in Frameworks */,
 				760AB9B61ED9E77700FF26A6 /* Swifternalization.framework in Frameworks */,
 				760AB9B71ED9E77700FF26A6 /* Localize.framework in Frameworks */,
 				760AB9B81ED9E77700FF26A6 /* Alamofire.framework in Frameworks */,
@@ -275,6 +283,7 @@
 				767044C41ED6FEC70002EDE5 /* RxCocoa.framework in Frameworks */,
 				7690BCA91ED2309700B631C2 /* Swifternalization.framework in Frameworks */,
 				7653BDDE1EEB0FBB0079EE3D /* SwiftyBeaver.framework in Frameworks */,
+				76D5C28B1EF5C608003604AA /* NVActivityIndicatorView.framework in Frameworks */,
 				7647BD111ED34F7D00591395 /* Localize.framework in Frameworks */,
 				764D12C51EE3FD1F00BAAA6E /* KeychainAccess.framework in Frameworks */,
 				767044C71ED7106C0002EDE5 /* Alamofire.framework in Frameworks */,
@@ -440,6 +449,7 @@
 		7690BCBD1ED2391300B631C2 /* ExternalLibraries */ = {
 			isa = PBXGroup;
 			children = (
+				76D5C28A1EF5C608003604AA /* NVActivityIndicatorView.framework */,
 				7653BDDD1EEB0FBB0079EE3D /* SwiftyBeaver.framework */,
 				764D12C41EE3FD1F00BAAA6E /* KeychainAccess.framework */,
 				76B345641EE0945200CBAA1A /* SwiftyJSON.framework */,
@@ -676,6 +686,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/KeychainAccess.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyBeaver.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/NVActivityIndicatorView.framework",
 			);
 			outputPaths = (
 			);
@@ -713,6 +724,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/KeychainAccess.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyBeaver.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/NVActivityIndicatorView.framework",
 			);
 			outputPaths = (
 			);

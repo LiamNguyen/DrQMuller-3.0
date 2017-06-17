@@ -8,4 +8,5 @@ github "SwiftyJSON/SwiftyJSON"
 github "kishikawakatsumi/KeychainAccess"
 github "SwiftyBeaver/SwiftyBeaver"
 github "SnapKit/SnapKit" ~> 3.2.0
+github "ninjaprox/NVActivityIndicatorView"
 

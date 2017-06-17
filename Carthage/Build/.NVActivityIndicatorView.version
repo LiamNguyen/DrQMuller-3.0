@@ -1,0 +1,9 @@
+{
+  "commitish" : "3.6.1",
+  "iOS" : [
+    {
+      "hash" : "f938237958dd39a75d85f9edc30d973fb76ff6ef3d389da26e562823ef0ac775",
+      "name" : "NVActivityIndicatorView"
+    }
+  ]
+}
