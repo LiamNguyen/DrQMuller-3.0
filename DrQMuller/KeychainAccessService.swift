@@ -43,6 +43,8 @@ class KeychainAccessService {
 
     enum KeychainAccessKey: String {
         case authorizationToken
+        case username
+        case password
         case testStore
         case testRemove
     }

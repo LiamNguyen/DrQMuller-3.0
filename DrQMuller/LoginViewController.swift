@@ -2,8 +2,9 @@ import UIKit
 import RxSwift
 import RxCocoa
 import Localize
+import NVActivityIndicatorView
 
-class LoginViewController: UIViewController, UITextFieldDelegate {
+class LoginViewController: UIViewController, UITextFieldDelegate, NVActivityIndicatorViewable {
 
     @IBOutlet fileprivate weak var txtUsername: CustomTextField!
     @IBOutlet fileprivate weak var txtPassword: CustomTextField!
@@ -83,6 +84,26 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             .map({ CGFloat($0) })
             .bind(to: btnLogin.rx.alpha)
             .addDisposableTo(disposeBag)
+
+		loginViewModel.isLoadingForAutoLogin.asObservable()
+			.subscribe(onNext: { [weak self] isLoadingForAutoLogin in
+				if isLoadingForAutoLogin {
+					self?.startAnimating(
+						CGSize(width: 50, height: 50),
+						message: Constants.Login.ActivityIndicator.loggingIn,
+						type: NVActivityIndicatorType.ballTrianglePath
+					)
+				} else {
+					self?.stopAnimating()
+				}
+			}).addDisposableTo(disposeBag)
+
+		loginViewModel.autoLoginSuccess.asObservable()
+			.subscribe(onNext: { success in
+				if success {
+					print("Navigate next")
+				}
+			}).addDisposableTo(disposeBag)
 
 //        Mark: Text fields onChange observable
 

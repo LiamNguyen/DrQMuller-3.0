@@ -23,6 +23,9 @@
 			"resetPassword": "Forgot username or password?",
 			"login": "Login",
 			"register": "Register"
+		},
+		"ActivityIndicator": {
+			"loggingIn": "Logging in..."
 		}
 	},
 	"Register": {

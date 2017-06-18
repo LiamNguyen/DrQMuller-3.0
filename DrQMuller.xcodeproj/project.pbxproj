@@ -119,6 +119,7 @@
 		E6517AA6098C3BFB7432496A /* CustomerAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65178A1F73EBE6D2F8505FC /* CustomerAction.swift */; };
 		E6517BC1C3C3F4F2920338E6 /* ExtendError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65175D57DF7BF9D520E7586 /* ExtendError.swift */; };
 		E6517C0CDD04CECE5E414091 /* Retrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6517682BD42F0ED1126B8EB /* Retrier.swift */; };
+		E6517C10481A5065A92855C6 /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65177927ACFD29B1E7E2811 /* LoginViewModelTests.swift */; };
 		E6517CF5299C158CDD5E712E /* AppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65175249FE71B0820C012B8 /* AppStore.swift */; };
 		E6517CFEEDAD3968C5A3E8DB /* KeychainAccessService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6517770A6381701B0BB5F48 /* KeychainAccessService.swift */; };
 		E6517D997E120E41380EB600 /* UserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6517B7E1786E173D5343560 /* UserDefaultsService.swift */; };
@@ -236,6 +237,7 @@
 		E65176549AD7FE3C4EB66AD7 /* ValidationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationHelper.swift; sourceTree = "<group>"; };
 		E6517682BD42F0ED1126B8EB /* Retrier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Retrier.swift; sourceTree = "<group>"; };
 		E6517770A6381701B0BB5F48 /* KeychainAccessService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainAccessService.swift; sourceTree = "<group>"; };
+		E65177927ACFD29B1E7E2811 /* LoginViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
 		E65178A1F73EBE6D2F8505FC /* CustomerAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerAction.swift; sourceTree = "<group>"; };
 		E65179037516FD7D6B93FEED /* UIApplicationExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
 		E6517B395E5662C1BDADB996 /* Cache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
@@ -313,6 +315,7 @@
 				7653BDE61EEC21420079EE3D /* CustomerActionTests.swift */,
 				76009F571EED4E5B0042BFBB /* CacheTests.swift */,
 				762FF6D91EE490D1006DA986 /* Info.plist */,
+				E65177927ACFD29B1E7E2811 /* LoginViewModelTests.swift */,
 			);
 			path = DrQMullerTests;
 			sourceTree = "<group>";
@@ -778,6 +781,7 @@
 				7653BDE71EEC21420079EE3D /* CustomerActionTests.swift in Sources */,
 				76EDA6F31EE5708C00BE0FDE /* AuthenticationStoreTests.swift in Sources */,
 				7653BDE51EEBF0AE0079EE3D /* KeyChainAccessServiceTests.swift in Sources */,
+				E6517C10481A5065A92855C6 /* LoginViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

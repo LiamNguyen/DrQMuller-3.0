@@ -62,6 +62,10 @@ struct Constants {
 			static let login			= "Login.Button.login".localize()
 			static let register			= "Login.Button.register".localize()
 		}
+
+		struct ActivityIndicator {
+			static let loggingIn        = "Login.ActivityIndicator.loggingIn".localize()
+		}
 	}
 
 	struct Register {

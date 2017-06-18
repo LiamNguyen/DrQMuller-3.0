@@ -23,6 +23,9 @@
 			"resetPassword": "Quên tên đăng nhập hoặc mật khẩu?",
 			"login": "Đăng nhập",
 			"register": "Đăng ký"
+		},
+		"ActivityIndicator": {
+			"loggingIn": "Đăng nhập tự động..."
 		}
 	},
 	"Register": {
