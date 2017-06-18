@@ -9,7 +9,7 @@ class CustomerAction {
         }
         do {
             try AppStore.sharedInstance.dispatch(
-                action: (key: .customer, state: infoWithoutToken)
+                action: (key: StateKeys.customer, state: infoWithoutToken)
             )
         } catch let error as ExtendError {
             Logger.sharedInstance.log(event: error.descriptionForLog, type: .error)

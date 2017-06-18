@@ -30,7 +30,7 @@ class CustomerActionTests: XCTestCase {
         XCTAssertThrowsError(try CustomerAction.saveCustomer(info: customerInfoWithoutToken))
         XCTAssertNoThrow(try CustomerAction.saveCustomer(info: customerInfo))
 
-        XCTAssertEqual(AppStore.sharedInstance.getState()[AppStore.StateKey.customer.rawValue], JSON(customerInfoWithoutToken))
+        XCTAssertEqual(AppStore.sharedInstance.getState()[StateKeys.customer], JSON(customerInfoWithoutToken))
         XCTAssertEqual(try KeychainAccessService.getString(forKey: .authorizationToken), customerInfo["authorizationToken"] as? String)
     }
 }

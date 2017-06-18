@@ -77,12 +77,17 @@ class LoginViewModel {
 			AuthenticationStore.sharedInstance.userLogin(requestBody) { [weak self] (result, customer) in
 				self?.isLoading.value = false
 				if let customer = customer {
-					completionHandler(self!.saveCustomer(customer: customer) && self!.storeUsernameAndPassword() ? result : .save_client_local_error)
+					let saveCustomerLocalSuccess = self!.saveCustomer(customer: customer) && self!.storeUsernameAndPassword()
+					completionHandler(saveCustomerLocalSuccess ? result : .save_client_local_error)
 				} else {
 					completionHandler(result == .login_success ? .server_error : result)
 				}
 			}
 		}
+	}
+
+	func getDestination() -> SegueDestination {
+	    return CustomerPresenter.isCustomerNotYetFilledProfile() ? .LoginToProfile : .LoginToBookingManager
 	}
 
 	fileprivate func rememberMe() {

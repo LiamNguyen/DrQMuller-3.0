@@ -12,7 +12,7 @@ class Cache {
 
     fileprivate init() {
         initialCache = JSON([
-            AppStore.StateKey.customer.rawValue: ""
+            StateKeys.customer: ""
         ])
 
         if let storedAppCache = UserDefaultsService.get(forKey: .appCache) as? String {
@@ -47,14 +47,14 @@ class Cache {
         return appCache.value
     }
 
-    func save(fields: [AppStore.StateKey]) throws {
+    func save(fields: [String]) throws {
         var newCache: [String: Any] = [String: Any]()
 
         _ = try fields.map { key in
-            if AppStore.sharedInstance.getState()[key.rawValue] == JSON.null {
+            if AppStore.sharedInstance.getState()[key] == JSON.null {
                 throw ExtendError.FindKeyInStateTreeFailed
             }
-            newCache[key.rawValue] = AppStore.sharedInstance.getState()[key.rawValue]
+            newCache[key] = AppStore.sharedInstance.getState()[key]
         }
 
         mergeCache(cache: JSON(newCache))

@@ -48,25 +48,25 @@ class CacheTests: XCTestCase {
         AppStore.sharedInstance.resetAppState()
         AppStore.sharedInstance.enableAutoStoreUserDefaults()
 
-		XCTAssertNoThrow(try Cache.sharedInstance.save(fields: [.customer]))
+		XCTAssertNoThrow(try Cache.sharedInstance.save(fields: [StateKeys.customer]))
 
 		XCTAssertTrue(UserDefaultsService.get(forKey: .appCache) == nil)
 
-		XCTAssertThrowsError(try Cache.sharedInstance.save(fields: [.customer, .myList]))
+		XCTAssertThrowsError(try Cache.sharedInstance.save(fields: [StateKeys.customer, StateKeys.myList]))
 
 		XCTAssertNoThrow(try AppStore.sharedInstance.dispatch(
-			action: (key: .myList, state: testDataMyList)
+			action: (key: StateKeys.myList, state: testDataMyList)
 		))
 
         XCTAssertTrue(UserDefaultsService.get(forKey: .appCache) == nil)
 
         XCTAssertNoThrow(try AppStore.sharedInstance.dispatch(
-            action: (key: .customer, state: testDataCustomer)
+            action: (key: StateKeys.customer, state: testDataCustomer)
         ))
 
         XCTAssertFalse(UserDefaultsService.get(forKey: .appCache) == nil)
 
-		XCTAssertNoThrow(try Cache.sharedInstance.save(fields: [.customer, .myList]))
+		XCTAssertNoThrow(try Cache.sharedInstance.save(fields: [StateKeys.customer, StateKeys.myList]))
 
 		if let storedAppCache = UserDefaultsService.get(forKey: .appCache) as? String {
             XCTAssertEqual(AppStore.sharedInstance.getState(), Helper.stringToJSON(string: storedAppCache))

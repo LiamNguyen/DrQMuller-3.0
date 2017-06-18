@@ -99,9 +99,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate, NVActivityIndi
 			}).addDisposableTo(disposeBag)
 
 		loginViewModel.autoLoginSuccess.asObservable()
-			.subscribe(onNext: { success in
+			.subscribe(onNext: { [weak self] success in
 				if success {
-					print("Navigate next")
+					
 				}
 			}).addDisposableTo(disposeBag)
 

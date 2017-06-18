@@ -135,7 +135,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
 		    switch result {
 		    case .register_success:
 		        print("User registered")
-		        print(AppStore.sharedInstance.getState()[AppStore.StateKey.customer.rawValue])
+		        print(CustomerPresenter.currentCustomer())
 			default:
 				ErrorDisplayService.sharedInstance.failReason.value.append((key: "", errorCode: result.rawValue))
 		    }

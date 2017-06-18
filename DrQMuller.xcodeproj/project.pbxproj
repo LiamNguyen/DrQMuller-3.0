@@ -109,6 +109,9 @@
 		E651738C890277201F3CDC6C /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65172CA792FF7ABCD6E8C39 /* RequestBuilder.swift */; };
 		E651739B05142D32B7194C49 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6517C6E89921365674412E1 /* Helper.swift */; };
 		E65173ABC889BCA65816A0A4 /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65179037516FD7D6B93FEED /* UIApplicationExtension.swift */; };
+		E65173C0EBAB6C697ADCD1FC /* StateKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6517B778F3B3EBA818E0442 /* StateKeys.swift */; };
+		E65173EB058BA1E6302E7CEF /* StateKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6517B778F3B3EBA818E0442 /* StateKeys.swift */; };
+		E65174D731E758D14E1252E5 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = E651756F41C8C25894DD4C51 /* Router.swift */; };
 		E6517507AA339A2CB25C58CF /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6517DEF750C8779C2F8BE76 /* Customer.swift */; };
 		E65178324D656FC515B223C1 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6517C6E89921365674412E1 /* Helper.swift */; };
 		E651788A67ADCDBDE24CFB5B /* ErrorDisplayService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E651738F1E391E2584FBE3BE /* ErrorDisplayService.swift */; };
@@ -118,14 +121,17 @@
 		E6517A08D5FC54D3899BF78D /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65173859AE7DF95D15DAAA8 /* Logger.swift */; };
 		E6517AA6098C3BFB7432496A /* CustomerAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65178A1F73EBE6D2F8505FC /* CustomerAction.swift */; };
 		E6517BC1C3C3F4F2920338E6 /* ExtendError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65175D57DF7BF9D520E7586 /* ExtendError.swift */; };
+		E6517C0A9884A6C9FCF50CAF /* CustomerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6517B10B59FFB7814D9D7F2 /* CustomerPresenter.swift */; };
 		E6517C0CDD04CECE5E414091 /* Retrier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6517682BD42F0ED1126B8EB /* Retrier.swift */; };
 		E6517C10481A5065A92855C6 /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65177927ACFD29B1E7E2811 /* LoginViewModelTests.swift */; };
+		E6517C2F80343E94D547208B /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = E651756F41C8C25894DD4C51 /* Router.swift */; };
 		E6517CF5299C158CDD5E712E /* AppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65175249FE71B0820C012B8 /* AppStore.swift */; };
 		E6517CFEEDAD3968C5A3E8DB /* KeychainAccessService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6517770A6381701B0BB5F48 /* KeychainAccessService.swift */; };
 		E6517D997E120E41380EB600 /* UserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6517B7E1786E173D5343560 /* UserDefaultsService.swift */; };
 		E6517DE662CD0A6432ADE7AE /* CustomerAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65178A1F73EBE6D2F8505FC /* CustomerAction.swift */; };
 		E6517ECF96F463E5375A57F8 /* ExtendError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65175D57DF7BF9D520E7586 /* ExtendError.swift */; };
 		E6517F0A19E3C6B1A7FD96BF /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6517B395E5662C1BDADB996 /* Cache.swift */; };
+		E6517F538DC43C59AB1A2753 /* CustomerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6517B10B59FFB7814D9D7F2 /* CustomerPresenter.swift */; };
 		E6517F6340C84B93F85F2242 /* ValidationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65176549AD7FE3C4EB66AD7 /* ValidationHelper.swift */; };
 /* End PBXBuildFile section */
 
@@ -233,6 +239,7 @@
 		E65173859AE7DF95D15DAAA8 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		E651738F1E391E2584FBE3BE /* ErrorDisplayService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorDisplayService.swift; sourceTree = "<group>"; };
 		E65175249FE71B0820C012B8 /* AppStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStore.swift; sourceTree = "<group>"; };
+		E651756F41C8C25894DD4C51 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		E65175D57DF7BF9D520E7586 /* ExtendError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtendError.swift; sourceTree = "<group>"; };
 		E65176549AD7FE3C4EB66AD7 /* ValidationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationHelper.swift; sourceTree = "<group>"; };
 		E6517682BD42F0ED1126B8EB /* Retrier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Retrier.swift; sourceTree = "<group>"; };
@@ -240,7 +247,9 @@
 		E65177927ACFD29B1E7E2811 /* LoginViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
 		E65178A1F73EBE6D2F8505FC /* CustomerAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerAction.swift; sourceTree = "<group>"; };
 		E65179037516FD7D6B93FEED /* UIApplicationExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
+		E6517B10B59FFB7814D9D7F2 /* CustomerPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerPresenter.swift; sourceTree = "<group>"; };
 		E6517B395E5662C1BDADB996 /* Cache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
+		E6517B778F3B3EBA818E0442 /* StateKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateKeys.swift; sourceTree = "<group>"; };
 		E6517B7E1786E173D5343560 /* UserDefaultsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsService.swift; sourceTree = "<group>"; };
 		E6517C6E89921365674412E1 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		E6517DEF750C8779C2F8BE76 /* Customer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
@@ -364,6 +373,7 @@
 				766FBA9F1ED1DCD100E4454D /* SupportingFiles */,
 				E6517D0C6C0DE98A8D97682F /* Model */,
 				E65175CFDEADA4B6CF7E96D6 /* Action */,
+				E6517AC3162334FED0228CD9 /* Presenter */,
 			);
 			path = DrQMuller;
 			sourceTree = "<group>";
@@ -405,6 +415,8 @@
 				E6517C6E89921365674412E1 /* Helper.swift */,
 				E65175D57DF7BF9D520E7586 /* ExtendError.swift */,
 				E65176549AD7FE3C4EB66AD7 /* ValidationHelper.swift */,
+				E651756F41C8C25894DD4C51 /* Router.swift */,
+				E6517B778F3B3EBA818E0442 /* StateKeys.swift */,
 			);
 			name = Helper;
 			sourceTree = "<group>";
@@ -485,6 +497,14 @@
 				E65178A1F73EBE6D2F8505FC /* CustomerAction.swift */,
 			);
 			path = Action;
+			sourceTree = "<group>";
+		};
+		E6517AC3162334FED0228CD9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E6517B10B59FFB7814D9D7F2 /* CustomerPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		E6517AD99536084861B60978 /* Local */ = {
@@ -767,6 +787,9 @@
 				E65173ABC889BCA65816A0A4 /* UIApplicationExtension.swift in Sources */,
 				E6517A08D5FC54D3899BF78D /* Logger.swift in Sources */,
 				E6517012F47B87657F0FBFB2 /* Cache.swift in Sources */,
+				E65174D731E758D14E1252E5 /* Router.swift in Sources */,
+				E65173C0EBAB6C697ADCD1FC /* StateKeys.swift in Sources */,
+				E6517F538DC43C59AB1A2753 /* CustomerPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -814,6 +837,9 @@
 				E6517034276C230E1C0B9814 /* UIApplicationExtension.swift in Sources */,
 				E651793111D2C5764FF3DA2A /* Logger.swift in Sources */,
 				E6517F0A19E3C6B1A7FD96BF /* Cache.swift in Sources */,
+				E6517C2F80343E94D547208B /* Router.swift in Sources */,
+				E65173EB058BA1E6302E7CEF /* StateKeys.swift in Sources */,
+				E6517C0A9884A6C9FCF50CAF /* CustomerPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

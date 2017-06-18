@@ -21,7 +21,7 @@ class LoginViewModelTests: XCTestCase {
 	func testSaveCustomer() throws {
 		loginViewModel.userLogin { _ in
 			XCTAssertNotEqual(try? KeychainAccessService.getString(forKey: .authorizationToken), "")
-			XCTAssertNotEqual(AppStore.sharedInstance.getState()[AppStore.StateKey.customer.rawValue], "")
+			XCTAssertNotEqual(AppStore.sharedInstance.getState()[StateKeys.customer], "")
 		}
 	}
 

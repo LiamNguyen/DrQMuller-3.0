@@ -16,7 +16,7 @@ class AppStore {
 //        Mark: Define initial app state
 
         initialState = JSON([
-            StateKey.customer.rawValue: ""
+            StateKeys.customer: ""
         ])
 
         initializeAppState()
@@ -28,7 +28,7 @@ class AppStore {
             .subscribe(onNext: { [weak self] _ in
                 if !self!.autoStoreDisabled && !self!.firstTimeInitializeState {
                     do {
-                        try Cache.sharedInstance.save(fields: [.customer])
+                        try Cache.sharedInstance.save(fields: [StateKeys.customer])
                     } catch let error as ExtendError {
                         Logger.sharedInstance.log(event: error.descriptionForLog, type: .error)
                     } catch let error {
@@ -45,9 +45,9 @@ class AppStore {
 		return appState.value
     }
 
-    func dispatch(action: (key: StateKey, state: Any)) throws {
+    func dispatch(action: (key: String, state: Any)) throws {
         do {
-            appState.value = try appState.value.merged(with: JSON([action.key.rawValue: action.state]))
+            appState.value = try appState.value.merged(with: JSON([action.key: action.state]))
         } catch let error {
             Logger.sharedInstance.log(event: "SwiftyJson merge error:\n\(error.localizedDescription)", type: .error)
             throw ExtendError.DispatchActionToStoreFailed
@@ -64,12 +64,6 @@ class AppStore {
                 errorCode: "application_error"
             ))
         }
-    }
-
-    enum StateKey: String {
-        case customer
-        case testing
-        case myList
     }
 
 //    Mark: Testing purpose

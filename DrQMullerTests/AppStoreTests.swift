@@ -38,15 +38,15 @@ class AppStoreTests: XCTestCase {
 
         XCTAssertEqual(AppStore.sharedInstance.getState(), initialState)
 
-        try? AppStore.sharedInstance.dispatch(action: (key: .testing, state: "I am testing something here for sure"))
+        try? AppStore.sharedInstance.dispatch(action: (key: StateKeys.testing, state: "I am testing something here for sure"))
 
         XCTAssertEqual(AppStore.sharedInstance.getState(), firstExpectedState)
 
-        try? AppStore.sharedInstance.dispatch(action: (key: .myList, state: ["Find more money", "Find even more and more money"]))
+        try? AppStore.sharedInstance.dispatch(action: (key: StateKeys.myList, state: ["Find more money", "Find even more and more money"]))
 
         XCTAssertEqual(AppStore.sharedInstance.getState(), secondExpectedState)
 
-        try? AppStore.sharedInstance.dispatch(action: (key: .myList, state: ["I replaced it already"]))
+        try? AppStore.sharedInstance.dispatch(action: (key: StateKeys.myList, state: ["I replaced it already"]))
 
         XCTAssertEqual(AppStore.sharedInstance.getState(), thirdExpectedState)
 
@@ -60,14 +60,14 @@ class AppStoreTests: XCTestCase {
 
 		XCTAssertTrue(UserDefaultsService.get(forKey: .appCache) == nil)
 
-        try? AppStore.sharedInstance.dispatch(action: (key: .testing, state: "I am testing something here for sure"))
+        try? AppStore.sharedInstance.dispatch(action: (key: StateKeys.testing, state: "I am testing something here for sure"))
 
         XCTAssertTrue(UserDefaultsService.get(forKey: .appCache) == nil)
 
-        try? AppStore.sharedInstance.dispatch(action: (key: .customer, state: customer))
+        try? AppStore.sharedInstance.dispatch(action: (key: StateKeys.customer, state: customer))
 
         if let storedAppCache = UserDefaultsService.get(forKey: .appCache) as? String {
-            let customerStateKey: String = AppStore.StateKey.customer.rawValue
+            let customerStateKey: String = StateKeys.customer
             let storedCustomer = Helper.stringToJSON(string: storedAppCache)[customerStateKey]
             let currentCustomer = AppStore.sharedInstance.getState()[customerStateKey]
 
@@ -80,20 +80,20 @@ class AppStoreTests: XCTestCase {
     fileprivate func initializeAppStateForTesting() {
         initialState = JSON(
             [
-                AppStore.StateKey.customer.rawValue: ""
+                StateKeys.customer: ""
             ]
         )
         firstExpectedState = JSON(
             [
-                AppStore.StateKey.customer.rawValue: "",
-                AppStore.StateKey.testing.rawValue: "I am testing something here for sure"
+                StateKeys.customer: "",
+                StateKeys.testing: "I am testing something here for sure"
             ]
         )
         secondExpectedState = JSON(
             [
-                AppStore.StateKey.customer.rawValue: "",
-                AppStore.StateKey.testing.rawValue: "I am testing something here for sure",
-                AppStore.StateKey.myList.rawValue: [
+                StateKeys.customer: "",
+                StateKeys.testing: "I am testing something here for sure",
+                StateKeys.myList: [
                     "Find more money",
                     "Find even more and more money"
                 ]
@@ -101,9 +101,9 @@ class AppStoreTests: XCTestCase {
         )
         thirdExpectedState = JSON(
             [
-                AppStore.StateKey.customer.rawValue: "",
-                AppStore.StateKey.testing.rawValue: "I am testing something here for sure",
-                AppStore.StateKey.myList.rawValue: [
+                StateKeys.customer: "",
+                StateKeys.testing: "I am testing something here for sure",
+                StateKeys.myList: [
                     "Find more money",
                     "Find even more and more money",
                     "I replaced it already"
